@@ -256,11 +256,11 @@ A continuación, se presentan los User Personas diseñados para representar a lo
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-<img src="Resources/img/Segmento1-UserPersona.png">
+![User Persona Segmento 1](./assets/img/Segmento1-UserPersona.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-<img src="Resources/img/Segmento2-UserPersona.png">
+![User Persona Segmento 2](./assets/img/Segmento2-UserPersona.png)
 
 ---
 
@@ -301,12 +301,12 @@ En esta sección se presentan los User Journey Maps elaborados para cada User Pe
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-<img src="Resources/img/Segmento1-JourneyMapping.png">
+![Journey Mapping Segmento 1](./assets/img/Segmento1-JourneyMapping.png)
 
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-<img src="Resources/img/Segmento2-JourneyMapping.png">
+![Journey Mapping Segmento 2](./assets/img/Segmento2-JourneyMapping.png)
 
 ---
 
@@ -316,11 +316,11 @@ En esta sección se presentan los Empathy Maps elaborados para cada User Persona
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-<img src="Resources/img/Segmento1-EmpathyMapping.png">
+![Empathy Mapping Segmento 1](./assets/img/Segmento1-EmpathyMapping.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-<img src="Resources/img/Segmento2-EmpathyMapping.png">
+![Empathy Mapping Segmento 2](./assets/img/Segmento2-EmpathyMapping.png)
 
 ---
 
@@ -330,11 +330,11 @@ En esta sección se presentan los As-Is Scenario Mapping elaborados para cada Us
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-<img src="Resources/img/Segmento1-As-IsMapping.png">
+![As-Is Scenario Mapping Segmento 1](./assets/img/Segmento1-As-IsMapping.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-<img src="Resources/img/Segmento2-As-IsMapping.png">
+![As-Is Scenario Mapping Segmento 2](./assets/img/Segmento2-As-IsMapping.png)
 
 ---
 
