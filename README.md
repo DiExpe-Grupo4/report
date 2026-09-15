@@ -20,10 +20,10 @@ Llevar a cabo un análisis competitivo es clave para reconocer oportunidades y r
     <tr>
     <td rowspan="3" class="sub">PERFIL</td>
     <td rowspan="2" class="sub">Overview</td>
-<td> SafeBus <img src="./Avisum/assets/chapter-02/safebus.jpg" width="140"></td>
-<td> Metropolitano <img src="./Avisum/assets/chapter-02/metropolitano.jpg" width="140"></td>
-<td> RTP <img src="./Avisum/assets/chapter-02/rtp.jpg" width="140"></td>
-<td> Mi Transporte <img src="./Avisum/assets/chapter-02/mi-transporte.jpg" width="140"></td>
+<td> SafeBus <img src="./Avisum/assets/img/safebus.jpg" width="140"></td>
+<td> Metropolitano <img src="./Avisum/assets/img/metropolitano.jpg" width="140"></td>
+<td> RTP <img src="./Avisum/assets/img/rtp.jpg" width="140"></td>
+<td> Mi Transporte <img src="./Avisum/assets/img/mi-transporte.jpg" width="140"></td>
 </tr>
     <tr>
         <td>Sistema de seguridad instalado directamente en unidades de transporte público tradicional (cústers, combis), que integra cámara de vigilancia 360°, botón de pánico y conteo de pasajeros en una sola plataforma, sin depender de infraestructura vial fija.</td>
