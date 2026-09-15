@@ -20,10 +20,10 @@ Llevar a cabo un análisis competitivo es clave para reconocer oportunidades y r
     <tr>
     <td rowspan="3" class="sub">PERFIL</td>
     <td rowspan="2" class="sub">Overview</td>
-    <td> SafeBus <img src="./assets/chapter-02/safebus.jpg" width="140"></td>
-    <td> Metropolitano <img src="./assets/chapter-02/metropolitano.jpg" width="140"></td>
-    <td> RTP <img src="./assets/chapter-02/rtp.jpg" width="140"></td>
-    <td> Mi Transporte <img src="./assets/chapter-02/mi-transporte.jpg" width="140"></td>
+<td> SafeBus <img src="./Avisum/assets/chapter-02/safebus.jpg" width="140"></td>
+<td> Metropolitano <img src="./Avisum/assets/chapter-02/metropolitano.jpg" width="140"></td>
+<td> RTP <img src="./Avisum/assets/chapter-02/rtp.jpg" width="140"></td>
+<td> Mi Transporte <img src="./Avisum/assets/chapter-02/mi-transporte.jpg" width="140"></td>
 </tr>
     <tr>
         <td>Sistema de seguridad instalado directamente en unidades de transporte público tradicional (cústers, combis), que integra cámara de vigilancia 360°, botón de pánico y conteo de pasajeros en una sola plataforma, sin depender de infraestructura vial fija.</td>
@@ -172,21 +172,21 @@ Por otro lado, estas son nuestras tácticas específicas:
 
 **Entrevistado 1:**
 
-<img src = "Resources/img/Entrevista1Segmento1.png">
+[![](./Avisum/Resources/img/Entrevista1Segmento1.png)](./Avisum/Resources/img/Entrevista1Segmento1.png)
 
 **Resumen de la entrevista:**
 
 
 **Entrevistado 2:**
 
-<img src = "Resources/img/Entrevista2Segmento1.png">
+[![](./Avisum/Resources/img/Entrevista2Segmento1.png)](./Avisum/Resources/img/Entrevista2Segmento1.png)
 
 **Resumen de la entrevista:**
 
 
 **Entrevistado 3:** 
 
-<img src = "Resources/img/Entrevista3Segmento1.png">
+[![](./Avisum/Resources/img/Entrevista3Segmento1.png)](./Avisum/Resources/img/Entrevista3Segmento1.png)
 
 **Resumen de la entrevista:**
 
@@ -197,21 +197,21 @@ Por otro lado, estas son nuestras tácticas específicas:
 
 **Entrevistado 1:**
 
-<img src = "Resources/img/Entrevista1Segmento2.png">
+[![](./Avisum/Resources/img/Entrevista1Segmento2.png)](./Avisum/Resources/img/Entrevista1Segmento2.png)
 
 **Resumen de la entrevista:**
 
 
 **Entrevistado 2:**
 
-<img src = "Resources/img/Entrevista2Segmento2.png">
+[![](./Avisum/Resources/img/Entrevista2Segmento2.png)](./Avisum/Resources/img/Entrevista2Segmento2.png)
 
 **Resumen de la entrevista:**
 
 
 **Entrevistado 3:**
 
-<img src = "Resources/img/Entrevista3Segmento2.png">
+[![](./Avisum/Resources/img/Entrevista3Segmento2.png)](./Avisum/Resources/img/Entrevista3Segmento2.png)
 
 **Resumen de la entrevista:**
 
@@ -256,11 +256,11 @@ A continuación, se presentan los User Personas diseñados para representar a lo
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-![User Persona Segmento 1](./assets/img/Segmento1-UserPersona.png)
+[![User Persona Segmento 1](./Avisum/assets/img/Segmento1-UserPersona.png)](./Avisum/assets/img/Segmento1-UserPersona.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-![User Persona Segmento 2](./assets/img/Segmento2-UserPersona.png)
+[![User Persona Segmento 2](./Avisum/assets/img/Segmento2-UserPersona.png)](./Avisum/assets/img/Segmento2-UserPersona.png)
 
 ---
 
@@ -301,12 +301,12 @@ En esta sección se presentan los User Journey Maps elaborados para cada User Pe
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-![Journey Mapping Segmento 1](./assets/img/Segmento1-JourneyMapping.png)
+[![Journey Mapping Segmento 1](./Avisum/assets/img/Segmento1-JourneyMapping.png)](./Avisum/assets/img/Segmento1-JourneyMapping.png)
 
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-![Journey Mapping Segmento 2](./assets/img/Segmento2-JourneyMapping.png)
+[![Journey Mapping Segmento 2](./Avisum/assets/img/Segmento2-JourneyMapping.png)](./Avisum/assets/img/Segmento2-JourneyMapping.png)
 
 ---
 
@@ -316,11 +316,11 @@ En esta sección se presentan los Empathy Maps elaborados para cada User Persona
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-![Empathy Mapping Segmento 1](./assets/img/Segmento1-EmpathyMapping.png)
+[![Empathy Mapping Segmento 1](./Avisum/assets/img/Segmento1-EmpathyMapping.png)](./Avisum/assets/img/Segmento1-EmpathyMapping.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-![Empathy Mapping Segmento 2](./assets/img/Segmento2-EmpathyMapping.png)
+[![Empathy Mapping Segmento 2](./Avisum/assets/img/Segmento2-EmpathyMapping.png)](./Avisum/assets/img/Segmento2-EmpathyMapping.png)
 
 ---
 
@@ -330,11 +330,11 @@ En esta sección se presentan los As-Is Scenario Mapping elaborados para cada Us
 
 **Segmento Objetivo 1: Conductores (operarios) de transporte público**
 
-![As-Is Scenario Mapping Segmento 1](./assets/img/Segmento1-As-IsMapping.png)
+[![As-Is Scenario Mapping Segmento 1](./Avisum/assets/img/Segmento1-As-IsMapping.png)](./Avisum/assets/img/Segmento1-As-IsMapping.png)
 
 **Segmento Objetivo 2: Empresas o consorcios de transporte público**
 
-![As-Is Scenario Mapping Segmento 2](./assets/img/Segmento2-As-IsMapping.png)
+[![As-Is Scenario Mapping Segmento 2](./Avisum/assets/img/Segmento2-As-IsMapping.png)](./Avisum/assets/img/Segmento2-As-IsMapping.png)
 
 ---
 
