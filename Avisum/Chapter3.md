@@ -2,7 +2,7 @@
 
 ## 3.1. To-Be Scenario Mapping
 
-<h3>Segento 1</h3>
+<h3>Segento 1: Conductores</h3>
 
 |Inicio de turno|Durante la ruta|Ante un cobro de cupo|Ante una emergencia|Cierre de turno|
 | :--: | :--: | :--: | :--: | :--: |
@@ -11,7 +11,7 @@
 | **Feeling** | Confianza, sensación de respaldo desde el inicio 🙂 | Tranquilidad, menor carga mental de vigilar su propia seguridad 🙂 | Menos indefensión, respaldo institucional 😌 | Alivio inmediato al ver la confirmación 😮‍💨→🙂 | Sensación de continuidad y respaldo documentado 🙂 |
 
 
-<h3>Segento 2</h3>
+<h3>Segento 2: Jefes de consorcios</h3>
 
 |Inicio de operación | Supervisión durante el día | Ante un incidente reportado | Gestión de la escasez de conductores | Cierre y evaluación |
 | :--: | :--: | :--: | :--: | :--: |
