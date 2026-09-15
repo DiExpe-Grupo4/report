@@ -209,9 +209,8 @@ En nuestro proyecto hemos implementado los siguientes sistemas de navegación:
 #### 4.3.1. Landing Page Wireframe
 Para la Landing page se desarrollaron en Figma cada apartado del 	sitio web.  
 <center>
-<img src = "assets/img/LandingWireframe.png">
-<img src = "assets/img/LandingWireframe2.png">
-<img src = "assets/img/LandingWireframe3.png">
+<img src = "assets/img/LandingPageWireframe.png">
+
 </center>
 
 #### 4.3.2. Landing Page Mock-up
