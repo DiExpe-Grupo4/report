@@ -1,9 +1,7 @@
 ## 2.1. Competidores
-
 Comprender el entorno competitivo resulta clave para el posicionamiento de cualquier modelo de negocio digital. En esta sección se realiza un análisis de los competidores de SafeBus, tanto directos como indirectos, evaluando las estrategias que aplican, así como sus principales fortalezas y debilidades frente a la propuesta de monitoreo y seguridad en tiempo real para transporte público del negocio.
 
 ### 2.1.1. Análisis competitivo
-
 Llevar a cabo un análisis competitivo es clave para reconocer oportunidades y riesgos en el mercado, así como para posicionar a SafeBus de manera estratégica. Este análisis permite comprender cómo los competidores atienden las necesidades de conductores, pasajeros y empresas de transporte, identificar vacíos en el mercado y destacar nuestra solución a través de ventajas diferenciadoras como la cámara de vigilancia 360°. También facilita la elaboración de estrategias más efectivas de marketing, precios y distribución, garantizando una propuesta de valor sólida y sostenible frente a la inseguridad y la extorsión que afecta al sector.
 
 <table>
@@ -20,7 +18,7 @@ Llevar a cabo un análisis competitivo es clave para reconocer oportunidades y r
     <tr>
     <td rowspan="3" class="sub">PERFIL</td>
     <td rowspan="2" class="sub">Overview</td>
-<td> SafeBus <img src="./assets/img/safebus.jpg" width="140"></td>
+<td> Avisum <img src="./assets/img/favicon.svg" width="140"></td>
 <td> Metropolitano <img src="./assets/img/metropolitano.jpg" width="140"></td>
 <td> RTP <img src="./assets/img/rtp.jpg" width="140"></td>
 <td> Mi Transporte <img src="./assets/img/mi-transporte.jpg" width="140"></td>
@@ -106,8 +104,6 @@ Llevar a cabo un análisis competitivo es clave para reconocer oportunidades y r
     </tr>
 </table>
 
----
-
 #### 2.1.2. Estrategias y tácticas frente a competidores.
 
 Entre las principales estrategias y tácticas que ejecutaremos como startup son las siguientes:
@@ -126,11 +122,9 @@ Por otro lado, estas son nuestras tácticas específicas:
 - Políticas claras y visibles de almacenamiento, retención y acceso a las grabaciones de la cámara 360°, posicionándola ante los conductores como un respaldo ante denuncias falsas o conflictos con pasajeros, y no solo como una herramienta de control sobre ellos.
 - Reportes automáticos de reducción de incidentes y extorsión, que faciliten a las empresas la decisión de renovar o expandir el servicio.
 - Campaña de referidos entre conductores, aprovechando el canal de WhatsApp que ya usan hoy para alertarse de zonas de riesgo, para impulsar la adopción boca a boca.
-  
----
+
 
 ### 2.2 Entrevistas
-
 #### 2.2.1 Diseño de entrevistas
 
 **User: Conductores (operarios) de transporte público**
@@ -164,87 +158,127 @@ Por otro lado, estas son nuestras tácticas específicas:
 12. Haciendo uso de una herramienta digital en tiempo real, ¿qué aspectos podrían ayudarte a mejorar?
 13. Si se implementara este sistema (app + cámara 360°), ¿qué necesitarían o qué les preocuparía antes de usarlo?
 
----
 
 #### 2.2.2 Registro de entrevista
 
-**User: Conductores (operarios) de transporte público**
+<h3>User: Conductores (operarios) de transporte público</h3>
 
-**Entrevistado 1:**
+**Entrevistado 1: Isaac Diaz**
+Edad: 24 años
+Distrito: Los Olivos
+Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQAgxwp_SW22QpjqP_2LFiWSAdYBHohGYuGkvqzhTnHDw3Q?e=p0gfr4
+![Entrevista 1](assets/img/Entrevista1.png)
+**Resumen de la entrevista:** Isaac inicia su jornada a las 4 a.m. y termina pasadas las 10 p.m., enfrentando mayor sensación de inseguridad durante las noches, especialmente en zonas como El Agustino y Caquetá. Señala que las extorsiones y cobros de cupos son prácticamente cotidianos, con amenazas físicas hacia quienes se niegan a pagar. En cuanto a seguridad, su unidad cuenta apenas con una cámara de baja calidad, sin ningún otro mecanismo de protección por parte de la empresa. Ante una emergencia, reconoce que pedir ayuda es muy lento y complicado, ya que depende únicamente de su celular personal. Considera fundamental contar con monitoreo en tiempo real, un botón de pánico y registro del número de pasajeros a bordo. Mostró total disposición a usar una aplicación de seguridad, incluyendo la validación de identidad por QR, viéndola como una medida que ordena y protege la operación. Usaría la solución principalmente en el turno nocturno y al inicio de cada jornada. 
 
-[![](./assets/img/Entrevista1Segmento1.png)](./assets/img/Entrevista1Segmento1.png)
+**Entrevistado 2: Elverth Vasquez**
+Edad: 24 años
+Distrito: Ate
+Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQDZPsCISt-yTYTs5S4l8HeaAQpjL1ZLpmaajFW__S6ceEI?e=qO2gok
+![Entrevista2](assets/img/Entrevista2.png)
+**Resumen de la entrevista:** Elverth inicia su jornada a las 4:30 a.m. y culmina cerca de las 9 p.m., realizando entre 4 y 5 vueltas diarias. Identifica zonas como Zárate y La Victoria como los puntos de mayor riesgo durante su ruta nocturna. Señala que los cobros de cupo ocurren dos veces por semana de manera casi normalizada, asumiendo esta presión como parte inevitable del trabajo. En cuanto a seguridad, cuenta únicamente con una cámara en mal estado sin ningún respaldo adicional por parte de la empresa. Reconoce que pedir ayuda en una emergencia es peligroso e ineficiente, ya que debe llamar por celular mientras conduce. Considera prioritario contar con un botón de alerta directa que no requiera comunicación verbal, y también señala la falta de respuesta policial como un problema estructural que agrava su situación. Mostró total disposición a usar una aplicación de monitoreo y valoró positivamente la validación por QR, viéndola como una medida que también lo protege a él ante posibles suplantaciones. Usaría la solución principalmente en horario nocturno y al transitar por zonas de alto riesgo que ya tiene identificadas en su ruta. 
 
-**Resumen de la entrevista:**
-
-
-**Entrevistado 2:**
-
-[![](./assets/img/Entrevista2Segmento1.png)](./assets/img/Entrevista2Segmento1.png)
-
-**Resumen de la entrevista:**
-
-
-**Entrevistado 3:** 
-
-[![](./assets/img/Entrevista3Segmento1.png)](./assets/img/Entrevista3Segmento1.png)
-
-**Resumen de la entrevista:**
-
-
----
-
-**User: Representantes de Empresas o consorcios de transporte público**
-
-**Entrevistado 1:**
-
-[![](./assets/img/Entrevista1Segmento2.png)](./assets/img/Entrevista1Segmento2.png)
-
-**Resumen de la entrevista:**
+**Entrevistado 3: Margarita Nuñez** 
+Edad: 34
+Distrito: Ate
+Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQCDEnBDbQFuT5alyi7S1O1rAc_Amy-5v-hK0TdLZh5oRWs?e=ee2m7X
+![Entrevita3](assets/img/Entrevista3.png)
+**Resumen de la entrevista:** Margarita combina su jornada laboral de 6 a.m. a 8 p.m. con sus responsabilidades como madre, dejando a sus hijos al cuidado de su mamá antes de salir cada día. Identifica el riesgo no solo en horario nocturno sino a lo largo de toda la jornada, señalando que como mujer conductora enfrenta una exposición mayor a intimidaciones y acoso dentro de su propia unidad. Indica que en su ruta se cobra cupo semanalmente y que su condición de mujer la hace blanco más fácil de presión por parte de los extorsionadores. En cuanto a seguridad, no cuenta con ningún mecanismo real de protección, dependiendo únicamente de un número telefónico de la empresa que raramente responde a tiempo. Destaca como necesidad prioritaria una alarma silenciosa que no sea visible para el agresor, ya que activar una alerta de forma obvia podría empeorar la situación. Mostró la mayor disposición de los tres entrevistados hacia el uso de la aplicación, afirmando que la usaría desde el primer día y durante toda la jornada sin restricción de horario. Valoró positivamente la validación por QR como mecanismo que agiliza la respuesta de la empresa ante cualquier incidente que le ocurra. 
 
 
-**Entrevistado 2:**
+<h3>User: Representantes de Empresas o consorcios de transporte público</h3>
 
-[![](./assets/img/Entrevista2Segmento2.png)](./assets/img/Entrevista2Segmento2.png)
+**Entrevistado 1: Kiara Nuñez Alvarado**
+Edad: 27
+Distrito: Puente Piedra
+![Entrevista4](assets/img/Entrevista4.png)
+**Resumen de la entrevista:** Kiara representante de ETUCHISA SAC.
+La entrevistada señala que actualmente la empresa cuenta con medidas básicas de seguridad, como cámaras en algunas unidades, supervisión en paraderos y contacto con autoridades; sin embargo, reconoce que la cobertura es limitada y no existe un sistema integral.
+El principal problema identificado es la extorsión por parte de organizaciones criminales, además de robos tanto dentro como fuera de las unidades, especialmente en zonas con poca iluminación. Estas situaciones ocurren con alta frecuencia, afectando tanto a conductores como a pasajeros.
+El impacto es significativo, no solo en términos económicos, sino también en la seguridad de las personas y la reputación de la empresa. Actualmente, la comunicación ante emergencias se realiza mediante llamadas telefónicas, lo que genera demoras en la respuesta.
+Asimismo, destaca la dificultad para monitorear en tiempo real las unidades debido a la falta de tecnología integrada, y menciona que la verificación de conductores se realiza de forma manual, lo que implica riesgos de suplantación.
+Finalmente, considera que una solución digital permitiría mejorar el control de conductores y unidades, aunque identifica como barreras principales el costo de implementación y la capacitación del personal.
 
-**Resumen de la entrevista:**
+**Entrevistado 2: Jaime A. Russvelt**
+Edad: 50
+Distrito: Ancon
+![Entrevista5](assets/img/Entrevista5.png)
+**Resumen de la entrevista:** Representante de la empresa nueva estrella
 
+El entrevistado describe un contexto altamente crítico, donde la extorsión es el principal problema estructural, afectando tanto a la empresa como a los propietarios de unidades. Señala que existen cobros elevados por parte de organizaciones criminales, incluso múltiples grupos simultáneamente.
+Además, menciona la presencia de delincuencia común (robos a pasajeros), pero enfatiza que la mayor amenaza proviene de la delincuencia organizada. Estas situaciones generan un fuerte impacto, provocando escasez de conductores, ya que muchos abandonan el trabajo o migran al extranjero por temor.
+La empresa no cuenta con mecanismos efectivos de prevención, ya que generalmente se enteran de los incidentes después de que ocurren, evidenciando una falta de capacidad de respuesta en tiempo real.
+En cuanto a la supervisión, reconoce que no existen herramientas tecnológicas adecuadas y que dependen en gran medida de procesos manuales. La verificación de conductores se basa en documentación, aunque admite que no garantiza un control total.
+El entrevistado considera que una solución tecnológica sería útil, especialmente si permite comunicación directa con autoridades, pero señala que su efectividad dependería también del apoyo institucional. Su principal preocupación es la falta de respuesta del Estado frente a la inseguridad.
 
-**Entrevistado 3:**
-
-[![](./assets/img/Entrevista3Segmento2.png)](./assets/img/Entrevista3Segmento2.png)
-
-**Resumen de la entrevista:**
-
-
----
+**Entrevistado 3: Puma Nicanor Yamoca**
+Edad: 45
+Distrito: Santa Anita
+![Entrevista6](assets/img/Entrevista6.png)
+**Resumen de la entrevista:** Representante de Alamo santa rosa la G, propietario de 12 unidades que trabaja desde pacasmayo hasta santa anita
+El entrevistado manifiesta que tanto conductores como pasajeros trabajan en un entorno de alta inseguridad, donde la extorsión es el problema más grave y constante. Indica que el pago de cupos es prácticamente obligatorio para poder operar con normalidad.
+Destaca que las organizaciones criminales ejercen un control constante, llegando incluso a conocer información personal de los transportistas, lo que incrementa el nivel de riesgo. Esta situación tiene un impacto directo en la economía, ya que obliga a los conductores a trabajar más y aumentar las tarifas, afectando también a los usuarios.
+En caso de emergencias, señala que la respuesta de las autoridades es lenta e ineficiente, lo que genera desconfianza en el sistema de seguridad. Además, considera que es muy difícil supervisar las unidades, especialmente en rutas largas.
+La verificación de conductores se basa en requisitos básicos como licencias y formación, pero reconoce la existencia de personas infiltradas o no autorizadas.
+Finalmente, valora positivamente la implementación de tecnología, indicando que herramientas como sensores, cámaras o sistemas de monitoreo serían de gran ayuda. Sin embargo, resalta la necesidad de capacitación tanto para conductores como para usuarios, para asegurar su correcta adopción.
 
 #### 2.2.3 Análisis de entrevista
 
-**Conductores (operarios) de transporte público:**
+<h3>Conductores (operarios) de transporte público:</h3>
 
-**Entrevista 1:** 
+**Entrevista 1:** El segmento objetivo del entrevistado es:
+Conductor de transporte público urbano que opera largas jornadas en rutas con alta incidencia de inseguridad y extorsión, especialmente en horarios nocturnos.
+Los aspectos mas comunes que señala el entrevistado son los siguientes:
+- Jornada extensa (4 a.m. a 10 p.m.) con mayor inseguridad en la noche, especialmente en zonas peligrosas.
+- Extorsiones y cobros ilegales son frecuentes, con amenazas físicas.
+- Baja seguridad en la unidad (solo una cámara de mala calidad).
+- Respuesta ante emergencias lenta y poco efectiva (depende del celular personal).
+- Necesita soluciones como monitoreo en tiempo real, botón de pánico y conteo de pasajeros.
+- Alta disposición a usar una app de seguridad (incluyendo QR), sobre todo en horarios nocturnos.
 
+**Entrevista 2:** El segmento objetivo del entrevistado es:
+Conductor de transporte público urbano que trabaja en rutas con zonas de alto riesgo, expuesto a extorsiones recurrentes y con limitada infraestructura de seguridad durante jornadas prolongadas.
+Los aspectos más comunes que señala el entrevistado son los siguientes:
+- Jornada larga (4:30 a.m. a 9 p.m.) con mayor riesgo en zonas peligrosas durante la noche.
+- Cobros de cupo frecuentes (2 veces por semana), normalizados como parte del trabajo.
+- Seguridad deficiente (cámara en mal estado y sin apoyo de la empresa).
+- Emergencias difíciles de gestionar (llamadas peligrosas mientras conduce).
+- Necesita un botón de alerta rápida sin comunicación verbal.
+- Percibe baja respuesta policial como un problema grave.
+- Alta disposición a usar una app con monitoreo y validación QR, especialmente en zonas y horarios de riesgo.
 
-**Entrevista 2:** 
+**Entrevista 3:** El segmento objetivo del entrevistado es:
+Conductora de transporte público urbano, jefa de familia, que opera en entornos de alta inseguridad, con mayor exposición a acoso y extorsión, y con necesidad de soluciones de seguridad discretas durante toda su jornada.
+Los aspectos más comunes que señala la entrevistada son los siguientes:
+- Jornada extensa (6 a.m. a 8 p.m.) combinada con responsabilidades familiares.
+- Riesgo constante durante todo el día, con mayor vulnerabilidad por ser mujer (acoso e intimidación).
+- Extorsión semanal, con mayor presión hacia ella.
+- Nula seguridad en la unidad (solo un contacto telefónico poco efectivo).
+- Necesita una alarma silenciosa que no alerte al agresor.
+- Muy alta disposición a usar una app de seguridad desde el primer día.
+- Valora la validación por QR para agilizar la respuesta ante incidentes.
 
+<h3>Representantes de Empresas o consorcios de transporte público:</h3>
 
-**Entrevista 3:** 
+**Entrevista 1:** El segmento objetivo del entrevistado es:
+Representante de empresa de transporte público con múltiples unidades en operación urbana. 
+Los aspectos mas comunes que señala e entrevistado son los siguientes:
+- Falta de un sistema tecnológico integral que permita monitoreo en tiempo real de las unidades.
+- Alta frecuencia de problemas de seguridad como extorsión y robos en rutas.
+- Limitaciones en la respuesta ante emergencias debido al uso de medios tradicionales como llamadas telefónicas.
 
+**Entrevista 2:** El segmento objetivo del entrevistado es:
+Representante de empresa de transporte público afectada por delincuencia organizada y extorsión. 
+Los aspectos mas comunes que señala el entrevistado son los siguientes:
+- La extorsión es el problema principal y afecta directamente la operación del servicio.
+- Falta de herramientas para prevenir incidentes, ya que la empresa se entera después de que ocurren.
+- Impacto crítico en la operación, incluyendo escasez de conductores y reducción de unidades activas.
 
----
+**Entrevista 3:** El segmento objetivo del entrevistado es Propietario de unidades de transporte público que opera en rutas extensas. 
 
-**Representantes de Empresas o consorcios de transporte público:**
-
-**Entrevista 1:** 
-
-
-**Entrevista 2:** 
-
-
-**Entrevista 3:** 
-
-
----
+Los aspectos más comunes que señala el entrevistado son los siguientes:
+- La extorsión es constante y condiciona el funcionamiento del servicio.
+- Dificultad para supervisar unidades y garantizar seguridad en rutas largas.
+- Necesidad de implementar soluciones tecnológicas, aunque con énfasis en capacitación para su uso.
 
 ### 2.3 Needfinding
 
