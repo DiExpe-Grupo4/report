@@ -22,17 +22,17 @@ La paleta de colores de SafeBus se despliega en tonos oscuros y con contrastes, 
 
 - **Negro:** Usamos el color negro como la base de la interfaz. Este tono aporta elegancia, seriedad y profundidad, además de generar un entorno visual enfocado y libre de distracciones, refuerza la percepción de control, vigilancia y tecnología.
 <center>
-<img src="activos/ imagen/negro.png">
+<img src="activos/imagen/negro.png">
 </center>
 
 - **Verde** Usamos en verde neón (#C3F400) como color principal de aceto. Lo usamos en botones, indicadores y títulos. Este color se asocia a sistemas digitales, monitoreo y confirmación, transmitiendo dinamismo e innovación. El otro verde (#596D0B) lo usamos de color secundario para generar contraste.
 <center>
-<img src="activos/ imagen/Verde.png">
+<img src="activos/imagen/Verde.png">
 </center>
 
 - **Rojo:** Este rojo lo usamos de manera puntual en elementos críticos, para transmitir alerta, ya que es un color que se asocia mucho a emergencia, urgencia, peligro o acción inmediata.
 <center>
-<img src="activos/ imagen/Rojo.png">
+<img src="activos/imagen/Rojo.png">
 </center>
 
 **Typography:**
@@ -45,7 +45,7 @@ Se establecerá la siguiente jerarquía:
 - Párrafos: legible y de lectura rápida. **Inter- Light/Bold (24-12px)**
 
 <center>
-<img src="activos/ imagen/Type.png">
+<img src="activos/imagen/Type.png">
 </center>
 
 **Spacing y Layout:**
@@ -53,7 +53,7 @@ El diseño se organizará mediante el uso de espacios consistentes y estructuras
 
 - Base unit: Se usará la regla de múltiplos de px para paddings y spacing.
 <center>
-<img src="activos/ imagen/spacing.png">
+<img src="activos/imagen/spacing.png">
 </center>
 
 - Grid: Márgenes de 24px para mantener armonía en la vista.
@@ -63,15 +63,15 @@ El diseño se organizará mediante el uso de espacios consistentes y estructuras
 
 - Botones: Verde para acciones principales, rojo para acciones críticas, gris para acciones secundarias.
 <center>
-<img src="activos/ imagen/button.png">
+<img src="activos/imagen/button.png">
 </center>
 - Cards: Contenedores de información organizados y fáciles de entender.
 <center>
-<img src="activos/ imagen/cuadros.png">
+<img src="activos/imagen/cuadros.png">
 </center>
 - Iconografía: Estilo simple y de fácil reconocimiento.
 <center>
-<img src="activos/ imagen/icons.png">
+<img src="activos/imagen/icons.png">
 </center>
 
 **Tono de comunicación:**
@@ -87,7 +87,7 @@ Las decisiones de diseño se sustentan en los siguientes principios:
 #### 4.1.2. Web Style Guidelines
 En esta sección, definiremos los estándares visuales e interactivos de la aplicación en entorno web, asegurando una experiencia consistente y funcional.
 
-<img src="activos/ imagen/NavbarAndButtons.png">
+<img src="activos/imagen/NavbarAndButtons.png">
 
 ---
 
