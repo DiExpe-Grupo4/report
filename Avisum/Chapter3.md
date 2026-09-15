@@ -2,7 +2,22 @@
 
 ## 3.1. To-Be Scenario Mapping
 
+<h3>Segento 1</h3>
 
+|Inicio de turno|Durante la ruta|Ante un cobro de cupo|Ante una emergencia|Cierre de turno|
+| :--: | :--: | :--: | :--: | :--: |
+| **Doing** | Inicia sesión y valida su identidad mediante reconocimiento facial antes de recibir la unidad | Conduce sabiendo que tiene el botón de alerta accesible en todo momento, sin distraerse con el celular | Activa la alerta de pánico de forma discreta si percibe una amenaza durante el cobro | Presiona el botón de pánico y recibe confirmación de que la alerta llegó a la central | Finaliza el servicio desde la misma app; el cierre queda registrado automáticamente |
+| **Thinking** | "Ya no tengo que recordar de memoria qué zonas son riesgosas, el sistema me respalda todo el turno." | "Si algo pasa, no dependo de avisar por WhatsApp a un colega, la central ya lo sabe." | "Ahora queda un registro de lo que pasó, no es mi palabra sola contra la de nadie." | "Ya no me pregunto si alguien va a contestar, sé que la alerta se envió y fue confirmada." | "Ya no tengo que contarle todo de memoria al siguiente conductor, mi turno ya quedó registrado." |
+| **Feeling** | Confianza, sensación de respaldo desde el inicio 🙂 | Tranquilidad, menor carga mental de vigilar su propia seguridad 🙂 | Menos indefensión, respaldo institucional 😌 | Alivio inmediato al ver la confirmación 😮‍💨→🙂 | Sensación de continuidad y respaldo documentado 🙂 |
+
+
+<h3>Segento 2</h3>
+
+|Inicio de operación | Supervisión durante el día | Ante un incidente reportado | Gestión de la escasez de conductores | Cierre y evaluación |
+| :--: | :--: | :--: | :--: | :--: |
+| **Doing** | Abre el panel de Avisum y ve qué unidades están validadas e iniciando servicio, sin depender de reportes verbales | Consulta el panel centralizado de estado y ubicación en tiempo real, en vez de llamar uno por uno | Recibe la alerta ya clasificada por gravedad, con ubicación exacta del evento, directo en el panel | Consulta el historial de emergencias para identificar patrones de riesgo y sustentar mejoras a sus conductores | Revisa el historial de alertas y métricas del periodo directamente en el sistema |
+| **Thinking** | "Ya no tengo que esperar llamadas para saber quién salió a ruta." | "Puedo ver todo al mismo tiempo, ya no tengo que llamar a cada conductor." | "Ya no tengo que decidir a quién llamar primero, el sistema me dice qué tan grave es y dónde está." | "Ahora tengo datos concretos de cuántos incidentes hubo y dónde, no solo percepción." | "Ya puedo cuantificar cuánto he mejorado en seguridad, con datos reales." |
+| **Feeling** | Mayor control desde el primer momento del día 🙂 | Tranquilidad y eficiencia, menos tiempo invertido en supervisión manual 🙂 | Rapidez y certeza en la toma de decisiones 😌 | Confianza en decisiones basadas en evidencia, no en intuición 🙂 | Seguridad en la gestión y argumento sólido frente a la operación de la flota 🙂 |
 
 ## 3.2. User Stories
 
