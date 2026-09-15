@@ -167,21 +167,27 @@ Por otro lado, estas son nuestras tácticas específicas:
 Edad: 24 años
 Distrito: Los Olivos
 Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQAgxwp_SW22QpjqP_2LFiWSAdYBHohGYuGkvqzhTnHDw3Q?e=p0gfr4
+
 ![Entrevista 1](assets/img/Entrevista1.png)
+
 **Resumen de la entrevista:** Isaac inicia su jornada a las 4 a.m. y termina pasadas las 10 p.m., enfrentando mayor sensación de inseguridad durante las noches, especialmente en zonas como El Agustino y Caquetá. Señala que las extorsiones y cobros de cupos son prácticamente cotidianos, con amenazas físicas hacia quienes se niegan a pagar. En cuanto a seguridad, su unidad cuenta apenas con una cámara de baja calidad, sin ningún otro mecanismo de protección por parte de la empresa. Ante una emergencia, reconoce que pedir ayuda es muy lento y complicado, ya que depende únicamente de su celular personal. Considera fundamental contar con monitoreo en tiempo real, un botón de pánico y registro del número de pasajeros a bordo. Mostró total disposición a usar una aplicación de seguridad, incluyendo la validación de identidad por QR, viéndola como una medida que ordena y protege la operación. Usaría la solución principalmente en el turno nocturno y al inicio de cada jornada. 
 
 **Entrevistado 2: Elverth Vasquez**
 Edad: 24 años
 Distrito: Ate
 Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQDZPsCISt-yTYTs5S4l8HeaAQpjL1ZLpmaajFW__S6ceEI?e=qO2gok
+
 ![Entrevista2](assets/img/Entrevista2.png)
+
 **Resumen de la entrevista:** Elverth inicia su jornada a las 4:30 a.m. y culmina cerca de las 9 p.m., realizando entre 4 y 5 vueltas diarias. Identifica zonas como Zárate y La Victoria como los puntos de mayor riesgo durante su ruta nocturna. Señala que los cobros de cupo ocurren dos veces por semana de manera casi normalizada, asumiendo esta presión como parte inevitable del trabajo. En cuanto a seguridad, cuenta únicamente con una cámara en mal estado sin ningún respaldo adicional por parte de la empresa. Reconoce que pedir ayuda en una emergencia es peligroso e ineficiente, ya que debe llamar por celular mientras conduce. Considera prioritario contar con un botón de alerta directa que no requiera comunicación verbal, y también señala la falta de respuesta policial como un problema estructural que agrava su situación. Mostró total disposición a usar una aplicación de monitoreo y valoró positivamente la validación por QR, viéndola como una medida que también lo protege a él ante posibles suplantaciones. Usaría la solución principalmente en horario nocturno y al transitar por zonas de alto riesgo que ya tiene identificadas en su ruta. 
 
 **Entrevistado 3: Margarita Nuñez** 
 Edad: 34
 Distrito: Ate
 Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQCDEnBDbQFuT5alyi7S1O1rAc_Amy-5v-hK0TdLZh5oRWs?e=ee2m7X
+
 ![Entrevita3](assets/img/Entrevista3.png)
+
 **Resumen de la entrevista:** Margarita combina su jornada laboral de 6 a.m. a 8 p.m. con sus responsabilidades como madre, dejando a sus hijos al cuidado de su mamá antes de salir cada día. Identifica el riesgo no solo en horario nocturno sino a lo largo de toda la jornada, señalando que como mujer conductora enfrenta una exposición mayor a intimidaciones y acoso dentro de su propia unidad. Indica que en su ruta se cobra cupo semanalmente y que su condición de mujer la hace blanco más fácil de presión por parte de los extorsionadores. En cuanto a seguridad, no cuenta con ningún mecanismo real de protección, dependiendo únicamente de un número telefónico de la empresa que raramente responde a tiempo. Destaca como necesidad prioritaria una alarma silenciosa que no sea visible para el agresor, ya que activar una alerta de forma obvia podría empeorar la situación. Mostró la mayor disposición de los tres entrevistados hacia el uso de la aplicación, afirmando que la usaría desde el primer día y durante toda la jornada sin restricción de horario. Valoró positivamente la validación por QR como mecanismo que agiliza la respuesta de la empresa ante cualquier incidente que le ocurra. 
 
 
@@ -190,7 +196,9 @@ Link del video: https://1drv.ms/v/c/470edfbbf4f38077/IQCDEnBDbQFuT5alyi7S1O1rAc_
 **Entrevistado 1: Kiara Nuñez Alvarado**
 Edad: 27
 Distrito: Puente Piedra
+
 ![Entrevista4](assets/img/Entrevista4.png)
+
 **Resumen de la entrevista:** Kiara representante de ETUCHISA SAC.
 La entrevistada señala que actualmente la empresa cuenta con medidas básicas de seguridad, como cámaras en algunas unidades, supervisión en paraderos y contacto con autoridades; sin embargo, reconoce que la cobertura es limitada y no existe un sistema integral.
 El principal problema identificado es la extorsión por parte de organizaciones criminales, además de robos tanto dentro como fuera de las unidades, especialmente en zonas con poca iluminación. Estas situaciones ocurren con alta frecuencia, afectando tanto a conductores como a pasajeros.
@@ -201,7 +209,9 @@ Finalmente, considera que una solución digital permitiría mejorar el control d
 **Entrevistado 2: Jaime A. Russvelt**
 Edad: 50
 Distrito: Ancon
+
 ![Entrevista5](assets/img/Entrevista5.png)
+
 **Resumen de la entrevista:** Representante de la empresa nueva estrella
 
 El entrevistado describe un contexto altamente crítico, donde la extorsión es el principal problema estructural, afectando tanto a la empresa como a los propietarios de unidades. Señala que existen cobros elevados por parte de organizaciones criminales, incluso múltiples grupos simultáneamente.
@@ -213,7 +223,9 @@ El entrevistado considera que una solución tecnológica sería útil, especialm
 **Entrevistado 3: Puma Nicanor Yamoca**
 Edad: 45
 Distrito: Santa Anita
+
 ![Entrevista6](assets/img/Entrevista6.png)
+
 **Resumen de la entrevista:** Representante de Alamo santa rosa la G, propietario de 12 unidades que trabaja desde pacasmayo hasta santa anita
 El entrevistado manifiesta que tanto conductores como pasajeros trabajan en un entorno de alta inseguridad, donde la extorsión es el problema más grave y constante. Indica que el pago de cupos es prácticamente obligatorio para poder operar con normalidad.
 Destaca que las organizaciones criminales ejercen un control constante, llegando incluso a conocer información personal de los transportistas, lo que incrementa el nivel de riesgo. Esta situación tiene un impacto directo en la economía, ya que obliga a los conductores a trabajar más y aumentar las tarifas, afectando también a los usuarios.
