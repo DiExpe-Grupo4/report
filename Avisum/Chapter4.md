@@ -230,31 +230,31 @@ Aquí vemos la organización de secciones individuales que componen las distinta
 <center>
 <img src = "assets/img/LandingPageWireframe.png">
 <center>
-<img src = "Resources/img/ga1.png">
-<img src = "Resources/img/ga2.png">
-<img src = "Resources/img/ga3.png">
-<img src = "Resources/img/ga4.png">
+<img src = "assets/img/ga1.png">
+<img src = "assets/img/ga2.png">
+<img src = "assets/img/ga3.png">
+<img src = "assets/img/ga4.png">
 </center>
 
 #### 4.4.2. Web Applications Wireflow Diagrams
 
 Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
-<img src = "Resources/img/Wireflow.png">
+<img src = "assets/img/Wireflow.png">
 
 #### 4.4.2. Web Applications Mock-ups
 <center>
-<img src = "Resources/img/SafeBus - Acceso Conductor.png">
-<img src = "Resources/img/SafeBus - ImpactoEnNumeros.png">
-<img src = "Resources/img/SafeBus - Inicio.png">
-<img src = "Resources/img/SafeRide - Inicio de Servicio.png">
+<img src = "assets/img/SafeBus - Acceso Conductor.png">
+<img src = "assets/img/SafeBus - ImpactoEnNumeros.png">
+<img src = "assets/img/SafeBus - Inicio.png">
+<img src = "assets/img/SafeRide - Inicio de Servicio.png">
 </center>
 
 #### 4.4.3. Web Applications User Flow Diagrams
 
 **User flow 1: ADMIN**
 <center>
-<img src = "Resources/img/UserflowAdmin.png">
+<img src = "assets/img/UserflowAdmin.png">
 </center>
 
 **User Flow 2: Conductor**
@@ -282,29 +282,29 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 **Accesibilidad y objetivos táctiles:** Todos los elementos interactivos del prototipo tienen dimensiones mínimas de 48 × 48 px, especialmente relevantes para conductores que interactúan con la aplicación desde su smartphone durante la jornada de manejo. El botón de pánico tiene dimensiones ampliadas y color rojo con alto contraste para garantizar su activación inmediata bajo condiciones de estrés. Los contrastes de color en todos los estados cumplen el mínimo WCAG 2.1 AA.
 
 <center>
-<img src= "Resources/img/SafeBusLading.png">
+<img src= "assets/img/SafeBusLading.png">
 </center>
 
 ### Flujos de interacción cubiertos por el prototipo
 
 **Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende la pantalla de verificación de identidad mediante código QR, la validación de autorización del conductor para el vehículo asignado, la validación de que el conductor no esté operando otra unidad simultáneamente, la pantalla de servicio activo con el botón de pánico, el contador de pasajeros en tiempo real y el botón de finalización de turno con confirmación modal.
 <center>
-<img src= "Resources/img/AccesoAutorizadoConductor.png">
+<img src= "assets/img/AccesoAutorizadoConductor.png">
 </center>
 
 **Flujo 2 — Gestión de pasajeros y detección de anomalías:** Comprende la pantalla de conteo de pasajeros con botones de abordaje y bajada, la alerta visual al superar la capacidad máxima del vehículo, la detección y notificación de variaciones anómalas en el número de pasajeros y la consulta del estado actual del servicio.
 <center>
-<img src= "Resources/img/ConteoDePasajeros.png">
+<img src= "assets/img/ConteoDePasajeros.png">
 </center>
 
 **Flujo 3 — Activación y gestión de alertas de emergencia:** Comprende la activación del botón de pánico por el conductor, la confirmación de envío con indicador de reintento automático si no hay respuesta, la recepción de la alerta en el panel de la central con clasificación automática por nivel de gravedad, el detalle de la alerta con conductor, vehículo, número de pasajeros y ubicación, el registro del tiempo de respuesta al confirmar la atención y el escalamiento automático de alertas no atendidas con notificación a múltiples destinatarios.
 <center>
-<img src= "Resources/img/EnvioDeAlerta.png">
+<img src= "assets/img/EnvioDeAlerta.png">
 </center>
 
 **Flujo 4 — Monitoreo de flota por la empresa administradora:** Comprende el dashboard de estado en tiempo real de todas las unidades activas, el módulo de seguimiento de ubicación por vehículo, el monitoreo de ocupación con comparación entre rutas, la detección de unidades que superan su capacidad y el historial completo de emergencias filtrable por fecha, conductor y vehículo.
 <center>
-<img src= "Resources/img/MonitoreoEmpresaAdministradora.png">
+<img src= "assets/img/MonitoreoEmpresaAdministradora.png">
 </center>
 
 ---
@@ -316,43 +316,43 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 - Autentificacion de cuentas: Responsable de autentificar al conductor.
 <center>
-<img src="Resources/img/autentificacioncuentas.png">
+<img src="assets/img/autentificacioncuentas.png">
 </center>
 
 - Monitoreo de Tranporte: Encargado de seguimiento GPS, estado de unidades y su visualización en tiempo real.
 <center>
-<img src="Resources/img/monitoreotransporte.png">
+<img src="assets/img/monitoreotransporte.png">
 </center>
 
 - Gestion de Alertas: Administra notificaciones de emergencia y comunicación.
 <center>
-<img src="Resources/img/Gestionalarmas.png">
+<img src="assets/img/Gestionalarmas.png">
 </center>
 
 - Gestión de usuarios: Administra usuarios.
 <center>
-<img src="Resources/img/Gestiondeusuarios.png">
+<img src="assets/img/Gestiondeusuarios.png">
 </center>
 
 - Gestion de sensores IoT: Administra sensores
 <center>
-<img src="Resources/img/SensoresIoT.png">
+<img src="assets/img/SensoresIoT.png">
 </center>
 
 #### 4.6.2. Software Architecture Context Diagram
 <center>
-<img src = "Resources/img/SAcontextDiagram.png">
+<img src = "assets/img/SAcontextDiagram.png">
 </center>
 
 #### 4.6.3. Software Architecture Container Diagrams
 <center>
-<img src = "Resources/img/SAcontainerDiagram.png">
+<img src = "assets/img/SAcontainerDiagram.png">
 </center>
 
 #### 4.6.4. Software Architecture Components Diagrams
 <center>
-<img src = "Resources/img/SAComponentsDiagram.png">
-<img src = "Resources/img/diagramacontenedoresconduct.png">
+<img src = "assets/img/SAComponentsDiagram.png">
+<img src = "assets/img/diagramacontenedoresconduct.png">
 </center>
 
 ---
@@ -360,7 +360,7 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 ### 4.7. Software Object-Oriented Design
 #### 4.7.1. Class Diagrams
 <center>
-<img src = "Resources/img/ClassDiagram.png">
+<img src = "assets/img/ClassDiagram.png">
 </center>
 
 ---
@@ -368,5 +368,5 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 ### 4.8. Database Design
 #### 4.8.1. Database Diagrams
 <center>
-<img src = "Resources/img/DatabaseDiagram.png">
+<img src = "assets/img/DatabaseDiagram.png">
 </center>
