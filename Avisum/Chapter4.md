@@ -229,7 +229,144 @@ Wireframe Landing Page: En este wireframe vemos la organización de los elemento
 Aquí vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
 <center>
 <img src = "assets/img/LandingPageWireframe.png">
+<center>
+<img src = "Resources/img/ga1.png">
+<img src = "Resources/img/ga2.png">
+<img src = "Resources/img/ga3.png">
+<img src = "Resources/img/ga4.png">
 </center>
 
-Organización de elementos para el landing page en entorno de móviles  
+#### 4.4.2. Web Applications Wireflow Diagrams
+
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
+
+<img src = "Resources/img/Wireflow.png">
+
+#### 4.4.2. Web Applications Mock-ups
 <center>
+<img src = "Resources/img/SafeBus - Acceso Conductor.png">
+<img src = "Resources/img/SafeBus - ImpactoEnNumeros.png">
+<img src = "Resources/img/SafeBus - Inicio.png">
+<img src = "Resources/img/SafeRide - Inicio de Servicio.png">
+</center>
+
+#### 4.4.3. Web Applications User Flow Diagrams
+
+**User flow 1: ADMIN**
+<center>
+<img src = "Resources/img/UserflowAdmin.png">
+</center>
+
+**User Flow 2: Conductor**
+
+<img src = "Resources/img/UserFlowConductor.png">
+
+---
+
+## 4.5. Web Applications Prototyping
+
+### Introducción y criterios de diseño
+
+El prototipo interactivo de SafeBus simula la navegación y los principales flujos de interacción de la aplicación web, permitiendo evaluar la coherencia de la experiencia de usuario antes del desarrollo, identificar puntos de fricción y validar las decisiones de arquitectura de información tomadas a lo largo del capítulo 4. El prototipo fue construido en Figma utilizando conexiones de prototipado entre frames, transiciones y overlays para representar de forma fiel los comportamientos especificados en los User Flow Diagrams.
+
+Los criterios de diseño que guiaron las decisiones de interacción y navegación del prototipo son los siguientes:
+
+**Orientación al rol y al flujo operativo de urgencia:** La arquitectura de navegación prioriza el acceso inmediato a las tareas de mayor frecuencia e importancia definidas en el User Task Matrix del capítulo 2. Para el conductor, el botón de pánico es el elemento más prominente de su pantalla principal, visible desde el primer momento en que inicia sesión. Para el operador de la central, el panel de alertas activas clasificadas por nivel de gravedad es la primera vista al iniciar sesión. Para el administrador de la empresa, el dashboard con el estado en tiempo real de toda la flota carga como vista inicial sin pasos adicionales.
+
+**Consistencia en los patrones de interacción:** Se emplearon cuatro patrones de navegación a lo largo de toda la aplicación: (1) Navegación por Sidebar para el cambio entre módulos principales según el rol activo — conductor, central o empresa; (2) Drawer lateral deslizante para formularios de registro y edición que no requieren cambio de contexto, como el registro de un nuevo conductor o la asignación de vehículo; (3) Modal central para acciones críticas que requieren confirmación del usuario, como finalizar el turno, desactivar un conductor o escalar una alerta no atendida; y (4) Toast o Snackbar para retroalimentación inmediata de resultado sin interrumpir el flujo operativo, como la confirmación de recepción de una alerta de pánico.
+
+**Prevención de errores en acciones de alto impacto:** En operaciones con consecuencias irreversibles o de alto impacto operativo, como activar el botón de pánico, finalizar un turno activo, desactivar un conductor o escalar una alerta, el prototipo incluye una capa adicional de confirmación mediante modal que describe el impacto de la acción antes de ejecutarla. Esto es especialmente crítico en el contexto de SafeBus, donde una acción incorrecta puede comprometer la trazabilidad de un incidente real de seguridad en el transporte público.
+
+**Retroalimentación inmediata en tiempo real:** Todos los cambios en el estado del sistema que afectan al usuario se comunican de forma inmediata: el panel de alertas de la central se actualiza al recibirse una nueva alerta de pánico, el contador de pasajeros se actualiza en tiempo real al registrarse cada abordaje o bajada, y los campos de formulario muestran validación inline sin necesidad de enviar el formulario completo. Las alertas no confirmadas muestran un indicador de reintento automático visible en el panel de la central.
+
+**Accesibilidad y objetivos táctiles:** Todos los elementos interactivos del prototipo tienen dimensiones mínimas de 48 × 48 px, especialmente relevantes para conductores que interactúan con la aplicación desde su smartphone durante la jornada de manejo. El botón de pánico tiene dimensiones ampliadas y color rojo con alto contraste para garantizar su activación inmediata bajo condiciones de estrés. Los contrastes de color en todos los estados cumplen el mínimo WCAG 2.1 AA.
+
+<center>
+<img src= "Resources/img/SafeBusLading.png">
+</center>
+
+### Flujos de interacción cubiertos por el prototipo
+
+**Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende la pantalla de verificación de identidad mediante código QR, la validación de autorización del conductor para el vehículo asignado, la validación de que el conductor no esté operando otra unidad simultáneamente, la pantalla de servicio activo con el botón de pánico, el contador de pasajeros en tiempo real y el botón de finalización de turno con confirmación modal.
+<center>
+<img src= "Resources/img/AccesoAutorizadoConductor.png">
+</center>
+
+**Flujo 2 — Gestión de pasajeros y detección de anomalías:** Comprende la pantalla de conteo de pasajeros con botones de abordaje y bajada, la alerta visual al superar la capacidad máxima del vehículo, la detección y notificación de variaciones anómalas en el número de pasajeros y la consulta del estado actual del servicio.
+<center>
+<img src= "Resources/img/ConteoDePasajeros.png">
+</center>
+
+**Flujo 3 — Activación y gestión de alertas de emergencia:** Comprende la activación del botón de pánico por el conductor, la confirmación de envío con indicador de reintento automático si no hay respuesta, la recepción de la alerta en el panel de la central con clasificación automática por nivel de gravedad, el detalle de la alerta con conductor, vehículo, número de pasajeros y ubicación, el registro del tiempo de respuesta al confirmar la atención y el escalamiento automático de alertas no atendidas con notificación a múltiples destinatarios.
+<center>
+<img src= "Resources/img/EnvioDeAlerta.png">
+</center>
+
+**Flujo 4 — Monitoreo de flota por la empresa administradora:** Comprende el dashboard de estado en tiempo real de todas las unidades activas, el módulo de seguimiento de ubicación por vehículo, el monitoreo de ocupación con comparación entre rutas, la detección de unidades que superan su capacidad y el historial completo de emergencias filtrable por fecha, conductor y vehículo.
+<center>
+<img src= "Resources/img/MonitoreoEmpresaAdministradora.png">
+</center>
+
+---
+
+### 4.6. Domain-Driven Software Architecture
+#### 4.6.1. Design-Level Event Storming
+Urban Guard es una plataforma orientada a mejorar la seguridad en el transporte público mediante monitoreo en tiempo real, protocolos de emergencia, sensores inteligentes y comunicación inmediata entre pasajeros, conductores y autoridades.
+El objetivo principal del sistema es detectar situaciones de riesgo, gestionar incidentes de seguridad y proporcionar respuesta rápida dentro de las unidades de transporte.
+
+- Autentificacion de cuentas: Responsable de autentificar al conductor.
+<center>
+<img src="Resources/img/autentificacioncuentas.png">
+</center>
+
+- Monitoreo de Tranporte: Encargado de seguimiento GPS, estado de unidades y su visualización en tiempo real.
+<center>
+<img src="Resources/img/monitoreotransporte.png">
+</center>
+
+- Gestion de Alertas: Administra notificaciones de emergencia y comunicación.
+<center>
+<img src="Resources/img/Gestionalarmas.png">
+</center>
+
+- Gestión de usuarios: Administra usuarios.
+<center>
+<img src="Resources/img/Gestiondeusuarios.png">
+</center>
+
+- Gestion de sensores IoT: Administra sensores
+<center>
+<img src="Resources/img/SensoresIoT.png">
+</center>
+
+#### 4.6.2. Software Architecture Context Diagram
+<center>
+<img src = "Resources/img/SAcontextDiagram.png">
+</center>
+
+#### 4.6.3. Software Architecture Container Diagrams
+<center>
+<img src = "Resources/img/SAcontainerDiagram.png">
+</center>
+
+#### 4.6.4. Software Architecture Components Diagrams
+<center>
+<img src = "Resources/img/SAComponentsDiagram.png">
+<img src = "Resources/img/diagramacontenedoresconduct.png">
+</center>
+
+---
+
+### 4.7. Software Object-Oriented Design
+#### 4.7.1. Class Diagrams
+<center>
+<img src = "Resources/img/ClassDiagram.png">
+</center>
+
+---
+
+### 4.8. Database Design
+#### 4.8.1. Database Diagrams
+<center>
+<img src = "Resources/img/DatabaseDiagram.png">
+</center>
