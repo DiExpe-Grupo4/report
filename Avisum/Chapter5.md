@@ -133,7 +133,7 @@ Para que nuestra landing page esté disponible para todos nuestros usuarios, la 
 Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Landing Page de SafeBus
 
 
-<img width="841" height="438" alt="image" src="https://github.com/user-attachments/assets/f83df4df-5565-4fd7-8b13-7b722c743a9a" />
+//imnagen a Insertar
 
 * Pantalla de GitHub para crear una organización, donde se ingresan el nombre, correo de contacto y si pertenece a una cuenta personal o institución antes de la verificación.
 
@@ -141,7 +141,7 @@ Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los reposit
 
 Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HTML, TailwindCSS, TypeScript). Verificamos que los cambios se hicieran en la rama principal (main). Finalmente, confirmamos la acción con “Commit changes” para guardar los archivos. Una vez ya configurada y lanzada podremos ingresar desde el repositorio mediante el enlace [safe-bus-lading.vercel.app](https://lading-page-six-psi.vercel.app/) .
 
-<img width="1892" height="932" alt="image" src="https://github.com/user-attachments/assets/12cdff7e-c520-4954-bd3a-4ae5db5401fc" />
+///IMAGEN A INSERTAR
 
 
 **3\. Visualización de la landing page**
@@ -149,4 +149,4 @@ Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HT
  La página principal del landing de SafeBus tiene un diseño limpio y moderno con un menú superior que enlaza las secciones "Características", "Cómo funciona", "Estadística" y "Apoyo", junto con un botón de ingreso. En la sección hero, destaca el eslogan "Protege tu ruta, asegura tu futuro" y una breve descripción del servicio. También se presentan estadísticas clave, como el porcentaje de rutas seguras operativas y la cantidad de conductores protegidos.
 
 
-<img width="835" height="411" alt="image" src="https://github.com/user-attachments/assets/4fcfe970-4224-48b5-92a1-a537b52c85bf" />
+//IMAGEN A INSERTAR
