@@ -148,5 +148,210 @@ Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HT
 
  La página principal del landing de SafeBus tiene un diseño limpio y moderno con un menú superior que enlaza las secciones "Características", "Cómo funciona", "Estadística" y "Apoyo", junto con un botón de ingreso. En la sección hero, destaca el eslogan "Protege tu ruta, asegura tu futuro" y una breve descripción del servicio. También se presentan estadísticas clave, como el porcentaje de rutas seguras operativas y la cantidad de conductores protegidos.
 
+///IMAGEN A INSERTAR 
+
+
+# 5.2. Product Implementation & Deployment
+
+## 5.2.1. Sprint Backlogs
+
+> Completa esta tabla con los sprints reales de tu equipo (Jira, Trello, GitHub Projects, etc.)
+
+📸 *Adjuntar captura del tablero (Jira/Trello/GitHub Projects) de cada sprint.*
+
+---
+
+## 5.2.2. Implemented Landing Page Evidence
+
+**Nombre del proyecto:** Avisum: Sistema de seguridad y monitoreo para transporte público urbano
+
+**URL desplegada:** https://lading-page-six-psi.vercel.app/
+
+**Stack:** React + TypeScript + Vite + Tailwind CSS , desplegado en Vercel 
+
+**Secciones implementadas:**
+- Hero con propuesta de valor
+- Estadísticas (rutas monitoreadas, conductores protegidos, reducción de incidentes)
+- Características (verificación de identidad, botón de pánico, monitoreo GPS)
+- Proceso "¿Cómo funciona Avisum?"
+- CTA de contacto/demo
+
+📸 *Adjuntar 2-3 capturas de la landing page (hero, características, footer).*
+
+---
+
+## 5.2.3. Implemented Frontend-Web Application Evidence
+
+**URL desplegada:** `https://avisum-frontend.vercel.app`
+
+**Stack:** Angular (standalone components + signals), estructurado por bounded context (alineado 1 a 1 con el backend):
+
+src/app/
+├── iam/ → login, verificación de identidad
+├── camera/ → reconocimiento facial (UI)
+├── monitoring/ → unidades de bus, turnos, conteo de pasajeros, mapa en vivo
+├── alert-management/ → alertas de pánico, historial de alertas
+├── profile/ → perfil del conductor
+├── users/ → gestión de conductores
+└── shared/ → servicios compartidos (tracking de flota en tiempo real)
+
+
+
+**Funcionalidades implementadas y conectadas al backend real:**
+- Login por código de empleado (`GET /employees/code/{code}`)
+- Verificación de identidad y arranque automático de turno
+- Dashboard del conductor con métricas en vivo (distancia, tiempo, pasajeros, recaudación)
+- Botón de pánico → crea alerta real en el backend
+- Panel de administración: asignación de unidades, historial de turnos, logs de alertas
+- Mapa en tiempo real (Leaflet/OpenStreetMap) con posición de la unidad
+
+📸 *Adjuntar capturas de: login, dashboard del conductor, panel de administración, mapa en vivo.*
+
+---
+
+## 5.2.4. Acuerdo de Servicio - SaaS
+
+
+
+*Nota técnica :* como el backend corre en el plan gratuito de Render, el servicio puede "dormir" tras 15 min de inactividad (primera petición tarda 30-50s en responder). Esto debe mencionarse como limitación conocida del ambiente de despliegue actual, no como parte del SLA comprometido en un entorno de producción real con plan pago.
+
+---
+
+## 5.2.5. Implemented Native-Mobile Application Evidence
+
+*A relizar*
+
+---
+
+## 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+
+**URL desplegada:** `https://avisum-backendv2.onrender.com`
+
+**Stack:** Spring Boot (Java), arquitectura DDD + CQRS, base de datos H2 (modo compatible MySQL), documentación автоgenerada con Springdoc/OpenAPI.
+
+**Bounded contexts implementados:**
+
+| Bounded Context | Responsabilidad | Aggregates |
+|---|---|---|
+| `iam` | Identidad y autenticación de empleados | `Employee` |
+| `usermanagement` | Gestión de conductores | `Driver` |
+| `monitoring` | Flota, turnos y conteo de pasajeros | `BusUnit`, `Sensor`, `Shift`, `PassengerCount` |
+| `alertmanagement` | Alertas de seguridad | `Alert` |
+| `camera` | Reconocimiento facial de conductores | `FaceVerification` |
+| `profiles` | Perfil del conductor | `DriverProfile` |
+
+**Seguridad implementada:**
+- Contraseñas hasheadas con BCrypt (nunca texto plano)
+- Bloqueo temporal de cuenta tras 5 intentos fallidos de login (15 min)
+- Login real con validación de credenciales (`POST /employees/login`)
+- Validación cruzada entre bounded contexts (ej. no se puede registrar un sensor en una unidad inexistente)
+
+**Despliegue:** contenedor Docker (multi-stage build, `eclipse-temurin:26`), desplegado en Render.
+
+📸 *Adjuntar captura de Render mostrando "Deploy succeeded / Live", y del Swagger UI en producción.*
+
+---
+
+## 5.2.7. RESTful API documentation
+
+**Documentación interactiva (Swagger/OpenAPI):** `https://avisum-backendv2.onrender.com/swagger-ui/index.html`
+
+### Endpoints principales
+
+**Employees (IAM)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/employees` | Crear empleado |
+| POST | `/api/v1/employees/login` | Login con validación de password |
+| GET | `/api/v1/employees` | Listar empleados |
+| GET | `/api/v1/employees/{id}` | Obtener empleado por ID |
+| GET | `/api/v1/employees/code/{employeeCode}` | Obtener empleado por código |
+
+**Drivers (UserManagement)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/drivers` | Registrar conductor |
+| GET | `/api/v1/drivers` | Listar conductores |
+| GET | `/api/v1/drivers/{id}` | Obtener conductor por ID |
+
+**Bus Units (Monitoring)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/bus-units` | Registrar unidad |
+| GET | `/api/v1/bus-units` | Listar unidades (incluye conductor asignado y conteo de pasajeros en vivo) |
+| GET | `/api/v1/bus-units/{id}` | Obtener unidad por ID |
+| PATCH | `/api/v1/bus-units/{id}/location` | Actualizar ubicación y velocidad |
+
+**Sensors (Monitoring)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/sensors` | Registrar sensor |
+| GET | `/api/v1/sensors` | Listar sensores |
+| GET | `/api/v1/sensors/{id}` | Obtener sensor por ID |
+| GET | `/api/v1/sensors/bus-unit/{busUnitId}` | Sensores de una unidad |
+| PATCH | `/api/v1/sensors/{id}/reading` | Actualizar lectura |
+
+**Shifts (Monitoring)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/shifts` | Iniciar turno |
+| PATCH | `/api/v1/shifts/{id}/end` | Finalizar turno |
+| GET | `/api/v1/shifts` | Listar turnos |
+| GET | `/api/v1/shifts/{id}` | Obtener turno por ID |
+| GET | `/api/v1/shifts/employee/{employeeId}` | Historial de turnos de un conductor |
+| GET | `/api/v1/shifts/bus-unit/{busUnitId}/active` | Turno activo de una unidad |
+
+**Passenger Counts (Monitoring)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/passenger-counts` | Registrar lectura de conteo |
+| GET | `/api/v1/passenger-counts` | Listar lecturas |
+| GET | `/api/v1/passenger-counts/shift/{shiftId}` | Lecturas de un turno |
+
+**Alerts (AlertManagement)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/alerts` | Crear alerta de seguridad |
+| GET | `/api/v1/alerts` | Listar alertas |
+| GET | `/api/v1/alerts/{id}` | Obtener alerta por ID |
+| GET | `/api/v1/alerts/employee/{employeeId}` | Alertas de un empleado |
+| PATCH | `/api/v1/alerts/{id}/resolve` | Resolver alerta |
+
+**Face Verifications (Camera)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/face-verifications` | Verificar rostro de un conductor |
+| GET | `/api/v1/face-verifications` | Listar verificaciones |
+| GET | `/api/v1/face-verifications/{id}` | Obtener verificación por ID |
+| GET | `/api/v1/face-verifications/employee/{employeeId}` | Historial de un empleado |
+
+**Driver Profiles (Profiles)**
+| Método | Endpoint | Descripción |
+|---|---|---|
+| POST | `/api/v1/driver-profiles` | Crear perfil |
+| GET | `/api/v1/driver-profiles` | Listar perfiles |
+| GET | `/api/v1/driver-profiles/{id}` | Obtener perfil por ID |
+| GET | `/api/v1/driver-profiles/employee/{employeeId}` | Perfil por empleado |
+| PATCH | `/api/v1/driver-profiles/employee/{employeeId}` | Actualizar perfil |
+
+---
+
+## 5.2.8. Team Collaboration Insights
+
+**Repositorios:**
+- Backend: `github.com/DiExpe-Grupo4/avisum-backendv2`
+- Frontend: `github.com/DiExpe-Grupo4/Avisum-Frontend`
+
+**Flujo de trabajo colaborativo:**
+- Backend y frontend en repositorios separados, cada uno responsable de su capa.
+- Integración mediante contrato de API documentado en Swagger — el frontend consume el backend ya probado en Swagger antes de conectarse.
+- Verificación cruzada de bounded contexts en el backend para mantener integridad referencial entre módulos (ej. IAM ↔ Monitoring ↔ Camera).
+
+📸 *Adjuntar captura de la pestaña "Insights" de cada repositorio en GitHub (Contributors, Commits over time, Code frequency).*
+
+**Miembros del equipo:** :
+
+
+
 
 //IMAGEN A INSERTAR
