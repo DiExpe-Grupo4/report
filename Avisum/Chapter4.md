@@ -95,10 +95,26 @@ En esta sección, definiremos los estándares visuales e interactivos de la apli
 ##### 4.1.3.1 iOS Mobile Style Guidelines.
 En esta sección, definiremos los estándares visuales e interactivos de la aplicación en entorno web, asegurando una experiencia consistente y funcional.
 
+Navbar:
+
 <img src="assets/img/mobilenavbar.png">
 
-##### 4.1.3.1 Andrpid Mobile Style Guidelines.
+Botones:
+
+<img src="assets/img/mobilebotones1.png">
+
+<img src="assets/img/mobilebotones2.png">
+
+<img src="assets/img/mobilebotones3.png">
+
+##### 4.1.3.2 Andrpid Mobile Style Guidelines.
 En esta sección, definiremos los estándares visuales e interactivos de la aplicación en entorno web, asegurando una experiencia consistente y funcional.
+
+Navbar:
+
+<img src="assets/img/mobilenavbar.png">
+
+Botones
 
 <img src="assets/img/mobilebotones1.png">
 
