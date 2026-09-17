@@ -218,11 +218,8 @@ src/app/
 - Panel de administración: asignación de unidades, historial de turnos, logs de alertas
 - Mapa en tiempo real (Leaflet/OpenStreetMap) con posición de la unidad
 
-* Login/ Incio de Sesion de Avisum
-
-  <img src="assets/img/InicioAvisum.png">
   
-* Verificacion del Conductor
+* Inicio de Sesion y Verificacion del Conductor
 
   <img src="assets/img/VerificacionConductor.png">
                     
