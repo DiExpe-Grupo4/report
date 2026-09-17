@@ -89,6 +89,13 @@ En esta sección, definiremos los estándares visuales e interactivos de la apli
 
 <img src="assets/img/NavbarAndButtons.png">
 
+
+#### 4.1.3. Web Style Guidelines.
+
+##### 4.1.3.1 iOS Mobile Style Guidelines.
+
+##### 4.1.3.1 Andrpid Mobile Style Guidelines.
+
 ---
 
 ### 4.2. Information Architecture
@@ -220,9 +227,24 @@ Para la Landing page se desarrollaron en Figma cada apartado del 	sitio web.
 
 ---
 
-### 4.4. Web Applications UX/UI Design
+### 4.4. Mobile Applications UX/UI Design
 
-#### 4.4.1. Web Applications Wireframes
+#### 4.4.1 Mobile Applications Wireframes
+#### 4.4.2 Mobile Applications Wireflow Diagrams
+#### 4.4.3 Mobile Applications Mock-ups
+#### 4.4.4 Mobile Applications User Flow Diagrams
+
+---
+
+### 4.5. Mobile Applications Prototyping
+#### 4.5.1 Android Mobile Prototyping
+#### 4.5.1 IOS Mobile Prototyping
+
+---
+
+### 4.6. Web Applications UX/UI Design
+
+#### 4.6.1. Web Applications Wireframes
 
 Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.  
 Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentan al usuario inicialmente al entrar a la página.  
@@ -236,13 +258,13 @@ Aquí vemos la organización de secciones individuales que componen las distinta
 <img src = "assets/img/ga4.png">
 </center>
 
-#### 4.4.2. Web Applications Wireflow Diagrams
+#### 4.6.2. Web Applications Wireflow Diagrams
 
 Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
 <img src = "assets/img/Wireflow.png">
 
-#### 4.4.2. Web Applications Mock-ups
+#### 4.6.3. Web Applications Mock-ups
 <center>
 <img src = "assets/img/SafeBus - Acceso Conductor.png">
 <img src = "assets/img/SafeBus - ImpactoEnNumeros.png">
@@ -250,7 +272,7 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 <img src = "assets/img/SafeRide - Inicio de Servicio.png">
 </center>
 
-#### 4.4.3. Web Applications User Flow Diagrams
+#### 4.6.4. Web Applications User Flow Diagrams
 
 **User flow 1: ADMIN**
 <center>
@@ -263,7 +285,7 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 
 ---
 
-## 4.5. Web Applications Prototyping
+## 4.7. Web Applications Prototyping
 
 ### Introducción y criterios de diseño
 
@@ -309,8 +331,8 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 
 ---
 
-### 4.6. Domain-Driven Software Architecture
-#### 4.6.1. Design-Level Event Storming
+### 4.8. Domain-Driven Software Architecture
+#### 4.8.1. Design-Level Event Storming
 Urban Guard es una plataforma orientada a mejorar la seguridad en el transporte público mediante monitoreo en tiempo real, protocolos de emergencia, sensores inteligentes y comunicación inmediata entre pasajeros, conductores y autoridades.
 El objetivo principal del sistema es detectar situaciones de riesgo, gestionar incidentes de seguridad y proporcionar respuesta rápida dentro de las unidades de transporte.
 
@@ -339,17 +361,17 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 <img src="assets/img/SensoresIoT.png">
 </center>
 
-#### 4.6.2. Software Architecture Context Diagram
+#### 4.8.2. Software Architecture Context Diagram
 <center>
 <img src = "assets/img/SAcontextDiagram.png">
 </center>
 
-#### 4.6.3. Software Architecture Container Diagrams
+#### 4.8.3. Software Architecture Container Diagrams
 <center>
 <img src = "assets/img/SAcontainerDiagram.png">
 </center>
 
-#### 4.6.4. Software Architecture Components Diagrams
+#### 4.8.4. Software Architecture Components Diagrams
 <center>
 <img src = "assets/img/SAComponentsDiagram.png">
 <img src = "assets/img/diagramacontenedoresconduct.png">
@@ -357,16 +379,20 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 ---
 
-### 4.7. Software Object-Oriented Design
-#### 4.7.1. Class Diagrams
+### 4.9. Software Object-Oriented Design
+#### 4.9.1. Class Diagrams
 <center>
 <img src = "assets/img/ClassDiagram.png">
 </center>
 
+
+#### 4.9.2 Class Dictionary
+
+
 ---
 
-### 4.8. Database Design
-#### 4.8.1. Database Diagrams
+### 4.10. Database Design
+#### 4.10.1. Database Diagrams
 <center>
 <img src = "assets/img/DatabaseDiagram.png">
 </center>
