@@ -130,10 +130,10 @@ Esta sección detalla los pasos necesarios para desplegar de forma satisfactoria
 
 Para que nuestra landing page esté disponible para todos nuestros usuarios, la publicamos como un sitio web utilizando la plataforma de GitHub. El proceso se llevó a cabo de la siguiente manera:
 
-Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Landing Page de SafeBus
+Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los repositorios del proyecto y almacenar el código de la Landing Page de Avisum
 
 
-//imnagen a Insertar
+<img width="841" height="438" alt="image" src="https://github.com/user-attachments/assets/f83df4df-5565-4fd7-8b13-7b722c743a9a" />
 
 * Pantalla de GitHub para crear una organización, donde se ingresan el nombre, correo de contacto y si pertenece a una cuenta personal o institución antes de la verificación.
 
@@ -141,14 +141,14 @@ Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los reposit
 
 Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HTML, TailwindCSS, TypeScript). Verificamos que los cambios se hicieran en la rama principal (main). Finalmente, confirmamos la acción con “Commit changes” para guardar los archivos. Una vez ya configurada y lanzada podremos ingresar desde el repositorio mediante el enlace [safe-bus-lading.vercel.app](https://lading-page-six-psi.vercel.app/) .
 
-///IMAGEN A INSERTAR
+  <img src="assets/img/RepoLanding.png">
 
 
 **3\. Visualización de la landing page**
 
  La página principal del landing de SafeBus tiene un diseño limpio y moderno con un menú superior que enlaza las secciones "Características", "Cómo funciona", "Estadística" y "Apoyo", junto con un botón de ingreso. En la sección hero, destaca el eslogan "Protege tu ruta, asegura tu futuro" y una breve descripción del servicio. También se presentan estadísticas clave, como el porcentaje de rutas seguras operativas y la cantidad de conductores protegidos.
 
-///IMAGEN A INSERTAR 
+ <img src="assets/img/visualizacionLanding.png">
 
 
 # 5.2. Product Implementation & Deployment
@@ -176,8 +176,21 @@ Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HT
 - Proceso "¿Cómo funciona Avisum?"
 - CTA de contacto/demo
 
-📸 *Adjuntar 2-3 capturas de la landing page (hero, características, footer).*
 
+* Header y Texto informativo  
+ <img src="assets/img/visualizacionLanding.png">
+
+*  Estadistica
+   <img src="assets/img/Estadistica.png">
+
+*   Capas de Defensa
+    <img src="assets/img/CapasDeDefensa.png">
+
+*   Como Funciona Avisum
+
+  <img src="assets/img/ComoFunciona.png">
+    
+ 
 ---
 
 ## 5.2.3. Implemented Frontend-Web Application Evidence
@@ -205,13 +218,68 @@ src/app/
 - Panel de administración: asignación de unidades, historial de turnos, logs de alertas
 - Mapa en tiempo real (Leaflet/OpenStreetMap) con posición de la unidad
 
-📸 *Adjuntar capturas de: login, dashboard del conductor, panel de administración, mapa en vivo.*
+* Login/ Incio de Sesion de Avisum
+
+  <img src="assets/img/InicioAvisum.png">
+  
+* Verificacion del Conductor
+
+  <img src="assets/img/VerificacionConductor.png">
+                    
+* Dashboard del condcutor
+
+  <img src="assets/img/dashboardConductor.png">
+
+* Mapa del Condcutor
+
+  <img src="assets/img/MapaConductor.png">
+
+* Alerta de Panico
+
+  <img src="assets/img/AlertaDePanico.png">
+
+* Servicio Finalizado
+
+  <img src="assets/img/ServicioFinalizado.png">
+
+* Reporte del Conductor al finalizzar su turno
+
+  <img src="assets/img/ServicioFinalizado.png">
+  
+* Panel de administracion , vista del centro de Operaciones
+
+  <img src="assets/img/PanelDeAdministracion.png">
+
 
 ---
 
 ## 5.2.4. Acuerdo de Servicio - SaaS
 
+**Avisum** se ofrece como un servicio SaaS (Software as a Service) de suscripción para empresas de transporte público urbano. A continuación se detallan los términos del acuerdo de servicio (SLA - Service Level Agreement) entre Avisum y las empresas cliente.
 
+### Niveles de servicio
+
+| Ítem | Compromiso |
+|---|---|
+| Disponibilidad objetivo | 99.0% mensual (excluye mantenimiento programado, notificado con 24h de anticipación) |
+| Horario de soporte | Lunes a Viernes, 9:00am – 6:00pm (hora Perú) |
+| Tiempo de respuesta ante incidente crítico (ej. caída total del sistema, botón de pánico no funcional) | Menor a 4 horas |
+| Tiempo de respuesta ante incidente menor (ej. error visual, reporte no crítico) | Menor a 24 horas |
+| Retención de datos | Mientras la cuenta esté activa, más 30 días adicionales tras cancelación |
+| Backups | Diarios, con retención de 7 días |
+| Canal de soporte | Correo soporte@avisum.pe y WhatsApp Business |
+
+### Responsabilidades del proveedor (Avisum)
+- Mantener la plataforma operativa según el nivel de disponibilidad acordado.
+- Aplicar actualizaciones de seguridad y parches de forma oportuna.
+- Notificar con anticipación cualquier mantenimiento programado que implique downtime.
+- Resguardar la confidencialidad de los datos de empleados y unidades registradas por el cliente.
+
+### Responsabilidades del cliente (empresa de transporte)
+- Mantener actualizada la información de sus conductores y unidades en el sistema.
+- Proteger las credenciales de acceso de sus operadores administrativos.
+- Reportar de inmediato cualquier incidente de seguridad o uso indebido detectado.
+- Usar el sistema conforme a los términos de uso aceptados al momento de la suscripción.
 
 *Nota técnica :* como el backend corre en el plan gratuito de Render, el servicio puede "dormir" tras 15 min de inactividad (primera petición tarda 30-50s en responder). Esto debe mencionarse como limitación conocida del ambiente de despliegue actual, no como parte del SLA comprometido en un entorno de producción real con plan pago.
 
@@ -248,8 +316,13 @@ src/app/
 
 **Despliegue:** contenedor Docker (multi-stage build, `eclipse-temurin:26`), desplegado en Render.
 
-📸 *Adjuntar captura de Render mostrando "Deploy succeeded / Live", y del Swagger UI en producción.*
+* Backend Deploy
 
+  <img src="assets/img/BackendDeployado.png">
+  
+* Swagger, Backend en produccion
+  
+  <img src="assets/img/SwaggerDeployado.png">
 ---
 
 ## 5.2.7. RESTful API documentation
