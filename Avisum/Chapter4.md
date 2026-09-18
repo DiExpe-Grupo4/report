@@ -259,12 +259,13 @@ Para la Landing page se desarrollaron en Figma cada apartado del sitio web.
 <img src = "assets/img/mocup_avissum.png">
 </center>
 
-
 ## 4.4. Mobile Applications UX/UI Design
-
 ### 4.4.1 Mobile Applications Wireframes
+
 ### 4.4.2 Mobile Applications Wireflow Diagrams
+
 ### 4.4.3 Mobile Applications Mock-ups
+
 ### 4.4.4 Mobile Applications User Flow Diagrams
 
 ## 4.5. Mobile Applications Prototyping
