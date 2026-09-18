@@ -141,14 +141,14 @@ Registro en GitHub Creamos una cuenta en GitHub para poder gestionar los reposit
 
 Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HTML, TailwindCSS, TypeScript). Verificamos que los cambios se hicieran en la rama principal (main). Finalmente, confirmamos la acción con “Commit changes” para guardar los archivos. Una vez ya configurada y lanzada podremos ingresar desde el repositorio mediante el enlace [safe-bus-lading.vercel.app](https://lading-page-six-psi.vercel.app/) .
 
-  <img src="assets/img/RepoLanding.png">
+  <img src="assets/img/RepoLanding.png" alt="RepoLanding">
 
 
 **3\. Visualización de la landing page**
 
  La página principal del landing de SafeBus tiene un diseño limpio y moderno con un menú superior que enlaza las secciones "Características", "Cómo funciona", "Estadística" y "Apoyo", junto con un botón de ingreso. En la sección hero, destaca el eslogan "Protege tu ruta, asegura tu futuro" y una breve descripción del servicio. También se presentan estadísticas clave, como el porcentaje de rutas seguras operativas y la cantidad de conductores protegidos.
 
- <img src="assets/img/visualizacionLanding.png">
+  <img src="assets/img/visualizacionLanding.png" alt="Visualización Landing">
 
 
 # 5.2. Product Implementation & Deployment
@@ -178,17 +178,17 @@ Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HT
 
 
 * Header y Texto informativo  
- <img src="assets/img/visualizacionLanding.png">
+ <img src="assets/img/visualizacionLanding.png" alt="Visualización Landing">
 
 *  Estadistica
-   <img src="assets/img/Estadistica.png">
+   <img src="assets/img/Estadistica.png" alt="Estadística">
 
 *   Capas de Defensa
-    <img src="assets/img/CapasDeDefensa.png">
+    <img src="assets/img/CapasDeDefensa.png" alt="Capas de Defensa">
 
 *   Como Funciona Avisum
 
-  <img src="assets/img/ComoFunciona.png">
+  <img src="assets/img/ComoFunciona.png" alt="Cómo funciona Avisum">
     
  
 ---
@@ -221,31 +221,31 @@ src/app/
   
 * Inicio de Sesion y Verificacion del Conductor
 
-  <img src="assets/img/VerificacionConductor.png">
+  <img src="assets/img/VerificacionConductor.png" alt="Verificación del conductor">
                     
 * Dashboard del condcutor
 
-  <img src="assets/img/dashboardConductor.png">
+  <img src="assets/img/dashboardConductor.png" alt="Dashboard del conductor">
 
 * Mapa del Condcutor
 
-  <img src="assets/img/MapaConductor.png">
+  <img src="assets/img/MapaConductor.png" alt="Mapa del conductor">
 
 * Alerta de Panico
 
-  <img src="assets/img/AlertaDePanico.png">
+  <img src="assets/img/AlertaDePanico.png" alt="Alerta de pánico">
 
 * Servicio Finalizado
 
-  <img src="assets/img/ServicioFinalizado.png">
+  <img src="assets/img/ServicioFinalizado.png" alt="Servicio finalizado">
 
 * Reporte del Conductor al finalizzar su turno
 
-  <img src="assets/img/ServicioFinalizado.png">
+  <img src="assets/img/ServicioFinalizado.png" alt="Servicio finalizado">
   
 * Panel de administracion , vista del centro de Operaciones
 
-  <img src="assets/img/PanelDeAdministracion.png">
+  <img src="assets/img/PanelDeAdministracion.png" alt="Panel de administración">
 
 
 ---
@@ -284,7 +284,41 @@ src/app/
 
 ## 5.2.5. Implemented Native-Mobile Application Evidence
 
-*A relizar*
+A continuación se adjuntan capturas que evidencian la implementación de la aplicación móvil nativa de Avisum. Las imágenes corresponden a pantallas reales y artefactos de desarrollo ubicados en la carpeta `assets/img/nativemobile/`.
+
+- Pantalla de inicio / Login — Interfaz donde el conductor ingresa su código y inicia sesión.
+
+  ![Login](assets/img/nativemobile/login.jpeg)
+
+- Pantalla principal (Home) — Vista principal con acceso a las funciones críticas: botón de pánico, estado del servicio y navegación rápida.
+
+  ![Home](assets/img/nativemobile/home.jpeg)
+
+- Registro de pasajeros — Interfaz de conteo y visualización del número de pasajeros durante el turno.
+
+  ![Conteo de pasajeros](assets/img/nativemobile/pasajeros.jpeg)
+
+- Perfil del conductor — Información del perfil, historial y configuración personal.
+
+  ![Perfil](assets/img/nativemobile/profile.jpeg)
+
+- Escaneo / Verificación — Pantalla utilizada para verificación rápida (por ejemplo escaneo de credenciales o QR).
+
+  ![Scan](assets/img/nativemobile/scan.jpeg)
+
+- Alerta enviada — Confirmación visual de que la alerta de pánico fue enviada correctamente.
+
+  ![Alerta enviada](assets/img/nativemobile/alerta-enviada.jpeg)
+
+- Alerta (pantalla de preparación) — Estado previo al envío de una alerta.
+
+  ![Alerta](assets/img/nativemobile/alerta.jpeg)
+
+- Entorno de desarrollo — Captura de Android Studio con la app en ejecución (evidencia del proceso de construcción y pruebas en emulador/dispositivo).
+
+  ![Android Studio](assets/img/nativemobile/android-studio.png)
+
+Estas imágenes constituyen la evidencia visual de la aplicación móvil: flujo de autenticación, control de turnos y pasajeros, proceso de verificación y envío de alertas. Si prefieres que usemos otra carpeta (por ejemplo `assets/mimg/native/mobile/`) puedo mover o duplicar las imágenes y actualizar las rutas en este documento — indícame exactamente la ruta que quieres usar.
 
 ---
 
@@ -315,11 +349,11 @@ src/app/
 
 * Backend Deploy
 
-  <img src="assets/img/BackendDeployado.png">
+  <img src="assets/img/BackendDeployado.png" alt="Backend desplegado">
   
 * Swagger, Backend en produccion
   
-  <img src="assets/img/SwaggerDeployado.png">
+  <img src="assets/img/SwaggerDeployado.png" alt="Swagger desplegado">
 ---
 
 ## 5.2.7. RESTful API documentation
