@@ -279,7 +279,14 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 </center>
 
 ### 4.4.3 Mobile Applications Mock-ups
+
+<img src="assets/img/mobileapplicationsmock-ups.png">
+
+</center>
+
 ### 4.4.4 Mobile Applications User Flow Diagrams
+<img src="assets/img/UserFlowConductor.png">
+
 
 ## 4.5. Mobile Applications Prototyping
 ### 4.5.1 Android Mobile Prototyping
