@@ -155,11 +155,51 @@ Accedimos al repositorio creado. Subimos los archivos generados del proyecto (HT
 
 ## 5.2.1. Sprint Backlogs
 
-> Completa esta tabla con los sprints reales de tu equipo (Jira, Trello, GitHub Projects, etc.)
+![spring backlog](assets/img/backlog_c5.png)
 
-📸 *Adjuntar captura del tablero (Jira/Trello/GitHub Projects) de cada sprint.*
+Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?filter=&groupBy=none
 
----
+
+| Sprint | US | Título | Tareas | Responsable | SP | Estado |
+|---|---|---|---|---|---|---|
+| Sprint 1 | US36 | Investigar mecanismo de comunicación en tiempo real | Comparar WebSockets, SSE y MQTT; hacer una prueba de concepto de latencia; documentar la decisión | Ivonne | 3 | Realizado |
+| Sprint 1 | US03 | Activar alerta de emergencia | Diseñar el botón de emergencia; enviar la alerta al backend; mostrar el estado del envío | Boris | 5 | Realizado |
+| Sprint 1 | US04 | Recepción de alerta | Implementar el canal en tiempo real; construir el panel de la central; mostrar la notificación | Kevin | 3 | Realizado |
+| Sprint 1 | US19 | Confirmación de recepción de alerta | Enviar el ACK desde la central; mostrar la confirmación al conductor; reintentar si falla | Kevin | 3 | Realizado |
+| Sprint 1 | US05 | Registro de evento de emergencia | Modelar la tabla o colección de eventos; persistir las alertas; probar el guardado | Abigail | 2 | Realizado |
+| Sprint 1 | US26 | Clasificación de alertas | Definir niveles de gravedad; implementar la regla de clasificación; ordenar por prioridad | Ivonne | 3 | Realizado |
+| Sprint 1 | US08 | Visualizar información del servicio | Maquetar la sección "Propuesta"; hacerla responsive | Carlos | 2 | Realizado |
+| Sprint 1 | US09 | Visualización de funcionalidades del servicio | Maquetar la sección "Funcionalidades"; agregar iconos y textos | Carlos | 2 | Realizado |
+| Sprint 1 | US27 | Registro de ubicación del evento | Capturar las coordenadas al activar la alerta; guardarlas en el evento; validar el formato | Abigail | 3 | Realizado |
+| Sprint 1 | US01 | Verificar identidad de conductor | Diseñar el flujo de validación; implementar la lógica en el backend; manejar errores | Ivonne | 5 | Realizado |
+| Sprint 1 | US02 | Registrar inicio de servicio | Crear la pantalla de inicio; guardar el registro con fecha y hora | Boris | 3 | Realizado |
+| Sprint 1 | US14 | Validar la autorización del conductor | Implementar la regla de conductor-vehículo autorizado; devolver mensajes de rechazo | Abigail | 3 | Realizado |
+| Sprint 1 | US15 | Asociación de conductor al vehículo | Definir la relación en la BD; guardar la asociación al iniciar el servicio | Abigail | 2 | Realizado |
+| Sprint 1 | US20 | Registro de turno terminado | Crear el botón de finalizar; cerrar el registro del viaje | Boris | 2 | Realizado |
+| Sprint 1 | US35 | Investigar tecnología de sensores para conteo | Comparar sensores infrarrojos, ultrasónicos y por cámara; evaluar precisión, costo e integración; documentar | Carlos | 3 | Realizado |
+| Sprint 1 | US06 | Conteo de pasajeros | Integrar el sensor elegido; implementar la lógica de subida y bajada; enviar el conteo al backend; hacer pruebas | Kevin (apoyo: Carlos) | 8 | Realizado |
+| Sprint 1 | US07 | Consultar número de pasajeros | Exponer el número actual; incluirlo en los reportes de emergencia | Carlos | 2 | Realizado |
+| Sprint 1 | US37 | Investigar servicio de geolocalización | Comparar Google Maps, Mapbox y GPS nativo; evaluar precisión y consumo de recursos; documentar | Abigail | 1 | Realizado |
+| Sprint 1 | US28 | Seguimiento de ubicación del vehículo | Enviar la ubicación periódicamente; almacenarla; mostrar la posición en el mapa en tiempo real | Ivonne (apoyo: Kevin) | 8 | Realizado |
+| Sprint 1 | US21 | Visualizar estado de unidades | Crear el listado y los indicadores de estado (activo, inactivo, en emergencia) | Boris | 3 | Realizado |
+| Sprint 1 | US16 | Consultar historial de emergencia | Crear la vista de historial; agregar filtros por fecha y gravedad | Kevin | 3 | Realizado |
+| Sprint 1 | US25 | Visualizar propuesta de valor | Maquetar la sección | Carlos | 1 | Realizado |
+| Sprint 1 | US23 | Visualización de misión y visión | Maquetar la sección | Carlos | 1 | Realizado |
+| Sprint 1 | US29 | Visualización de beneficios del sistema | Maquetar la sección | Carlos | 1 | Realizado |
+| Sprint 1 | US22 | Visualización de segmento de clientes | Maquetar la sección | Carlos | 1 | Realizado |
+| Sprint 1 | US30 | Visualización de equipo de trabajo | Maquetar la sección con fotos y descripciones del equipo | Carlos | 1 | Realizado |
+| Sprint 1 | US17 | Navegar entre secciones | Implementar el menú y el scroll suave entre secciones | Boris | 2 | Realizado |
+| Sprint 1 | US18 | Endpoint de autenticación | Implementar el login y el token (JWT); proteger las rutas | Ivonne | 3 | Realizado |
+| Sprint 1 | US10 | Endpoint de validación de conductor | Crear el endpoint; validar la entrada; escribir pruebas | Ivonne | 3 | Realizado |
+| Sprint 1 | US12 | Endpoint de alerta de emergencia | Crear el endpoint POST; documentar en Swagger; probar | Abigail | 3 | Realizado |
+| Sprint 1 | US13 | Endpoint de conteo de pasajeros | Crear el endpoint de actualización; validar rangos; probar | Abigail | 3 | Realizado |
+| Sprint 1 | US11 | Endpoint de inicio de servicio | Crear el endpoint POST; probar | Kevin | 3 | Realizado |
+| Sprint 1 | US24 | Endpoint de finalización de servicio | Crear el endpoint; probar | Kevin | 2 | Realizado |
+| Sprint 1 | US31 | Endpoint de actualización de conductor | Crear el endpoint PUT; validar los datos | Boris | 2 | Realizado |
+| Sprint 1 | US32 | Endpoint de consulta de historial de emergencias | Crear el endpoint GET con filtros y paginación | Boris | 2 | Realizado |
+| Sprint 1 | US33 | Endpoint de consulta de estado del servicio | Crear el endpoint GET | Carlos | 2 | Realizado |
+| Sprint 1 | US34 | Endpoint de consulta de ocupación del vehículo | Crear el endpoint GET | Carlos | 2 | Realizado |
+
 
 ## 5.2.2. Implemented Landing Page Evidence
 
@@ -451,11 +491,13 @@ Estas imágenes constituyen la evidencia visual de la aplicación móvil: flujo 
 - Integración mediante contrato de API documentado en Swagger — el frontend consume el backend ya probado en Swagger antes de conectarse.
 - Verificación cruzada de bounded contexts en el backend para mantener integridad referencial entre módulos (ej. IAM ↔ Monitoring ↔ Camera).
 
-📸 *Adjuntar captura de la pestaña "Insights" de cada repositorio en GitHub (Contributors, Commits over time, Code frequency).*
+![Landing](assets/img/Insight1_landing.png)
 
-**Miembros del equipo:** :
+![frontend](assets/img/insight1_frontend.png)
+
+![backend](assets/img/insight1_backend.png)
+
+![appmovil](assets/img/insight1_appmovil.png)
 
 
 
-
-//IMAGEN A INSERTAR
