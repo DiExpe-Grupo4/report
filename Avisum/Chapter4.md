@@ -263,6 +263,12 @@ Para la Landing page se desarrollaron en Figma cada apartado del sitio web.
 ## 4.4. Mobile Applications UX/UI Design
 
 ### 4.4.1 Mobile Applications Wireframes
+<img src = "assets/img/ga1.png">
+<img src = "assets/img/ga2.png">
+<img src = "assets/img/ga3.png">
+<img src = "assets/img/ga4.png">
+
+</center>
 ### 4.4.2 Mobile Applications Wireflow Diagrams
 ### 4.4.3 Mobile Applications Mock-ups
 ### 4.4.4 Mobile Applications User Flow Diagrams
@@ -281,10 +287,7 @@ Wireframe Landing Page: En este wireframe vemos la organización de los elemento
 Aquí vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
 <center>
 <img src = "assets/img/LandingPageWireframe.png">
-<img src = "assets/img/ga1.png">
-<img src = "assets/img/ga2.png">
-<img src = "assets/img/ga3.png">
-<img src = "assets/img/ga4.png">
+
 </center>
 
 ### 4.6.2. Web Applications Wireflow Diagrams
