@@ -259,6 +259,10 @@ Para la Landing page se desarrollaron en Figma cada apartado del sitio web.
 <img src = "assets/img/mocup_avissum.png">
 </center>
 
+**Mobile Web Browser Mock-up:**
+<center>
+<img src = "assets/img/LandingPageMockUpMobile.png">
+</center>
 
 ## 4.4. Mobile Applications UX/UI Design
 
@@ -306,12 +310,10 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 
 ### 4.6.1. Web Applications Wireframes
 
-Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.  
-Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentan al usuario inicialmente al entrar a la página.  
-Aquí vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
-<center>
-<img src = "assets/img/LandingPageWireframe.png">
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema, priorizando la jerarquía de información (columna izquierda: control del servicio en curso; columna derecha: acciones rápidas y estado del sistema) sobre el estilo visual.
 
+<center>
+<img src = "assets/img/WebAppWireframeInicio.png">
 </center>
 
 ### 4.6.2. Web Applications Wireflow Diagrams
