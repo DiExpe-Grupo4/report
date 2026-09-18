@@ -357,33 +357,13 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 
 ## 4.8. Domain-Driven Software Architecture
 ### 4.8.1. Design-Level Event Storming
-Urban Guard es una plataforma orientada a mejorar la seguridad en el transporte público mediante monitoreo en tiempo real, protocolos de emergencia, sensores inteligentes y comunicación inmediata entre pasajeros, conductores y autoridades.
+Durante la sesión de Design-Level EventStorming, el equipo exploró los flujos del dominio de forma independiente y granular, identificando contextos delimitados preliminares para cada proceso de negocio. Como parte del proceso metodológico exigido para este ejercicio, se incluyó también la exploración de un Shared Kernel & Infrastructure Context y un Communication & Notifications Bounded Context, orientados a preocupaciones transversales
+del sistema.
+
+Avisum es una plataforma orientada a mejorar la seguridad en el transporte público mediante monitoreo en tiempo real, protocolos de emergencia, sensores inteligentes y comunicación inmediata entre pasajeros, conductores y autoridades.
 El objetivo principal del sistema es detectar situaciones de riesgo, gestionar incidentes de seguridad y proporcionar respuesta rápida dentro de las unidades de transporte.
 
-- Autentificacion de cuentas: Responsable de autentificar al conductor.
-<center>
-<img src="assets/img/autentificacioncuentas.png">
-</center>
-
-- Monitoreo de Tranporte: Encargado de seguimiento GPS, estado de unidades y su visualización en tiempo real.
-<center>
-<img src="assets/img/monitoreotransporte.png">
-</center>
-
-- Gestion de Alertas: Administra notificaciones de emergencia y comunicación.
-<center>
-<img src="assets/img/Gestionalarmas.png">
-</center>
-
-- Gestión de usuarios: Administra usuarios.
-<center>
-<img src="assets/img/Gestiondeusuarios.png">
-</center>
-
-- Gestion de sensores IoT: Administra sensores
-<center>
-<img src="assets/img/SensoresIoT.png">
-</center>
+![Event Storming](assets/img/event_Storming.png)
 
 ### 4.8.2. Software Architecture Context Diagram
 <center>
@@ -405,17 +385,16 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 ## 4.9. Software Object-Oriented Design
 ### 4.9.1. Class Diagrams
+La arquitectura del sistema se ha modelado bajo el enfoque de Domain-Driven Design (DDD) para garantizar una alta cohesión y un bajo acoplamiento. Con el objetivo de facilitar el análisis del dominio y asegurar la legibilidad técnica, la representación visual del backend se ha segmentado. A continuación, se presentan los diagramas de clases correspondientes a los 5 Bounded Contexts identificados, detallando sus respectivos Agregados, Entidades y Objetos de Valor (Value Objects).
+
 <center>
 <img src = "assets/img/ClassDiagram.png">
 </center>
 
-
 ### 4.9.2 Class Dictionary
 
-
-
 ## 4.10. Database Design
-### 4.10.1. Database Diagrams
+### 4.10.1. Relational/Non-relational Database Diagram
 <center>
 <img src = "assets/img/DatabaseDiagram.png">
 </center>
