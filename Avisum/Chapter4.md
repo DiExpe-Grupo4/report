@@ -302,8 +302,78 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 
 
 ## 4.5. Mobile Applications Prototyping
+
+<h4>Introducción y criterios de diseño</h4> 
+
+El prototipo interactivo de SafeBus para dispositivos móviles representa la navegación y los principales flujos de interacción de la aplicación destinada a smartphones. El prototipo permite validar la experiencia de usuario antes de la implementación, comprobando la distribución de los elementos, la navegación entre pantallas y el comportamiento de las principales funcionalidades del sistema.
+
+La aplicación móvil se plantea para las plataformas Android e iOS, manteniendo una misma lógica funcional y los mismos flujos de interacción para los usuarios. La adaptación a cada plataforma se realiza considerando las características propias de los dispositivos móviles, especialmente la interacción táctil, el tamaño reducido de las pantallas y la necesidad de proporcionar acceso rápido a las funciones relacionadas con la operación y seguridad del servicio.
+
+El prototipo contempla principalmente las actividades realizadas por el conductor y las funciones de supervisión relacionadas con la operación de las unidades de transporte. Entre las funcionalidades representadas se encuentran la verificación de identidad, el inicio y finalización del servicio, el conteo de pasajeros, la activación de alertas de emergencia y el monitoreo de la información relacionada con las unidades.
+
+Los criterios de diseño considerados para el prototipo móvil son los siguientes:
+
+**Orientación al flujo operativo:** La navegación prioriza las funcionalidades necesarias para el desarrollo de las actividades principales de cada usuario. En el caso del conductor, se facilita el acceso al servicio activo, al conteo de pasajeros y al botón de pánico. De esta manera, las acciones relacionadas con la seguridad y operación del vehículo permanecen disponibles durante el servicio.
+
+**Adaptación a dispositivos móviles:** La interfaz se organiza considerando el tamaño y orientación de las pantallas de smartphones. Los elementos se distribuyen de manera que puedan ser identificados y utilizados mediante interacción táctil, evitando una sobrecarga de información en una misma pantalla.
+
+**Consistencia de interacción:** Los elementos y acciones mantienen patrones de interacción similares a lo largo del prototipo. Los botones, formularios, mensajes de confirmación y elementos de navegación conservan una lógica uniforme para que el usuario pueda comprender rápidamente el funcionamiento de la aplicación.
+
+**Prevención de errores:** Las acciones que pueden generar consecuencias importantes para la operación del sistema cuentan con mecanismos de confirmación. Esto permite reducir la posibilidad de ejecutar accidentalmente acciones como finalizar un servicio o activar una alerta de emergencia.
+
+**Retroalimentación del sistema:** Las acciones realizadas por el usuario generan una respuesta visual que permite conocer el resultado de la operación. Esto incluye mensajes de confirmación, cambios de estado y notificaciones relacionadas con las operaciones realizadas dentro de la aplicación.
+
+**Accesibilidad y facilidad de interacción:** El diseño considera el uso mediante pantallas táctiles, procurando que los elementos interactivos sean suficientemente visibles y fáciles de seleccionar. Se presta especial atención a las funciones relacionadas con situaciones de emergencia, donde el usuario requiere identificar rápidamente la acción correspondiente.
+
+**Consistencia entre plataformas:** Los prototipos para Android e iOS mantienen las mismas funcionalidades y flujos principales. De esta forma, un usuario puede realizar las mismas operaciones independientemente del sistema operativo utilizado, manteniendo una experiencia funcional consistente.
+
+<center>
+<img src= "assets/img/mobileapplicationsprototyping.png">
+</center>
+
 ### 4.5.1 Android Mobile Prototyping
-### 4.5.1 IOS Mobile Prototyping
+
+El prototipo móvil de SafeBus para Android representa la interacción del usuario con las principales funcionalidades de la aplicación desde un dispositivo smartphone. Su diseño adapta los flujos definidos para la plataforma web a un entorno de interacción táctil, priorizando la facilidad de navegación, la visualización de información relevante y el acceso rápido a las funciones relacionadas con la seguridad del servicio.
+
+El prototipo permite representar los principales flujos operativos de SafeBus, manteniendo la misma lógica funcional establecida para el sistema. Estos flujos comprenden la verificación e inicio del servicio del conductor, la gestión y monitoreo de pasajeros, la activación y gestión de alertas de emergencia y el monitoreo de la flota por parte de la empresa administradora.
+
+**Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende el acceso del conductor a la aplicación Android, la verificación de identidad mediante código QR y la validación de autorización para utilizar el vehículo asignado. También contempla la comprobación de que el conductor no se encuentre operando otra unidad simultáneamente. Una vez completadas las validaciones, el conductor accede al servicio activo, donde puede consultar el estado de su operación, visualizar el contador de pasajeros y acceder al botón de pánico. El flujo finaliza con la posibilidad de terminar el servicio mediante una acción de confirmación.
+
+<center> <img src="assets/img/flujo1.png"> </center>
+
+**Flujo 2 — Gestión de pasajeros y detección de anomalías:** Comprende la visualización del conteo de pasajeros durante el servicio activo. La aplicación permite consultar la cantidad de pasajeros registrados y reconocer los cambios producidos por los abordajes y bajadas. Asimismo, se contempla la notificación de situaciones en las que la cantidad de pasajeros supera la capacidad máxima del vehículo o presenta variaciones que requieren atención.
+
+<center> <img src="assets/img/flujo2.png"> </center>
+
+**Flujo 3 — Activación y gestión de alertas de emergencia:** Comprende la activación del botón de pánico desde el dispositivo móvil del conductor. Una vez realizada la acción, la aplicación proporciona una confirmación del envío de la alerta y comunica su estado. En caso de no recibir respuesta, se contempla el reintento de comunicación. La alerta generada contiene información relevante para su posterior gestión, como los datos del conductor, vehículo, pasajeros y ubicación disponible. El flujo permite mantener la comunicación entre el conductor y el personal responsable de atender la emergencia.
+
+<center> <img src="assets/img/flujo3.png"> </center>
+
+**Flujo 4 — Monitoreo de flota por la empresa administradora:** Comprende el acceso del usuario responsable de la empresa a la información relacionada con las unidades de transporte. El prototipo permite consultar el estado de los vehículos, realizar el seguimiento de su ubicación y revisar información relacionada con la ocupación. También contempla la identificación de unidades que superan su capacidad y la consulta del historial de emergencias mediante diferentes criterios de búsqueda.
+
+<center> <img src="assets/img/flujo4.png"> </center>
+
+### 4.5.2 IOS Mobile Prototyping
+
+El prototipo móvil de SafeBus para iOS representa la interacción del usuario con las principales funcionalidades de la aplicación desde dispositivos compatibles con este sistema operativo. Al igual que en Android, el prototipo adapta los flujos definidos para la aplicación web a un entorno móvil, considerando la interacción mediante pantalla táctil y la necesidad de proporcionar una navegación clara y directa.
+
+La versión para iOS mantiene la misma lógica funcional que la versión Android, permitiendo que los usuarios realicen las mismas operaciones y recorran los mismos flujos principales. De esta manera, las diferencias propias de cada plataforma no modifican las funcionalidades esenciales de SafeBus.
+
+**Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende el acceso del conductor a la aplicación iOS, la verificación de identidad mediante código QR y la validación de autorización para operar el vehículo asignado. También se verifica que el conductor no se encuentre operando otra unidad simultáneamente. Después de completar las validaciones, se presenta la pantalla de servicio activo, desde donde el conductor puede consultar el estado de su operación, visualizar el conteo de pasajeros y acceder al botón de pánico. Finalmente, el conductor puede finalizar el servicio mediante la correspondiente acción de confirmación.
+
+<center> <img src="assets/img/flujo1.png"> </center>
+
+**Flujo 2 — Gestión de pasajeros y detección de anomalías:** Comprende la consulta del conteo de pasajeros durante el servicio y la visualización de los cambios producidos por los abordajes y bajadas. El sistema permite identificar situaciones en las que la ocupación supera la capacidad máxima del vehículo y comunicar posibles variaciones anómalas en el número de pasajeros.
+
+<center> <img src="assets/img/flujo2.png"> </center>
+
+**Flujo 3 — Activación y gestión de alertas de emergencia:** Comprende la activación del botón de pánico por parte del conductor desde el dispositivo iOS. Después de activar la alerta, la aplicación muestra la confirmación correspondiente y comunica el estado del envío. Cuando no se obtiene respuesta, se contempla el mecanismo de reintento. La información asociada a la alerta permite al personal responsable conocer los datos necesarios para atender el incidente, incluyendo conductor, vehículo, cantidad de pasajeros y ubicación disponible.
+
+<center> <img src="assets/img/flujo3.png"> </center>
+
+**Flujo 4 — Monitoreo de flota por la empresa administradora:** Comprende la consulta del estado de las unidades de transporte desde la aplicación iOS. El usuario administrador puede acceder a información relacionada con la ubicación y ocupación de los vehículos, identificar unidades que superen su capacidad y consultar el historial de emergencias. La información se organiza para facilitar la consulta desde la pantalla del dispositivo y mantener la continuidad del flujo de monitoreo.
+
+<center> <img src="assets/img/flujo4.png"> </center>
 
 
 ## 4.6. Web Applications UX/UI Design
