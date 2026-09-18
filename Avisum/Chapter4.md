@@ -1,9 +1,8 @@
-## Capítulo IV: Product Design
-
-### 4.1. Style Guidelines
+# Capítulo IV: Product Design
+## 4.1. Style Guidelines
 Una guía de estilos o style guideline es un documento que enumera todas las elecciones y convenciones adoptadas en la empresa para mantener alineados al equipo de diseño y desarrollo. Seguir estos lineamientos permite desarrollar un prototipo de forma más rápida y eficiente (Kas, 2021).
 
-#### 4.1.1. General Style Guidelines
+### 4.1.1. General Style Guidelines
 El estilo visual de la aplicación está orientado a transmitir seguridad, control y monitoreo. La decisión del diseño prioriza la claridad de la información, la rapidez de interpretación y la confianza del usuario, considerando que la aplicación está enfocada en un entorno de gestión y seguridad.
 
 **Branding:**
@@ -18,7 +17,7 @@ Se busca que el usuario perciba el sistema como:
 Visualmente, se toma como referencia interfaces tipo dashboard y sistemas de monitoreo, donde la información es el elemento central y debe ser comprendida rápidamente.
 
 **Color Palette:**
-La paleta de colores de SafeBus se despliega en tonos oscuros y con contrastes, principalmente usamos el negro y verde neon, tambien el blanco y acentos de otros colores. Esta selección responde a la necesidad de crear un entorno visual tecnológico, seguro y orientado a la acción inmediata. La combinación de estos colores está pensada para transmitir monitoreo constante, control y respuesta en tiempo real, alineándose en el enfoque del que queremos dar con el producto respecto a la seguridad y gestión de buses.
+La paleta de colores de Avissum se despliega en tonos oscuros y con contrastes, principalmente usamos el negro y verde neon, tambien el blanco y acentos de otros colores. Esta selección responde a la necesidad de crear un entorno visual tecnológico, seguro y orientado a la acción inmediata. La combinación de estos colores está pensada para transmitir monitoreo constante, control y respuesta en tiempo real, alineándose en el enfoque del que queremos dar con el producto respecto a la seguridad y gestión de buses.
 
 - **Negro:** Usamos el color negro como la base de la interfaz. Este tono aporta elegancia, seriedad y profundidad, además de generar un entorno visual enfocado y libre de distracciones, refuerza la percepción de control, vigilancia y tecnología.
 <center>
@@ -60,7 +59,6 @@ El diseño se organizará mediante el uso de espacios consistentes y estructuras
 - Breakpoints: Ancho fijo de 1440px y alto de 1024px para web.
 
 **Componentes visuales:**
-
 - Botones: Verde para acciones principales, rojo para acciones críticas, gris para acciones secundarias.
 <center>
 <img src="assets/img/button.png">
@@ -84,15 +82,20 @@ Las decisiones de diseño se sustentan en los siguientes principios:
 - Accesibilidad: Buen contraste y legibilidad
 - Feedback inmediato: El sistema responde visualmente a las acciones del usuario
 
-#### 4.1.2. Web Style Guidelines
+### 4.1.2. Web Style Guidelines
 En esta sección, definiremos los estándares visuales e interactivos de la aplicación en entorno web, asegurando una experiencia consistente y funcional.
 
-<img src="assets/img/NavbarAndButtons.png">
+**Navbar:**
+<img src="assets/img/Navbar.png">
 
+**Botones:**
+<img src="assets/img/Botones.png">
 
-#### 4.1.3. Web Style Guidelines.
+**Responsive:**
+<img src="assets/img/responsive_avisum.png">
 
-##### 4.1.3.1 iOS Mobile Style Guidelines.
+### 4.1.3. Mobile Style Guidelines.
+#### 4.1.3.1 iOS Mobile Style Guidelines.
 En esta sección, definiremos los estándares visuales e interactivos de la aplicación en entorno web, asegurando una experiencia consistente y funcional.
 
 Navbar:
@@ -122,12 +125,10 @@ Botones
 
 <img src="assets/img/mobilebotones3.png">
 
----
-
-### 4.2. Information Architecture
+## 4.2. Information Architecture
 
 
-La Arquitectura de la Información (AI) de UrbanGuard está diseñada para organizar de manera lógica y clara el contenido, asegurando una navegación fluida y eficiente. Cada sección de la página cumple con un propósito específico, alineado con el objetivo de mejorar la seguridad en el transporte público. A continuación, te doy una descripción más detallada.
+La Arquitectura de la Información (AI) de UrbanGuard está diseñada para organizar de manera lógica y clara el contenido, asegurando una navegación fluida y eficiente. Cada sección de la página cumple con un propósito específico, alineado con el objetivo de mejorar la seguridad en el transporte público. A continuación, damos una descripción más detallada.
 
 #### 4.2.1. Organization Systems
 
@@ -170,7 +171,7 @@ Con esto, identificamos el contenido en categorías y nodos. De esta manera, log
 
 Estas adaptaciones de la estructura de la landing page para UrbanGuard toman los elementos de seguridad, funcionalidades y beneficios del sistema, alineándose con la información clave que los usuarios necesitan. Además, se utiliza un enfoque claro y persuasivo en cada una de las secciones para facilitar la conversión y maximizar la interacción con el producto.
 
-#### 4.2.3. SEO Tags and Meta Tags
+### 4.2.3. SEO Tags and Meta Tags
 La Landing Page de UrbanGuard incluye metadatos orientados a la indexación básica, compatibilidad móvil, carga de recursos visuales y reconocimiento de marca. Estos elementos ayudan a que la página sea interpretada correctamente por navegadores, buscadores y dispositivos móviles.
 **Titulo de la pagina:**
 ```html
@@ -235,62 +236,63 @@ En nuestro proyecto hemos implementado los siguientes sistemas de navegación:
 - **Etiquetas:** Permiten categorizar y agrupar contenidos por temas o funcionalidades, facilitando la búsqueda y el acceso a la información. En nuestra aplicación, las etiquetas se utilizan para identificar a los conductores con la categoría y estado. 
 - **Barras de búsqueda:** Incluidas para los perfiles con permisos de administrador, permite ubicar a los conductores de forma directa mediante nombre o etiqueta asociada. Esta integrada con los sistemas de búsqueda previamente descritos, garantizando resultados precisos y una experiencia fluida.
 
----
-
 ### 4.3. Landing Page UI Design
+En esta sección se presenta la propuesta de interfaz de usuario (UI) para el Landing Page. El diseño integra las decisiones establecidas en la arquitectura de información y los Style Guidelines previamente definidos, con el propósito de construir una experiencia visual coherente, atractiva y fácil de comprender.
+El objetivo principal del Landing Page es comunicar de manera clara la propuesta de valor de la startup, transmitir confianza a los nuevos visitantes y motivarlos a registrarse en la plataforma. De esta manera, se constituye como el principal punto de acceso al ecosistema de colaboración interuniversitaria.
 
-#### 4.3.1. Landing Page Wireframe
-Para la Landing page se desarrollaron en Figma cada apartado del 	sitio web.  
+### 4.3.1. Landing Page Wireframe
+Para la Landing page se desarrollaron en Figma cada apartado del sitio web.  
 <center>
 <img src = "assets/img/LandingPageWireframe.png">
-
 </center>
 
-#### 4.3.2. Landing Page Mock-up
+**Elementos de diseño:** En los wireframes de la landing page se destacan tres elementos de diseño clave: tamaño, espacio y figuras. Se busca implementar un estilo tactico, lo que se refleja en el uso de espacios amplios que crean una interfaz limpia, ligera y fácil de navegar. Esta disposición evita la sobrecarga visual y mejora la legibilidad.
+
+**Diseño inclusivo:** La interfaz presenta una estructura clara y organizada, diferenciando adecuadamente los elementos de navegación del contenido principal para facilitar su comprensión y recorrido. La distribución de los componentes sigue patrones visuales consistentes que permiten a los usuarios identificar y acceder fácilmente a la información. Asimismo, la correcta alineación de los elementos y el uso equilibrado de espacios en blanco contribuyen a una experiencia visual limpia, ordenada y libre de saturación.
+
+**Arquitectura de la información:** El wireframe de la landing page presenta una estructura clara, sencilla y coherente con el enfoque minimalista del diseño. Se priorizan los elementos esenciales, como el boton “Registrarse” cuya funcion se identifica fácilmente. Esta distribución permite reducir la carga cognitiva y facilita la comprensión de la interfaz desde el primer contacto. Asimismo, la jerarquía visual organiza la información de manera estratégica, mostrando únicamente los contenidos necesarios y orientando al usuario hacia las principales acciones sin generar distracciones.
+
+### 4.3.2. Landing Page Mock-up
+**Desktop Web Browser Mock-up:**
 <center>
-<img src = "assets/img/LandingMockUp.png">
+<img src = "assets/img/mocup_avissum.png">
 </center>
 
----
 
-### 4.4. Mobile Applications UX/UI Design
+## 4.4. Mobile Applications UX/UI Design
 
-#### 4.4.1 Mobile Applications Wireframes
-#### 4.4.2 Mobile Applications Wireflow Diagrams
-#### 4.4.3 Mobile Applications Mock-ups
-#### 4.4.4 Mobile Applications User Flow Diagrams
+### 4.4.1 Mobile Applications Wireframes
+### 4.4.2 Mobile Applications Wireflow Diagrams
+### 4.4.3 Mobile Applications Mock-ups
+### 4.4.4 Mobile Applications User Flow Diagrams
 
----
+## 4.5. Mobile Applications Prototyping
+### 4.5.1 Android Mobile Prototyping
+### 4.5.1 IOS Mobile Prototyping
 
-### 4.5. Mobile Applications Prototyping
-#### 4.5.1 Android Mobile Prototyping
-#### 4.5.1 IOS Mobile Prototyping
 
----
+## 4.6. Web Applications UX/UI Design
 
-### 4.6. Web Applications UX/UI Design
-
-#### 4.6.1. Web Applications Wireframes
+### 4.6.1. Web Applications Wireframes
 
 Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.  
 Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentan al usuario inicialmente al entrar a la página.  
 Aquí vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
 <center>
 <img src = "assets/img/LandingPageWireframe.png">
-<center>
 <img src = "assets/img/ga1.png">
 <img src = "assets/img/ga2.png">
 <img src = "assets/img/ga3.png">
 <img src = "assets/img/ga4.png">
 </center>
 
-#### 4.6.2. Web Applications Wireflow Diagrams
+### 4.6.2. Web Applications Wireflow Diagrams
 
 Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
-<img src = "assets/img/Wireflow.png">
+<img src="assets/img/Wireflow.png">
 
-#### 4.6.3. Web Applications Mock-ups
+### 4.6.3. Web Applications Mock-ups
 <center>
 <img src = "assets/img/SafeBus - Acceso Conductor.png">
 <img src = "assets/img/SafeBus - ImpactoEnNumeros.png">
@@ -298,7 +300,7 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 <img src = "assets/img/SafeRide - Inicio de Servicio.png">
 </center>
 
-#### 4.6.4. Web Applications User Flow Diagrams
+### 4.6.4. Web Applications User Flow Diagrams
 
 **User flow 1: ADMIN**
 <center>
@@ -306,14 +308,12 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 </center>
 
 **User Flow 2: Conductor**
+<img src = "assets/img/UserFlowConductor.png">
 
-<img src = "Resources/img/UserFlowConductor.png">
-
----
 
 ## 4.7. Web Applications Prototyping
 
-### Introducción y criterios de diseño
+<h4>Introducción y criterios de diseño</h4>
 
 El prototipo interactivo de SafeBus simula la navegación y los principales flujos de interacción de la aplicación web, permitiendo evaluar la coherencia de la experiencia de usuario antes del desarrollo, identificar puntos de fricción y validar las decisiones de arquitectura de información tomadas a lo largo del capítulo 4. El prototipo fue construido en Figma utilizando conexiones de prototipado entre frames, transiciones y overlays para representar de forma fiel los comportamientos especificados en los User Flow Diagrams.
 
@@ -333,7 +333,7 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 <img src= "assets/img/SafeBusLading.png">
 </center>
 
-### Flujos de interacción cubiertos por el prototipo
+<h4> Flujos de interacción cubiertos por el prototipo </h4>
 
 **Flujo 1 — Verificación e inicio de servicio del conductor:** Comprende la pantalla de verificación de identidad mediante código QR, la validación de autorización del conductor para el vehículo asignado, la validación de que el conductor no esté operando otra unidad simultáneamente, la pantalla de servicio activo con el botón de pánico, el contador de pasajeros en tiempo real y el botón de finalización de turno con confirmación modal.
 <center>
@@ -355,10 +355,8 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
 <img src= "assets/img/MonitoreoEmpresaAdministradora.png">
 </center>
 
----
-
-### 4.8. Domain-Driven Software Architecture
-#### 4.8.1. Design-Level Event Storming
+## 4.8. Domain-Driven Software Architecture
+### 4.8.1. Design-Level Event Storming
 Urban Guard es una plataforma orientada a mejorar la seguridad en el transporte público mediante monitoreo en tiempo real, protocolos de emergencia, sensores inteligentes y comunicación inmediata entre pasajeros, conductores y autoridades.
 El objetivo principal del sistema es detectar situaciones de riesgo, gestionar incidentes de seguridad y proporcionar respuesta rápida dentro de las unidades de transporte.
 
@@ -387,17 +385,17 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 <img src="assets/img/SensoresIoT.png">
 </center>
 
-#### 4.8.2. Software Architecture Context Diagram
+### 4.8.2. Software Architecture Context Diagram
 <center>
 <img src = "assets/img/SAcontextDiagram.png">
 </center>
 
-#### 4.8.3. Software Architecture Container Diagrams
+### 4.8.3. Software Architecture Container Diagrams
 <center>
 <img src = "assets/img/SAcontainerDiagram.png">
 </center>
 
-#### 4.8.4. Software Architecture Components Diagrams
+### 4.8.4. Software Architecture Components Diagrams
 <center>
 <img src = "assets/img/SAComponentsDiagram.png">
 <img src = "assets/img/diagramacontenedoresconduct.png">
@@ -405,20 +403,19 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 ---
 
-### 4.9. Software Object-Oriented Design
-#### 4.9.1. Class Diagrams
+## 4.9. Software Object-Oriented Design
+### 4.9.1. Class Diagrams
 <center>
 <img src = "assets/img/ClassDiagram.png">
 </center>
 
 
-#### 4.9.2 Class Dictionary
+### 4.9.2 Class Dictionary
 
 
----
 
-### 4.10. Database Design
-#### 4.10.1. Database Diagrams
+## 4.10. Database Design
+### 4.10.1. Database Diagrams
 <center>
 <img src = "assets/img/DatabaseDiagram.png">
 </center>
