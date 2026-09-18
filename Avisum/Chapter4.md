@@ -92,6 +92,7 @@ En esta sección, definiremos los estándares visuales e interactivos de la apli
 <img src="assets/img/Botones.png">
 
 **Responsive:**
+
 <img src="assets/img/responsive_avisum.png">
 
 ### 4.1.3. Mobile Style Guidelines.
@@ -399,16 +400,340 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 ## 4.9. Software Object-Oriented Design
 ### 4.9.1. Class Diagrams
-La arquitectura del sistema se ha modelado bajo el enfoque de Domain-Driven Design (DDD) para garantizar una alta cohesión y un bajo acoplamiento. Con el objetivo de facilitar el análisis del dominio y asegurar la legibilidad técnica, la representación visual del backend se ha segmentado. A continuación, se presentan los diagramas de clases correspondientes a los 5 Bounded Contexts identificados, detallando sus respectivos Agregados, Entidades y Objetos de Valor (Value Objects).
+La arquitectura del sistema se ha modelado bajo el enfoque de Domain-Driven Design (DDD) para garantizar una alta cohesión y un bajo acoplamiento. Con el objetivo de facilitar el análisis del dominio y asegurar la legibilidad técnica, la representación visual del backend se ha segmentado. A continuación, se presentan los diagramas de clases correspondientes a los 4 Bounded Contexts identificados, detallando sus respectivos Agregados, Entidades y Objetos de Valor (Value Objects).
 
 <center>
-<img src = "assets/img/ClassDiagram.png">
+<h4>Bounded Context: Authentication Management</h4>
+
+![bounded context 1](assets/img/bc1.png)
+
+<h4>Bounded Context: User</h4>
+
+![bounded context 2](assets/img/bc2.png)
+
+<h4>Bounded Context: Profile</h4>
+
+![bounded context 3](assets/img/bc3.png)
+
+<h4>Bounded Context: Monitoring</h4>
+
+![bounded context 4](assets/img/bc4.png)
+
 </center>
 
 ### 4.9.2 Class Dictionary
+Diccionario de clases correspondiente a los diagramas del punto anterior, para cada Aggregate Root, Entity y Value Object, sus atributos (nombre, tipo y descripción) y, cuando corresponde, sus métodos de dominio.
+
+<h4>Bounded Context: Authentication Management</h4>
+
+**`Authentication`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único del registro de autenticación. |
+| driverId | String | Referencia al conductor que intenta autenticarse. |
+| status | CodeStatus | Estado actual del proceso de autenticación (Value Object). |
+| createdAt | DateTime | Fecha y hora en que se inició el intento de inicio de sesión. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| validateCode(code: String): bool | Verifica que el código ingresado coincida con el generado y no esté expirado. |
+| authenticate(): void | Marca la autenticación como exitosa y habilita el acceso del conductor. |
+
+**`AuthenticationCode`** — *Entity*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único del código generado. |
+| code | String | Valor del código de acceso enviado al conductor. |
+| expiresAt | DateTime | Momento a partir del cual el código deja de ser válido. |
+| used | bool | Indica si el código ya fue consumido. |
+
+**`CodeStatus`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | String | Estado del código: PENDING \| VALIDATED \| EXPIRED. |
+
+<h4>Bounded Context: User</h4>
+
+**`Driver`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único del conductor. |
+| fullName | String | Nombre completo del conductor. |
+| licenseNumber | String | Número de licencia de conducir. |
+| status | DriverStatus | Estado del conductor dentro del sistema (Value Object). |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| identify(): void | Recupera y confirma la identidad del conductor ya autenticado. |
+| activate(): void | Habilita el acceso del conductor al panel principal. |
+
+**`ContactInfo`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| phone | String | Número de teléfono de contacto del conductor. |
+| email | String | Correo electrónico de contacto del conductor. |
+
+**`DriverStatus`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | String | Estado del conductor: ACTIVE \| INACTIVE \| SUSPENDED. |
+
+<h4> Bounded Context: Profile </h4>
+
+**`DriverProfile`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único del perfil. |
+| driverId | String | Referencia al conductor propietario del perfil. |
+| photoUrl | String | URL de la fotografía del conductor. |
+| experienceYears | int | Años de experiencia como conductor. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| getProfile(): ProfileSummary | Devuelve un resumen de los datos del perfil del conductor. |
+
+**`Bus`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único del vehículo. |
+| plate | VehiclePlate | Placa del vehículo (Value Object). |
+| capacity | int | Capacidad máxima de pasajeros del vehículo. |
+| model | String | Modelo del vehículo. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| getVehicleInfo(): void | Retorna la información básica del vehículo asignado a la ruta. |
+
+**`VehiclePlate`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | String | Número de placa del vehículo, validado por formato. |
+
+**`ProfileSummary`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| driverName | String | Nombre del conductor. |
+| photoUrl | String | URL de la fotografía del conductor. |
+| experienceYears | int | Años de experiencia del conductor. |
+
+<h4>Bounded Context: Monitoring</h4>
+
+**`Route`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único de la ruta. |
+| driverId | String | Conductor asignado a la ruta. |
+| busId | String | Vehículo asignado a la ruta. |
+| startTime | DateTime | Fecha y hora de inicio de la ruta. |
+| endTime | DateTime | Fecha y hora de finalización de la ruta. |
+| status | String | Estado de la ruta: PLANNED \| IN_PROGRESS \| FINISHED. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| start(): void | Marca el inicio de la ruta y dispara la política de inicio de monitoreo. |
+| finish(): void | Marca la finalización de la ruta. |
+
+**`MonitoringSession`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único de la sesión de monitoreo. |
+| routeId | String | Referencia a la ruta que está siendo monitoreada. |
+| passengerCount | PassengerCount | Cantidad de pasajeros registrada (Value Object). |
+| currentSpeed | Speed | Velocidad actual del bus (Value Object). |
+| startedAt | DateTime | Momento en que inició la sesión de monitoreo. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| registerPassengers(count: int): void | Registra la cantidad de pasajeros detectada. |
+| registerSpeed(speed: double): void | Registra la velocidad actual del bus. |
+
+**`EmergencyAlert`** — *Aggregate Root*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| id | String | Identificador único de la alerta de emergencia. |
+| routeId | String | Ruta en la que ocurrió la alerta. |
+| driverId | String | Conductor que activó la alerta. |
+| status | AlertStatus | Estado actual de la alerta (Value Object). |
+| createdAt | DateTime | Fecha y hora en que se activó la alerta. |
+| attendedAt | DateTime | Fecha y hora en que la alerta fue atendida. |
+
+**Métodos**
+
+| Método | Descripción |
+|---|---|
+| activate(): void | Activa la alerta de emergencia a partir del altercado. |
+| register(): void | Registra formalmente la alerta activada. |
+| send(): void | Envía la alerta al administrador / central de operaciones. |
+| attend(): void | Marca la alerta como atendida tras el apoyo del administrador. |
+| close(): void | Cierra la alerta una vez resuelta. |
+
+**`GeoLocation`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| lat | double | Latitud de la posición del bus. |
+| lng | double | Longitud de la posición del bus. |
+
+**`Speed`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | double | Valor numérico de la velocidad registrada. |
+| unit | String | Unidad de medida, por ejemplo km/h. |
+
+**`PassengerCount`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | int | Cantidad de pasajeros registrada; no puede ser negativa. |
+
+**`AlertStatus`** — *Value Object*
+
+| Atributo | Tipo | Descripción |
+|---|---|---|
+| value | String | Estado de la alerta: ACTIVATED \| REGISTERED \| SENT \| ATTENDED \| CLOSED. |
 
 ## 4.10. Database Design
+Se adopta una estrategia de persistencia poliglota, con una base de datos independiente por Bounded Context (*database-per-service*), siguiendo el mismo límite que los Aggregates definidos en la sección 4.9. Authentication, User y Profile manejan datos estructurados de bajo volumen de escritura y se modelan como bases de datos **relacionales** (PostgreSQL). Monitoring recibe escritura de alta frecuencia (velocidad, pasajeros, ubicación) y necesita un esquema flexible para el historial de ubicación, por lo que se modela como base de datos **no relacional** orientada a documentos (MongoDB).
+
 ### 4.10.1. Relational/Non-relational Database Diagram
+
+
+
+**Authentication DB — Relacional (PostgreSQL)**
+
 <center>
-<img src = "assets/img/DatabaseDiagram.png">
+
+```mermaid
+erDiagram
+    AUTHENTICATIONS ||--o{ AUTHENTICATION_CODES : has
+    AUTHENTICATIONS {
+        uuid id PK
+        uuid driver_id
+        string status
+        timestamp created_at
+    }
+    AUTHENTICATION_CODES {
+        uuid id PK
+        uuid authentication_id FK
+        string code
+        timestamp expires_at
+        boolean used
+    }
+```
 </center>
+
+**User DB — Relacional (PostgreSQL)**
+
+<center>
+
+```mermaid
+erDiagram
+    DRIVERS {
+        uuid id PK
+        string full_name
+        string license_number
+        string status
+        string phone
+        string email
+    }
+```
+</center>
+
+**Profile DB — Relacional (PostgreSQL)**
+
+<center>
+
+```mermaid
+erDiagram
+    DRIVER_PROFILES {
+        uuid id PK
+        uuid driver_id
+        string photo_url
+        int experience_years
+    }
+    BUSES {
+        uuid id PK
+        string plate
+        int capacity
+        string model
+    }
+```
+
+</center>
+
+**Monitoring DB — No relacional (MongoDB, orientada a documentos)**
+
+Las colecciones no tienen llaves foráneas físicas: las referencias entre documentos se resuelven por convención de identificador (`routeId`), propio del modelo de documentos, y no como un JOIN relacional.
+
+**Colección `routes`**
+
+```json
+{
+  "_id": "ObjectId",
+  "driverId": "String",
+  "busId": "String",
+  "startTime": "Date",
+  "endTime": "Date",
+  "status": "String"
+}
+```
+
+**Colección `monitoring_sessions`**
+
+```json
+{
+  "_id": "ObjectId",
+  "routeId": "String", 
+  "passengerCount": { "value": "Int" },
+  "currentSpeed": { "value": "Double", "unit": "String" },
+  "startedAt": "Date",
+  "locationHistory": [
+    { "lat": "Double", "lng": "Double", "timestamp": "Date" }
+  ]
+}
+```
+
+**Colección `emergency_alerts`**
+
+```json
+{
+  "_id": "ObjectId",
+  "routeId": "String",  
+  "driverId": "String",
+  "status": "String",
+  "createdAt": "Date",
+  "attendedAt": "Date"
+}
+```
+
+
+**Relaciones lógicas (sin FK física):**
+- 1 `routes` ↔ 1 `monitoring_sessions` (por `routeId`)
+- 1 `routes` ↔ 0..N `emergency_alerts` (por `routeId`)
+
