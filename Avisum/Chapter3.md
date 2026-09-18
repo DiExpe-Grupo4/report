@@ -89,7 +89,7 @@ Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?fil
 
 |Orden|User Story ID|Título|Descripción|Story Points|
 |---|---|---|---|---|
-|1|SP02|Investigar mecanismo de comunicación en tiempo real para alertas de emergencia|Como developer, quiero investigar mecanismos de comunicación en tiempo real, para determinar cuál garantiza la entrega oportuna de las alertas de emergencia a la central.|3|
+|1|US36|Investigar mecanismo de comunicación en tiempo real para alertas de emergencia|Como developer, quiero investigar mecanismos de comunicación en tiempo real, para determinar cuál garantiza la entrega oportuna de las alertas de emergencia a la central.|3|
 |2|US03|Activar alerta de emergencia|Como conductor, quiero enviar una alerta de emergencia, para notificar una situación de riesgo.|5|
 |3|US04|Recepción de alerta|Como sistema, quiero notificar a la central de operaciones, para gestionar la emergencia.|3|
 |4|US19|Confirmación de recepción de alerta|Como sistema, quiero confirmar que la alerta fue recibida por la central, para afirmar visibilidad.|3|
@@ -103,10 +103,10 @@ Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?fil
 |12|US14|Validar la autorización del conductor|Como sistema, quiero verificar que el conductor esté autorizado para operar el vehículo asignado.|3|
 |13|US15|Asociación de conductor al vehículo|Como sistema, quiero asociar un conductor a un vehículo, para asegurar la trazabilidad.|2|
 |14|US20|Registro de turno terminado|Como conductor, quiero finalizar el servicio, para cerrar el registro del viaje.|2|
-|15|SP01|Investigar tecnología de sensores para el conteo automático de pasajeros|Como developer, quiero investigar tecnologías de sensado para el conteo automático de pasajeros, para determinar cuál ofrece mejor precisión y viabilidad de integración.|3|
+|15|US35|Investigar tecnología de sensores para el conteo automático de pasajeros|Como developer, quiero investigar tecnologías de sensado para el conteo automático de pasajeros, para determinar cuál ofrece mejor precisión y viabilidad de integración.|3|
 |16|US06|Conteo de pasajeros|Como sistema, quiero contabilizar los pasajeros a bordo, para estimar el riesgo en caso de emergencia.|8|
 |17|US07|Consultar número de pasajeros|Como sistema, quiero disponer del número de pasajeros, para reportes de emergencia.|2|
-|18|SP03|Investigar servicio de geolocalización para el seguimiento de vehículos|Como developer, quiero investigar servicios de geolocalización disponibles, para determinar cuál ofrece mejor precisión y consumo de recursos.|3|
+|18|US37|Investigar servicio de geolocalización para el seguimiento de vehículos|Como developer, quiero investigar servicios de geolocalización disponibles, para determinar cuál ofrece mejor precisión y consumo de recursos.|3|
 |19|US28|Seguimiento de ubicación del vehículo|Como empresa, quiero contar con un seguimiento de ubicación de la unidad, para conocer su ubicación actual.|8|
 |20|US21|Visualizar estado de unidades|Como empresa, quiero conocer el estado de sus vehículos en operación, para tener una noción de sus unidades.|3|
 |21|US16|Consultar historial de emergencia|Como empresa, quiero revisar el historial de alertas, para análisis de seguridad.|3|
