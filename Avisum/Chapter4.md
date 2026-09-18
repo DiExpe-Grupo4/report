@@ -269,7 +269,15 @@ Para la Landing page se desarrollaron en Figma cada apartado del sitio web.
 <img src = "assets/img/ga4.png">
 
 </center>
+
 ### 4.4.2 Mobile Applications Wireflow Diagrams
+
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
+
+<img src="assets/img/mobileapplicationswireflowdiagrams.png">
+
+</center>
+
 ### 4.4.3 Mobile Applications Mock-ups
 ### 4.4.4 Mobile Applications User Flow Diagrams
 
