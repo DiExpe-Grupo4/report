@@ -377,8 +377,22 @@ El objetivo principal del sistema es detectar situaciones de riesgo, gestionar i
 
 ### 4.8.4. Software Architecture Components Diagrams
 <center>
-<img src = "assets/img/SAComponentsDiagram.png">
-<img src = "assets/img/diagramacontenedoresconduct.png">
+<h4>Components Diagram — Authentication Service</h4>
+
+![container1](assets/img/cd1.png)
+
+<h4>Components Diagram — User Service</h4>
+
+![container2](assets/img/cd2.png)
+
+<h4>Components Diagram — Profile Service</h4>
+
+![container3](assets/img/cd3.png)
+
+<h4>Components Diagram — Monitoring Service</h4>
+
+![container4](assets/img/cd4.png)
+
 </center>
 
 ---
