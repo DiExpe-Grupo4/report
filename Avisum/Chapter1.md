@@ -20,11 +20,11 @@ Nuestra propuesta tecnológica es **Avisum**, una solución orientada a la gesti
 
 |Foto de Perfil|Descripción|
 | :--: | :-- |
-| ![FotoIvonne](assets/img/ivonne.png) |Nombre: **Ivonne Beatriz Ibañez Torres**</br>Carrera: Ingeniería de Software</br>Codigo: U20241A995</br> Descripción: Estudainte de sexto ciclo con dominio en C++ y Python, conocimientos en diseño y patrones de software, PostgreSQL y MongoDB, Java ,Spring Boot y Node.js. |
+| ![FotoIvonne](assets/img/ivonne.png) |Nombre: **Ivonne Beatriz Ibañez Torres**</br>Carrera: Ingeniería de Software</br>Codigo: U20241A995</br> Descripción: Estudiante de sexto ciclo de Ingeniería de Software con conocimientos en programación con C++ y Python, diseño y patrones de software, gestión de bases de datos con PostgreSQL y MongoDB, y desarrollo backend con Java, Spring Boot y Node.js. Cuenta con interés en el diseño de soluciones de software y en la implementación de aplicaciones eficientes y escalables. |
 | ![FotoCarlos](assets/img/carlos.png) |Nombre: **Carlos Franco Blancas Chavez**</br>Carrera: Ingeniería de Software</br>Codigo: U20241A322</br> Descripción: Estudiante de sexto ciclo con conocimientos en C++, HTML, CSS, MySQL, Python (basics) y C# (basics) |
-| |Nombre: **Kevin Edu Lopez Montalvo**</br>Carrera: Ingeniería de Software</br>Codigo: U20241D958</br> Descripción: |
+| ![FotoKevin](assets/img/kevin.png)|Nombre: **Kevin Edu Lopez Montalvo**</br>Carrera: Ingeniería de Software</br>Codigo: U20241D958</br> Descripción: Estudiante de sexto ciclo de Ingeniería de Software con conocimientos en desarrollo FullStack, integración de componentes frontend y backend, control de versiones mediante Git y gestión de bases de datos. Posee interés en la construcción de aplicaciones web completas, trabajando de manera colaborativa y aplicando buenas prácticas durante el proceso de desarrollo. |
 | ![FotoBoris](assets/img/boris.png) |Nombre: **Boris Alvarado Millan**</br>Carrera: Ingeniería de Software</br>Codigo: U20241B676</br> Descripción: Estudiante de sexto ciclo con conocimientos en Java, Html, Css, JavaScript, Angular, Vue, Node.js, TypeScript, TailwindCss, Spring, C++ y Python |
-| |Nombre: **Nadhim Abigail Raymundo Villarroel**</br>Carrera: Ingeniería de Software</br>Codigo: U202318001</br> Descripción: |
+| ![FotoAbigail](assets/img/abigail.png) |Nombre: **Nadhim Abigail Raymundo Villarroel**</br>Carrera: Ingeniería de Software</br>Codigo: U202318001</br> Descripción: Estudiante de sexto ciclo de Ingeniería de Software, experiencia con bases de datos relacionales y no relacionales (MySQL, PostgreSQL, MongoDB), control de versiones con Git/GitHub aplicando GitFlow, y contenedores con Docker, HTML, CSS, JavaScript, TypeScript, C++ y Python. |
 
 _Tabla 1. Perfiles de integrantes de equipo - Elaboración propia_
 
