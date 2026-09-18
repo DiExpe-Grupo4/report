@@ -1,1 +1,4 @@
 # Bibliografia
+- Ministerio de Salud. (2019, 25 de julio). _Minsa insta a la población a conducir con prudencia durante el feriado largo para evitar accidentes_. https://www.gob.pe/institucion/minsa/noticias/46122-minsa-insta-a-la-poblacion-a-conducir-con-prudencia-durante-el-feriado-largo-para-evitar-accidentes?utm_source=chatgpt.com
+
+- Defensoría del Pueblo. (2022, 22 de diciembre). _Defensoría del Pueblo: cifra de accidentes de tránsito en 2022 alcanza niveles registrados antes de la pandemia._ https://www.gob.pe/institucion/defensoria/noticias/681902-defensoria-del-pueblo-cifra-de-accidentes-de-transito-en-2022-alcanza-niveles-registrados-antes-de-la-pandemia?utm_source=chatgpt.com
