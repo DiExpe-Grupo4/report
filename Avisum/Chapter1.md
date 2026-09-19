@@ -33,8 +33,6 @@ _Tabla 1. Perfiles de integrantes de equipo - Elaboración propia_
 
 Para comprender las necesidades de los usuarios y delimitar el problema que aborda Avisum, se aplicó la técnica 5W's & 2H's, la cual permite caracterizar la problemática a partir de siete preguntas clave.
 
-Para comprender las necesidades de los usuarios y delimitar el problema que aborda Avisum, se aplicó la técnica 5W's & 2H's, la cual permite caracterizar la problemática a partir de siete preguntas clave.
-
 **What (Qué)**
 - ¿Cuál es el problema?
 

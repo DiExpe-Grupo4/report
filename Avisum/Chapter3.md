@@ -111,10 +111,9 @@ Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?fil
 |20|US21|Visualizar estado de unidades|Como empresa, quiero conocer el estado de sus vehículos en operación, para tener una noción de sus unidades.|3|
 |21|US16|Consultar historial de emergencia|Como empresa, quiero revisar el historial de alertas, para análisis de seguridad.|3|
 |22|US25|Visualizar propuesta de valor|Como visitante, quiero conocer la propuesta de valor del sistema, para conocer su alcance.|1|
-|23|US23|Visualización de misión y visión|Como visitante, quiero conocer la misión y visión de la startup, para tener una idea clara de los objetivos.|1|
+|23|US23|Visualización de datos|Como visitante, quiero conocer datos de valor de la problematica, para tener una idea clara de los objetivos.|1|
 |24|US29|Visualización de beneficios del sistema|Como visitante, quiero conocer los beneficios del sistema, para saberlos.|1|
-|25|US22|Visualización de segmento de clientes|Como visitante, quiero identificar a qué tipo de usuarios está dirigido el sistema, para su conocimiento.|1|
-|26|US30|Visualización de equipo de trabajo|Como visitante, quiero conocer al equipo detrás de la solución, para ubicar a los desarrolladores.|1|
+|25|US22|Visualización de caracteristicas|Como visitante, quiero identificar caracteristicas del sistema, para su conocimiento.|1|
 |27|US17|Navegar entre secciones|Como visitante, quiero desplazarme entre secciones, para explorar el contenido.|2|
 |28|US12|Endpoint de alerta de emergencia|Como developer, quiero enviar alertas de emergencia mediante API, para realizar un testeo.|3|
 |29|US11|Endpoint de inicio de servicio|Como developer, quiero registrar el inicio de un servicio mediante API, para poder hacer pruebas del servicio.|3|
