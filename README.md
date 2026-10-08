@@ -71,6 +71,8 @@ Se presenta la evidencia de trabajo segun los Insights de Github.
 
 ![Insights Github - Hito 2](Avisum/assets/img/report_insight_hito2.png)
 
+![Network2](Avisum/assets/img/Network_2Avissum.png)
+
 ---
 
 # Indice
