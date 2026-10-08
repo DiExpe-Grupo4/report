@@ -515,7 +515,7 @@ El Video About-the-Product de Avisum tiene como público objetivo a los visitant
 | Dato | Detalle |
 |---|---|
 | Screenshot del video | *(pendiente — adjuntar captura del cuadro de video una vez grabado y editado)* |
-| URL en Microsoft Stream | *(pendiente — publicar como video privado y enlazar aquí)* |
+| URL en OneDrive (facilitado por el docente) | *(pendiente — publicar en el OneDrive indicado por el docente y enlazar aquí)* |
 | URL en YouTube (para incrustar en el Landing Page) | *(pendiente)* |
 | Timing / duración | *(pendiente — debe estar entre 1 y 3 minutos, según Anexo C del enunciado)* |
 
