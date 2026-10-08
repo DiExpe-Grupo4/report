@@ -2,6 +2,8 @@
 
 ## 3.1. To-Be Scenario Mapping
 
+En esta sección se presenta el To-Be Scenario Mapping de Avisum, elaborado a partir de los As-Is Scenario Mapping definidos en el Capítulo II para cada segmento objetivo (Conductores y Jefes de consorcios). El proceso de elaboración partió de una revisión individual de las fases identificadas en el As-Is, seguida de una sesión grupal en la que el equipo propuso, para cada fase, cómo cambiarían las acciones (Doing), los pensamientos (Thinking) y las emociones (Feeling) de los usuarios una vez que Avisum estuviera disponible. A diferencia del As-Is, en el que los usuarios dependían de comunicación informal (llamadas, WhatsApp, recorridos manuales) y carecían de evidencia o respaldo ante una emergencia, el To-Be incorpora el respaldo del sistema en cada fase: validación automática de identidad, botón de pánico con confirmación de recepción, visibilidad en tiempo real del estado de las unidades y un historial de alertas que sustenta la toma de decisiones. Estos cambios reducen la incertidumbre y la carga mental reportadas en el As-Is, y reemplazan la dependencia de la memoria o el criterio individual por información centralizada y trazable.
+
 <h3>Segento 1: Conductores</h3>
 
 |Inicio de turno|Durante la ruta|Ante un cobro de cupo|Ante una emergencia|Cierre de turno|

@@ -499,5 +499,25 @@ Estas imágenes constituyen la evidencia visual de la aplicación móvil: flujo 
 
 ![appmovil](assets/img/insight1_appmovil.png)
 
+---
 
+## 5.3. Video About-the-Product
+
+El Video About-the-Product de Avisum tiene como público objetivo a los visitantes del Landing Page que desean conocer el modelo de negocio y las características principales del producto, así como a los usuarios de las aplicaciones que desean entender los procesos que la solución soporta (validación de identidad, alertas de pánico, monitoreo de unidades y conteo de pasajeros). El tono del video es consistente con el tono adoptado para el producto: directo, profesional y enfocado en la seguridad, evitando un lenguaje alarmista. Incluye al menos un testimonio positivo de un usuario que participó en las entrevistas de validación, resaltando cómo Avisum responde a las necesidades identificadas en el Capítulo II.
+
+**Contenido del video:**
+- Introducción al problema de inseguridad en el transporte público urbano.
+- Presentación de Avisum como modelo de negocio (segmentos: conductores y empresas/consorcios de transporte).
+- Demostración de las funcionalidades principales: validación de identidad, botón de pánico, monitoreo en tiempo real y conteo de pasajeros.
+- Testimonio de un usuario entrevistado durante el proceso de validación.
+- Cierre con la propuesta de valor y llamado a la acción.
+
+| Dato | Detalle |
+|---|---|
+| Screenshot del video | *(pendiente — adjuntar captura del cuadro de video una vez grabado y editado)* |
+| URL en Microsoft Stream | *(pendiente — publicar como video privado y enlazar aquí)* |
+| URL en YouTube (para incrustar en el Landing Page) | *(pendiente)* |
+| Timing / duración | *(pendiente — debe estar entre 1 y 3 minutos, según Anexo C del enunciado)* |
+
+> **Nota:** esta sección documenta la estructura y el guion del video según lo exigido por el enunciado (Anexo C. Indicaciones para secciones que incluyen Videos). Falta grabar, editar y publicar el video; una vez disponible, reemplazar los campos "pendiente" con el screenshot y los enlaces reales.
 
