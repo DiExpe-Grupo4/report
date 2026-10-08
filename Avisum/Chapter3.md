@@ -12,6 +12,8 @@ En esta sección se presenta el To-Be Scenario Mapping de Avisum, elaborado a pa
 | **Thinking** | "Ya no tengo que recordar de memoria qué zonas son riesgosas, el sistema me respalda todo el turno." | "Si algo pasa, no dependo de avisar por WhatsApp a un colega, la central ya lo sabe." | "Ahora queda un registro de lo que pasó, no es mi palabra sola contra la de nadie." | "Ya no me pregunto si alguien va a contestar, sé que la alerta se envió y fue confirmada." | "Ya no tengo que contarle todo de memoria al siguiente conductor, mi turno ya quedó registrado." |
 | **Feeling** | Confianza, sensación de respaldo desde el inicio 🙂 | Tranquilidad, menor carga mental de vigilar su propia seguridad 🙂 | Menos indefensión, respaldo institucional 😌 | Alivio inmediato al ver la confirmación 😮‍💨→🙂 | Sensación de continuidad y respaldo documentado 🙂 |
 
+![Segmento 1 - To-Be Scenario Mapping](assets/img/Segmento1-ToBeMapping.png)
+_Figura. To-Be Scenario Mapping - Segmento Conductores - Elaboración propia (Miro)._
 
 <h3>Segento 2: Jefes de consorcios</h3>
 
@@ -20,6 +22,9 @@ En esta sección se presenta el To-Be Scenario Mapping de Avisum, elaborado a pa
 | **Doing** | Abre el panel de Avisum y ve qué unidades están validadas e iniciando servicio, sin depender de reportes verbales | Consulta el panel centralizado de estado y ubicación en tiempo real, en vez de llamar uno por uno | Recibe la alerta ya clasificada por gravedad, con ubicación exacta del evento, directo en el panel | Consulta el historial de emergencias para identificar patrones de riesgo y sustentar mejoras a sus conductores | Revisa el historial de alertas y métricas del periodo directamente en el sistema |
 | **Thinking** | "Ya no tengo que esperar llamadas para saber quién salió a ruta." | "Puedo ver todo al mismo tiempo, ya no tengo que llamar a cada conductor." | "Ya no tengo que decidir a quién llamar primero, el sistema me dice qué tan grave es y dónde está." | "Ahora tengo datos concretos de cuántos incidentes hubo y dónde, no solo percepción." | "Ya puedo cuantificar cuánto he mejorado en seguridad, con datos reales." |
 | **Feeling** | Mayor control desde el primer momento del día 🙂 | Tranquilidad y eficiencia, menos tiempo invertido en supervisión manual 🙂 | Rapidez y certeza en la toma de decisiones 😌 | Confianza en decisiones basadas en evidencia, no en intuición 🙂 | Seguridad en la gestión y argumento sólido frente a la operación de la flota 🙂 |
+
+![Segmento 2 - To-Be Scenario Mapping](assets/img/Segmento2-ToBeMapping.png)
+_Figura. To-Be Scenario Mapping - Segmento Empresas o consorcios - Elaboración propia (Miro)._
 
 ## 3.2. User Stories
 
