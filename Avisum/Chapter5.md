@@ -514,10 +514,10 @@ El Video About-the-Product de Avisum tiene como público objetivo a los visitant
 
 | Dato | Detalle |
 |---|---|
-| Screenshot del video | *(pendiente — adjuntar captura del cuadro de video una vez grabado y editado)* |
-| URL en OneDrive (facilitado por el docente) | *(pendiente — publicar en el OneDrive indicado por el docente y enlazar aquí)* |
+| Screenshot del video | ![Screenshot Video About-the-Product](assets/img/VideoAboutProduct_screenshot.png) |
+| URL en OneDrive (facilitado por el docente) | [Video About-the-Product - Avisum](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318001_upc_edu_pe/IQAIbYfvqzc5R4tuTk9vCMfGAXwk8z14KS-TpgzkomAuRl8?e=hJcMnm) |
 | URL en YouTube (para incrustar en el Landing Page) | *(pendiente)* |
 | Timing / duración | *(pendiente — debe estar entre 1 y 3 minutos, según Anexo C del enunciado)* |
 
-> **Nota:** esta sección documenta la estructura y el guion del video según lo exigido por el enunciado (Anexo C. Indicaciones para secciones que incluyen Videos). Falta grabar, editar y publicar el video; una vez disponible, reemplazar los campos "pendiente" con el screenshot y los enlaces reales.
+> **Nota:** esta sección documenta la estructura y el guion del video según lo exigido por el enunciado (Anexo C. Indicaciones para secciones que incluyen Videos). Falta publicar el video en YouTube e indicar su duración; una vez disponible, reemplazar los campos "pendiente" con los datos reales.
 
