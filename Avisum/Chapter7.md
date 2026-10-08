@@ -62,11 +62,9 @@ En este apartado se presentan las herramientas y prácticas utilizadas para gara
 
 * **Docker:** Se utiliza para contenerizar la aplicación backend desarrollada con Spring Boot, incluyendo sus dependencias y configuración. Esto permite mantener mayor consistencia entre los diferentes entornos de ejecución.
 
-* **Railway:** Se utiliza como plataforma para alojar la base de datos MySQL, facilitando su administración y permitiendo integrar procesos relacionados con el despliegue y mantenimiento de la información.
+* **Render:** Se emplea para realizar el despliegue del backend desarrollado con Spring Boot (contenedor Docker), junto con su base de datos H2 embebida (en modo compatible con MySQL), permitiendo automatizar la publicación de nuevas versiones y facilitar el monitoreo de la aplicación.
 
-* **Render:** Se emplea para realizar el despliegue del backend desarrollado con Spring Boot, permitiendo automatizar la publicación de nuevas versiones y facilitar el monitoreo de la aplicación.
-
-* **Firebase Hosting:** Se utiliza para alojar el frontend desarrollado con Angular y automatizar su publicación, proporcionando un proceso de despliegue rápido y accesible.
+* **Vercel:** Se utiliza para alojar y desplegar tanto el Landing Page como el Frontend-Web desarrollado con Angular, automatizando la publicación en cada push a la rama correspondiente y proporcionando un proceso de despliegue rápido, con URLs de preview por cada deploy.
 
 **Practices (Prácticas):**
 
@@ -80,43 +78,29 @@ En este apartado se presentan las herramientas y prácticas utilizadas para gara
 
 Este apartado describe los principales componentes que conforman el pipeline de despliegue a producción y la manera en que se integran para automatizar el proceso.
 
-**Componentes del Pipeline de la Base de Datos (Railway):**
+**Componentes del Pipeline del Backend y Base de Datos (Render para Spring Boot):**
 
-Este pipeline gestiona el despliegue y actualización de la base de datos MySQL alojada en Railway.
-
-1. **Gestión de Migraciones Automáticas:** Los cambios realizados en el modelo de datos del backend se reflejan mediante migraciones que mantienen sincronizada la estructura de la base de datos con las modificaciones realizadas en el código.
-
-2. **Backup Automático:** Se generan copias de seguridad de la información antes de realizar cambios importantes en la base de datos. Esto permite recuperar una versión anterior en caso de producirse algún inconveniente durante una migración.
-
-3. **Monitoreo de la Base de Datos:** Railway permite supervisar el estado y rendimiento de la base de datos después de aplicar los cambios. Ante posibles errores o comportamientos anómalos, se pueden identificar oportunamente para tomar las medidas correspondientes.
-
-4. **Validación de Esquema:** Después de ejecutar las migraciones, se realizan validaciones para comprobar que las tablas, columnas y relaciones se hayan actualizado correctamente y que el esquema mantenga la estructura esperada.
-
-5. **Despliegue Continuo:** Una vez completadas y validadas las migraciones, los cambios quedan disponibles en el entorno de producción, manteniendo un proceso de actualización continuo.
-
-![Railway](assets/img/Railwaypng.png)
-
-**Componentes del Pipeline del Backend (Render para Spring Boot):**
+El backend y su base de datos se despliegan juntos en Render: la base de datos es una instancia H2 (en modo compatible con MySQL) embebida dentro del mismo contenedor del backend, por lo que no requiere un proveedor de base de datos independiente.
 
 1. **Integración Continua:** Cuando se realiza un commit en la rama `develop`, Render obtiene la versión actualizada del backend desarrollado con Spring Boot y ejecuta el proceso de construcción mediante Maven.
 
-2. **Construcción de la Imagen Docker:** Se genera una imagen Docker que contiene la aplicación y sus dependencias necesarias para ejecutarse correctamente en el entorno de producción.
+2. **Construcción de la Imagen Docker:** Se genera una imagen Docker que contiene la aplicación, la configuración de la base de datos H2 y sus dependencias necesarias para ejecutarse correctamente en el entorno de producción.
 
-3. **Despliegue:** Una vez finalizada la construcción, Render implementa la nueva versión del backend en el entorno de producción.
+3. **Despliegue:** Una vez finalizada la construcción, Render implementa la nueva versión del backend (junto con su base de datos) en el entorno de producción.
 
-4. **Monitoreo y Alertas:** Después del despliegue, se supervisa el funcionamiento de la aplicación para detectar posibles errores o problemas de rendimiento que puedan requerir la intervención del equipo.
+4. **Monitoreo y Alertas:** Después del despliegue, se supervisa el funcionamiento de la aplicación y de la base de datos para detectar posibles errores o problemas de rendimiento que puedan requerir la intervención del equipo.
 
 ![Render](assets/img/Renderimg.png)
 
-**Componentes del Pipeline del Frontend (Firebase para Angular):**
+**Componentes del Pipeline del Frontend (Vercel para Angular):**
 
 1. **Compilación del Frontend:** Al detectar una nueva versión del código, se ejecuta el proceso de compilación de la aplicación Angular en modo producción, generando los archivos necesarios para su publicación.
 
 2. **Ejecución de Pruebas Automatizadas:** Se ejecutan pruebas unitarias y pruebas End-to-End (E2E) para verificar que las principales funcionalidades de la interfaz funcionen correctamente.
 
-3. **Despliegue en Firebase Hosting:** Si las validaciones se completan satisfactoriamente, la nueva versión de la aplicación se publica automáticamente mediante Firebase Hosting, permitiendo su distribución a los usuarios.
+3. **Despliegue en Vercel:** Si las validaciones se completan satisfactoriamente, la nueva versión de la aplicación (Landing Page y Frontend-Web) se publica automáticamente mediante Vercel, permitiendo su distribución a los usuarios y generando una URL de preview por cada deploy.
 
-4. **Invalidación de Caché:** Se actualiza la caché asociada al sitio para garantizar que los usuarios puedan acceder a la versión más reciente de la aplicación después del despliegue.
+4. **Invalidación de Caché / CDN:** Vercel actualiza automáticamente la caché de su red de edge (CDN) para garantizar que los usuarios puedan acceder a la versión más reciente de la aplicación después del despliegue.
 
-![FireBase](assets/img/firebaseimg.png)
+![Vercel](assets/img/vercelimg.png)
 
