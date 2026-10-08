@@ -40,6 +40,25 @@ Las pruebas unitarias de las core entities son fundamentales en el desarrollo de
 
 Las Core Integration Tests son esenciales para verificar que los controladores funcionen correctamente junto con otros componentes del sistema, como los servicios y las bases de datos. Además, permiten evaluar escenarios de error para comprobar que el sistema gestione adecuadamente situaciones inesperadas y devuelva los códigos de estado correspondientes. Esto contribuye a mejorar la experiencia del usuario, facilitar la detección de errores y garantizar un software más confiable y de calidad.
 
+**Employees Api Integration Test**
+
+![Employees Api Integration Test](assets/img/EmployeesApiIntegrationTest.png)
+
+**Bus Units Api Integration Test**
+
+![Bus Units Api Integration Test](assets/img/BusUnitsApiIntegrationTest.png)
+
+**Shifts Api Integration Test**
+
+![Shifts Api Integration Test]()
+
+**Alerts Api Integration Test**
+
+![Alerts Api Integration Test](assets/img/AlertsApiIntegrationTest.png)
+
+**Abstract Api IntegrationTest**
+
+![Abstract Api IntegrationTest]()
 
 ### 6.1.3. Core Behavior-Driven Development
 
