@@ -50,15 +50,11 @@ Las Core Integration Tests son esenciales para verificar que los controladores f
 
 **Shifts Api Integration Test**
 
-![Shifts Api Integration Test]()
+![Shifts Api Integration Test](assets/img/ShiftsApiIntegrationTest.png)
 
 **Alerts Api Integration Test**
 
 ![Alerts Api Integration Test](assets/img/AlertsApiIntegrationTest.png)
-
-**Abstract Api IntegrationTest**
-
-![Abstract Api IntegrationTest]()
 
 ### 6.1.3. Core Behavior-Driven Development
 
