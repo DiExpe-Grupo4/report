@@ -60,6 +60,32 @@ Las Core Integration Tests son esenciales para verificar que los controladores f
 
 El Behavior-Driven Development (BDD) permite validar el comportamiento del sistema a partir de escenarios que representan situaciones reales de uso. Estas pruebas ayudan a comprobar que las funcionalidades implementadas respondan correctamente a las necesidades definidas en los requerimientos, utilizando criterios claros y comprensibles para el equipo de desarrollo y los usuarios.
 
+<center>
+
+![features](assets/img/features.png)
+
+</center>
+
+**Identidad y autorización del conductor**
+
+![BDD1](assets/img/BDD1.png)
+
+**Inicio y cierre del servicio**
+
+![BDD2](assets/img/BDD2.png)
+
+**Alertas de emergencia**
+
+![BDD3](assets/img/BDD3.png)
+
+**Monitoreo de unidades y conteo de pasajeros**
+
+![BDD4](assets/img/BDD4.png)
+
+**Gestión de conoductores mediante Api**
+
+![BDD5](assets/img/BDd5.png)
+
 ### 6.1.4. Core System Tests.
 
 Las Core System Tests permiten evaluar el funcionamiento completo del sistema, verificando la interacción entre sus principales componentes y funcionalidades. Estas pruebas buscan comprobar que el producto cumpla con los requerimientos establecidos y que los flujos principales se ejecuten correctamente en escenarios similares a los de un entorno real.
