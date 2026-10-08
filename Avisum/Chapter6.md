@@ -4,7 +4,37 @@
 
 Las pruebas unitarias de las core entities son fundamentales en el desarrollo de software, ya que permiten verificar su correcto funcionamiento, detectar errores de manera temprana y facilitar el mantenimiento del código.
 
+**Alert Test**
 
+![Alert Test](assets/img/AlertTest.png)
+
+**Face Verification Test**
+
+![Face Verification Test](assets/img/FaceVerificationTest.png)
+
+**Employee Test**
+
+![Employee Test](assets/img/EmployeeTest.png)
+
+**Bus Unit Test**
+
+![Bus Unit Test](assets/img/BusUnitTest.png)
+
+**Passenger Count Test**
+
+![Passenger Count Test](assets/img/PassengeCountTest.png)
+
+**Sensor Test**
+
+![Sensot Test](assets/img/SensorTest.png)
+
+**Shift Test**
+
+![Shift Test](assets/img/ShiftTest.png)
+
+**Driver Profile Test**
+
+![Driver Profile Test](assets/img/DriverProfileTest.png)
 
 ### 6.1.2. Core Integration Tests.
 
