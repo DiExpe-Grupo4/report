@@ -84,7 +84,7 @@ El Behavior-Driven Development (BDD) permite validar el comportamiento del siste
 
 **Gestión de conoductores mediante Api**
 
-![BDD5](assets/img/BDd5.png)
+![BDD5](assets/img/BDD5.png)
 
 ### 6.1.4. Core System Tests.
 
