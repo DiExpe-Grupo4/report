@@ -104,3 +104,9 @@ El backend y su base de datos se despliegan juntos en Render: la base de datos e
 
 ![Vercel](assets/img/vercelimg.png)
 
+
+## 7.4. Continuous Monitoring
+### 7.4.1. Tools and Practices
+### 7.4.2. Monitoring Pipeline Components
+### 7.4.3. Alerting Pipeline Components
+### 7.4.4. Notification Pipeline Components.
