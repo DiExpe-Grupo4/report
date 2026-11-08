@@ -287,7 +287,6 @@ De las 12 pruebas ejecutadas, 11 pasaron y 1 falló.
 - El botón de pánico envía la alerta sin ventana de confirmación y la pantalla incluye un botón "Cancelar alerta" que no figura en las historias de usuario (ST-07).
 - Las cifras del panel de administración cambian entre cargas y la sección de alertas recientes quedó vacía, sin mensaje, en una de ellas (ST-09).
 - Las historias US22, US23 y US30 no tienen una sección equivalente en la landing page (ST-11).
-- El producto aparece con tres nombres distintos: "Avisum" en la landing y los capítulos, "SafeBus" en la pantalla de verificación y "UrbanGuard" en el título de la pestaña del frontend.
 
 #### Limitaciones
 
@@ -353,7 +352,7 @@ A continuación se presentan las preguntas que se emplearán en las entrevistas 
 3. ¿La información de una alerta es suficiente para tomar decisiones ante una incidencia?
 4. ¿La visualización del estado de vehículos y servicios en tiempo real facilita la supervisión?
 5. ¿Qué funcionalidad considera más importante y qué aspecto debería mejorarse?
-6. Del 1 al 5, ¿qué tan probable sería implementar SafeBus en su empresa? ¿Por qué?
+6. Del 1 al 5, ¿qué tan probable sería implementar Avisum en su empresa? ¿Por qué?
 
 ### 6.3.2. Registro de Entrevistas.
 
@@ -379,7 +378,7 @@ A continuación se presentan las preguntas que se emplearán en las entrevistas 
 
 - **Inicio:** 0:00
 - **Duración:** 4:05 min
-- **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c197_upc_edu_pe/IQBAPbPzZ9LaRLTMuplI1HgtAb3jY5Yyp_9oBWWvl_uLqoI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Nlzd3P](https://youtu.be/9hNV2Dpi0Bg)
+- **URL:** [https://youtu.be/9hNV2Dpi0Bg](https://youtu.be/9hNV2Dpi0Bg)
 - **Resumen:** Andre entiende la aplicación sin dificultad y siente que todo está ordenado y fácil de navegar. A lo largo de la demostración comenta que los procesos ingresar, ver el dashboard, registrar rutas, crear sensores y dispositivos le resultan claros y nada confusos. Le parece especialmente útil que la app permita vincular sensores y mostrar alertas, porque lo ve como algo realmente práctico para cuidar mejor las rutas. En general, transmite una impresión positiva: considera que la herramienta funciona bien, es intuitiva y podría ser utilizada sin problemas por cualquier transportista. 
 
 
@@ -394,7 +393,7 @@ A continuación se presentan las preguntas que se emplearán en las entrevistas 
 
 - **Inicio:** 0:00
 - **Duración:** 10:44 min
-- **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a352_upc_edu_pe/IQA3t8o3QYH8Q5MS_7G5JtQbAZmaOU4UJSALY0YLktrarOo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=MEaIVx](https://youtu.be/hXUC10LIUPg) 
+- **URL:** [https://youtu.be/hXUC10LIUPg](https://youtu.be/hXUC10LIUPg) 
 - **Resumen:** Franco transmite que la aplicación le resulta clara, ordenada y muy fácil de usar desde el inicio. Percibe que todo el flujo, desde la landing page hasta alertas es intuitivo, sin pasos confusos. La información está bien presentada, es relevante y le permite entender rápidamente cómo funciona cada sección. También valora que los formularios sean breves y que la navegación sea directa. En general, su impresión es positiva, siente que la app está bien estructurada, que cada parte cumple su propósito y que todas las funciones aportan valor a la experiencia del usuario. 
 
 
@@ -406,7 +405,7 @@ A continuación se presentan las preguntas que se emplearán en las entrevistas 
 
 - **Inicio:** 0:00
 - **Duración:** 6:25 min
-- **URL:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323243_upc_edu_pe/IQDvG7qcbLA4SpbyXvgeLP6zAZK4JCsJsvKpmLwuEPqTFp4?e=TL1NWp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://youtu.be/eNBxgPOn_I4) 
+- **URL:** [https://youtu.be/eNBxgPOn_I4](https://youtu.be/eNBxgPOn_I4) 
 - **Resumen:** Caro percibe que toda la aplicación es clara, directa y fácil de usar. Desde la landing page siente que la información está bien explicada y no encuentra ningún obstáculo para entender las funciones gratuitas ni para navegar. El formulario de registro le parece rápido y lógico, con los datos justos y necesarios. Al llegar al dashboard, entiende de inmediato cómo moverse entre secciones y considera que agregar una ruta es un proceso muy intuitivo, ya que todo está ordenado y bien identificado. También interpreta el módulo de administrador como una herramienta útil para organizar sus seguiminentos y anotar fechas, complicaciones y prioridades. En resumen, su impresión global es positiva: siente que la plataforma es sencilla, funcional y pensada para que cualquier usuario la pueda utilizar sin complicaciones.   
 
 ### 6.3.3. Evaluaciones según heurísticas.
