@@ -211,5 +211,5 @@ Las alertas se envían por dos canales: **correo electrónico** del equipo y un 
 </p>
 
 <p align="center">
-  <img src="Avisum/assets/img/08-discord-up.png" alt="Discord Up" width="800">
+  <img src="assets/img/08-discord-up.png" alt="Discord Up" width="800">
 </p>
