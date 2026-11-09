@@ -156,19 +156,19 @@ El pipeline de monitoreo tiene tres componentes:
 | Duración | 2 min 36 s |
 
 <p align="center">
-  <img src="Avisum/assets/img/01-config-monitor.png" alt="Configuración del monitor" width="800">
+  <img src="assets/img/01-config-monitor.png" alt="Configuración del monitor" width="800">
 </p>
 
 <p align="center">
-  <img src="Avisum/assets/img/05-panel-down.png" alt="Panel en estado Down" width="800">
+  <img src="assets/img/05-panel-down.png" alt="Panel en estado Down" width="800">
 </p>
 
 <p align="center">
-  <img src="Avisum/assets/img/06-url-corregida.png" alt="URL corregida" width="800">
+  <img src="assets/img/06-url-corregida.png" alt="URL corregida" width="800">
 </p>
 
 <p align="center">
-  <img src="Avisum/assets/img/09-monitor-recuperado.png" alt="Monitor recuperado" width="800">
+  <img src="assets/img/09-monitor-recuperado.png" alt="Monitor recuperado" width="800">
 </p>
 
 ---
@@ -193,17 +193,21 @@ Las alertas se envían por dos canales: **correo electrónico** del equipo y un 
 **Alerta de caída (Down)**
 
 <p align="center">
-  <img src="Avisum/assets/img/03-correo-down.png" alt="Correo Down" width="800">
+  <img src="assets/img/03-correo-down.png" alt="Correo Down" width="800">
 </p>
 
 <p align="center">
-  <img src="Avisum/assets/img/04-discord-down.png" alt="Discord Down" width="800">
+  <img src="assets/img/04-discord-down.png" alt="Discord Down" width="800">
 </p>
 
 **Alerta de recuperación (Up)**
 
 <p align="center">
-  <img src="Avisum/assets/img/07-correo-up.png" alt="Correo Up" width="800">
+  <img src="assets/img/07-correo-up.png" alt="Correo Up" width="800">
+</p>
+
+<p align="center">
+  <img src="assets/img/08-discord-up.png" alt="Discord Up" width="800">
 </p>
 
 <p align="center">
