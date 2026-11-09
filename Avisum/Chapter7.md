@@ -104,3 +104,90 @@ El backend y su base de datos se despliegan juntos en Render: la base de datos e
 
 ![Vercel](assets/img/vercelimg.png)
 
+---
+
+## 7.4. Continuous Monitoring
+
+### 7.4.1. Tools and Practices
+
+| Herramienta | Uso en Avisum |
+|---|---|
+| UptimeRobot (plan gratuito) | Monitoreo externo HTTP(S) de la disponibilidad del backend |
+| Correo electrónico | Canal de notificación de incidentes |
+| Discord (webhook) | Canal de notificación del equipo |
+| Swagger UI del backend (Render) | Endpoint verificado en cada chequeo |
+
+**Prácticas aplicadas:**
+
+- Monitoreo externo continuo cada 5 minutos.
+- Alertas automáticas ante caída y recuperación del servicio.
+- Historial de incidentes y tiempos de respuesta.
+- Validación del flujo mediante una caída simulada.
+
+**Mejoras futuras:** Spring Boot Actuator (`/actuator/health`), Sentry y métricas de latencia y memoria.
+
+---
+
+### 7.4.2. Monitoring Pipeline Components
+
+El pipeline de monitoreo tiene tres componentes:
+
+- **Sonda:** un monitor HTTP/S de UptimeRobot consulta `https://avisum-backend.onrender.com/swagger-ui.html` cada 5 minutos desde una ubicación automática (Falkenstein, Alemania).
+- **Evaluación:** el servicio se considera disponible (*Up*) si responde con éxito y caído (*Down*) si devuelve un error o no responde.
+- **Visualización:** el panel de UptimeRobot muestra el estado actual, la disponibilidad en 24 horas, 7 y 30 días, el tiempo de respuesta (alrededor de 450 a 550 ms) y el historial de incidentes.
+
+![Monitor en estado Up](Avisum/assets/img/02-monitor-up.png)
+
+---
+
+### 7.4.3. Alerting Pipeline Components
+
+**Regla de alerta:** si una verificación recibe un código distinto de éxito o no hay respuesta, se abre un incidente y se dispara la alerta. Cuando el servicio vuelve a responder, se cierra el incidente y se envía la alerta de recuperación. La regla se configuró sin retraso ni repetición.
+
+**Prueba de validación:** se cambió la URL monitoreada a una ruta inexistente (`swagger-ui.htmlXX`).
+
+| Dato | Valor |
+|---|---|
+| Causa raíz | HTTP 404 – Not Found |
+| Inicio del incidente | 08/11/2026 18:28:11 |
+| Resolución | 08/11/2026 18:30:47 |
+| Duración | 2 min 36 s |
+
+![Configuración del monitor](Avisum/assets/img/01-config-monitor.png)
+
+![Panel en estado Down](Avisum/assets/img/05-panel-down.png)
+
+![URL corregida](Avisum/assets/img/06-url-corregida.png)
+
+![Monitor recuperado](Avisum/assets/img/09-monitor-recuperado.png)
+
+---
+
+### 7.4.4. Notification Pipeline Components
+
+Las alertas se envían por dos canales: **correo electrónico** del equipo y un canal de **Discord** conectado mediante webhook. Cada notificación incluye:
+
+- el monitor y la URL verificada,
+- la causa raíz,
+- la ubicación de la sonda,
+- la hora de inicio y de resolución,
+- la duración del incidente.
+
+| Evento | Hora | Canales |
+|---|---|---|
+| Prueba de correo | 18:13 | Correo |
+| Confirmación del webhook | 18:23 | Discord |
+| Alerta **Down** | 18:28 | Correo y Discord |
+| Alerta **Up** (recuperación) | 18:30 | Correo y Discord |
+
+**Alerta de caída (Down)**
+
+![Correo Down](Avisum/assets/img/03-correo-down.png)
+
+![Discord Down](Avisum/assets/img/04-discord-down.png)
+
+**Alerta de recuperación (Up)**
+
+![Correo Up](Avisum/assets/img/07-correo-up.png)
+
+![Discord Up](Avisum/assets/img/08-discord-up.png)
