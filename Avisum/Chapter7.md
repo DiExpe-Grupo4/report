@@ -137,7 +137,7 @@ El pipeline de monitoreo tiene tres componentes:
 - **Visualización:** el panel de UptimeRobot muestra el estado actual, la disponibilidad en 24 horas, 7 y 30 días, el tiempo de respuesta (alrededor de 450 a 550 ms) y el historial de incidentes.
 
 <p align="center">
-  <img src="Avisum/assets/img/02-monitor-up.png" alt="Monitor en estado Up" width="800">
+  <img src="assets/img/02-monitor-up.png" alt="Monitor en estado Up" width="800">
 </p>
 
 ---
