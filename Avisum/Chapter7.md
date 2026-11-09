@@ -136,7 +136,9 @@ El pipeline de monitoreo tiene tres componentes:
 - **Evaluación:** el servicio se considera disponible (*Up*) si responde con éxito y caído (*Down*) si devuelve un error o no responde.
 - **Visualización:** el panel de UptimeRobot muestra el estado actual, la disponibilidad en 24 horas, 7 y 30 días, el tiempo de respuesta (alrededor de 450 a 550 ms) y el historial de incidentes.
 
-![Monitor en estado Up](Avisum/assets/img/02-monitor-up.png)
+<p align="center">
+  <img src="Avisum/assets/img/02-monitor-up.png" alt="Monitor en estado Up" width="800">
+</p>
 
 ---
 
@@ -153,13 +155,21 @@ El pipeline de monitoreo tiene tres componentes:
 | Resolución | 08/11/2026 18:30:47 |
 | Duración | 2 min 36 s |
 
-![Configuración del monitor](Avisum/assets/img/01-config-monitor.png)
+<p align="center">
+  <img src="Avisum/assets/img/01-config-monitor.png" alt="Configuración del monitor" width="800">
+</p>
 
-![Panel en estado Down](Avisum/assets/img/05-panel-down.png)
+<p align="center">
+  <img src="Avisum/assets/img/05-panel-down.png" alt="Panel en estado Down" width="800">
+</p>
 
-![URL corregida](Avisum/assets/img/06-url-corregida.png)
+<p align="center">
+  <img src="Avisum/assets/img/06-url-corregida.png" alt="URL corregida" width="800">
+</p>
 
-![Monitor recuperado](Avisum/assets/img/09-monitor-recuperado.png)
+<p align="center">
+  <img src="Avisum/assets/img/09-monitor-recuperado.png" alt="Monitor recuperado" width="800">
+</p>
 
 ---
 
@@ -182,12 +192,20 @@ Las alertas se envían por dos canales: **correo electrónico** del equipo y un 
 
 **Alerta de caída (Down)**
 
-![Correo Down](Avisum/assets/img/03-correo-down.png)
+<p align="center">
+  <img src="Avisum/assets/img/03-correo-down.png" alt="Correo Down" width="800">
+</p>
 
-![Discord Down](Avisum/assets/img/04-discord-down.png)
+<p align="center">
+  <img src="Avisum/assets/img/04-discord-down.png" alt="Discord Down" width="800">
+</p>
 
 **Alerta de recuperación (Up)**
 
-![Correo Up](Avisum/assets/img/07-correo-up.png)
+<p align="center">
+  <img src="Avisum/assets/img/07-correo-up.png" alt="Correo Up" width="800">
+</p>
 
-![Discord Up](Avisum/assets/img/08-discord-up.png)
+<p align="center">
+  <img src="Avisum/assets/img/08-discord-up.png" alt="Discord Up" width="800">
+</p>
