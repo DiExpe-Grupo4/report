@@ -287,7 +287,6 @@ De las 12 pruebas ejecutadas, 11 pasaron y 1 falló.
 - El botón de pánico envía la alerta sin ventana de confirmación y la pantalla incluye un botón "Cancelar alerta" que no figura en las historias de usuario (ST-07).
 - Las cifras del panel de administración cambian entre cargas y la sección de alertas recientes quedó vacía, sin mensaje, en una de ellas (ST-09).
 - Las historias US22, US23 y US30 no tienen una sección equivalente en la landing page (ST-11).
-- El producto aparece con tres nombres distintos: "Avisum" en la landing y los capítulos, "SafeBus" en la pantalla de verificación y "UrbanGuard" en el título de la pestaña del frontend.
 
 #### Limitaciones
 
@@ -295,3 +294,137 @@ De las 12 pruebas ejecutadas, 11 pasaron y 1 falló.
 - Las pruebas del panel de administración no verifican cifras ni alertas concretas, porque los datos mostrados cambian entre ejecuciones.
 - Las pruebas cubren la aplicación web; la aplicación móvil nativa no se probó con Selenium.
 
+## 6.2. Static testing & Verification
+### 6.2.1. Static Code Analysis
+Esta sección aborda las técnicas de prueba y verificación estática, cuyo objetivo es garantizar que el software cumpla con los estándares de calidad y seguridad antes de ser ejecutado. Al aplicarlas, es posible detectar defectos en las primeras etapas del ciclo de vida del desarrollo.
+
+El análisis estático consiste en examinar el código fuente sin ejecutarlo, ya sea mediante herramientas automatizadas o revisiones manuales. Con este enfoque se pueden identificar errores, vulnerabilidades de seguridad y aspectos susceptibles de mejora, lo que eleva la calidad general del software y reduce el costo de corregir problemas en fases posteriores.
+
+#### 6.2.1.1. Coding standard & Code conventions
+Los estándares de codificación y las convenciones son pautas que los desarrolladores deben seguir para lograr un código legible, mantenible y consistente. Para ello, se aplican los siguientes principios:
+
+- Clean Code: Se deben usar nombres claros y descriptivos para variables, funciones y clases. Las funciones han de ser breves y cumplir una única responsabilidad, y se debe eliminar el código muerto y los comentarios innecesarios. Esto facilita la comprensión del código y la colaboración entre desarrolladores.
+- Domain-Driven Design (DDD): Se debe adoptar un lenguaje ubicuo que refleje la terminología del negocio. Es clave dividir el sistema en bounded contexts y emplear correctamente entidades y objetos de valor. Asimismo, la lógica del dominio debe gestionarse mediante servicios de dominio y repositorios, lo que favorece una arquitectura más ordenada y alineada con los objetivos del negocio.
+
+#### 6.2.1.2. Code Quality & Code Security
+La calidad y la seguridad del código son esenciales para desarrollar software confiable:
+
+- Calidad del código: Debe medirse con métricas como la cobertura de pruebas y la complejidad ciclomática. Se recomienda emplear herramientas como SonarQube para dar seguimiento continuo a la calidad y verificar que se cumplan los estándares definidos. SonarQube realiza un análisis exhaustivo del código, detecta problemas de calidad y sugiere cómo corregirlos.
+- Seguridad del código: Es fundamental identificar y mitigar vulnerabilidades comunes, como las inyecciones SQL y el XSS, mediante la revisión del código. Aplicar prácticas de codificación segura y validar correctamente las entradas del usuario resulta clave para proteger el software.
+
+Dado este enfoque en calidad y seguridad, se utilizará SonarLint, una herramienta complementaria que analiza el código en tiempo real mientras se desarrolla. SonarLint se integra con los IDE más populares, como IntelliJ IDEA, Eclipse y Visual Studio, y permite a los desarrolladores detectar problemas de calidad y seguridad a medida que escriben, recibiendo recomendaciones inmediatas para resolverlos. De esta manera se fomenta una cultura de calidad y mejora continua desde el inicio del desarrollo, y se garantiza que los problemas se atiendan antes de llegar a las etapas de revisión y prueba.
+
+### 6.2.2. Reviews
+Las revisiones de código son un proceso fundamental para asegurar la calidad y el cumplimiento de las normas establecidas. Incluyen tanto revisiones manuales como automáticas y deben seguir las pautas descritas a continuación.
+
+**Tipos de revisiones**
+- _Revisión por pares_: Un desarrollador examina el código de otro para comprobar que cumple con los estándares y que resulta fácil de entender.
+- _Revisión formal_: Se realiza en una reunión estructurada en la que el código se evalúa con un checklist, lo que permite detectar problemas de manera colectiva.
+- _Revisión automática_: Se apoya en herramientas como SonarLint y SonarQube para identificar errores y problemas de calidad en tiempo real.
+
+**Proceso de revisión**
+- _Creación de Pull Requests_: Los desarrolladores deben crear un PR con una descripción clara de los cambios realizados y de las pruebas asociadas.
+- _Checklist de revisión_: Debe existir una lista de verificación que contemple aspectos como la claridad del código, la cobertura de pruebas y el manejo de errores.
+- _Comentarios y retroalimentación_: Los revisores deben ofrecer comentarios constructivos y específicos, y todo problema identificado debe resolverse antes de la aprobación final.
+- _Aprobación o rechazo del PR_: Todo PR requiere la aprobación de al menos un revisor adicional antes de integrarse en la rama principal.
+
+**Criterios de aceptación**
+- _Calidad y seguridad del código_: El código debe cumplir con los estándares de calidad y no introducir vulnerabilidades de seguridad.
+- _Cobertura de pruebas_: Se exige una cobertura mínima (por ejemplo, 80 %) para garantizar que el código nuevo esté debidamente probado.
+
+## 6.3. Validation Interviews
+### 6.3.1. Diseño de Entrevistas.
+A continuación se presentan las preguntas que se emplearán en las entrevistas de validación para evaluar la usabilidad de la aplicación actual. Estas preguntas han sido elaboradas para explorar las heurísticas de usabilidad y recoger información valiosa sobre la experiencia de los usuarios.
+
+**Segmento Objetivo 1: Conductores**
+
+1. ¿La información mostrada al iniciar sesión permite entender rápidamente el servicio?
+2. ¿El proceso de iniciar y finalizar un turno es sencillo para su trabajo diario?
+3. ¿Registrar una emergencia o enviar una alerta sería fácil durante una situación real?
+4. ¿La información del recorrido en tiempo real ayudaría a mejorar su trabajo?
+5. ¿Qué parte de la aplicación considera más útil y qué debería mejorar?
+6. Del 1 al 5, ¿qué tan probable sería utilizar esta aplicación durante sus jornadas? ¿Por qué?
+
+**Segmento objetivo 2: Empresas / Consorcios de transporte público**
+
+1. ¿El dashboard permite encontrar fácilmente la información necesaria para controlar conductores, unidades y servicios?
+2. ¿La gestión de turnos e historial de operaciones ayudaría a mejorar el control de la empresa?
+3. ¿La información de una alerta es suficiente para tomar decisiones ante una incidencia?
+4. ¿La visualización del estado de vehículos y servicios en tiempo real facilita la supervisión?
+5. ¿Qué funcionalidad considera más importante y qué aspecto debería mejorarse?
+6. Del 1 al 5, ¿qué tan probable sería implementar Avisum en su empresa? ¿Por qué?
+
+### 6.3.2. Registro de Entrevistas.
+
+**Segmento Objetivo 1: Conductores**
+
+- **Nombres y apellidos:** **PABLO CHACOT** 
+- **Género:** Masculino
+- **Edad:** 22 años
+
+<img src="assets/img/EntrevistaPACO.png">
+
+- **Inicio:** 0:00
+- **Duración:** 6:59 min
+- **URL:** [[https://upcedupe-my.sharepoint.com/:v:/g/personal/u202311082_upc_edu_pe/IQDu-vGArPjvQZbIJN1-flTDAfRFYF3reEetcAV8P1jpORY?](https://youtu.be/-4608rQgS-Y)]
+- **Resumen:** Paco percibe la aplicación como una herramienta clara y fácil de usar, mostrando comodidad y familiaridad con cada paso que se le presenta. Repite varias veces que el sistema es “sencillo” e “intuitivo”, lo que refleja que no encuentra fricciones ni confusiones en el flujo. También valora especialmente la utilidad práctica de los sensores y las alertas, porque entiende que aportan información clave para la seguridad durante la actividad del transporte público. En general, su actitud es positiva, receptiva y sin objeciones técnicas importantes, transmitiendo que la app le parece funcional, bien organizada y adecuada para usuarios que quieren gestionar su seguridad.
+
+
+- **Nombres y apellidos:** **VANESSA NUÑEZ** 
+- **Género:** FEMENINO
+- **Edad:** 26 años
+
+<img src="assets/img/EntrevistaVANESSA.png">
+
+- **Inicio:** 0:00
+- **Duración:** 4:05 min
+- **URL:** [https://youtu.be/9hNV2Dpi0Bg](https://youtu.be/9hNV2Dpi0Bg)
+- **Resumen:** Andre entiende la aplicación sin dificultad y siente que todo está ordenado y fácil de navegar. A lo largo de la demostración comenta que los procesos ingresar, ver el dashboard, registrar rutas, crear sensores y dispositivos le resultan claros y nada confusos. Le parece especialmente útil que la app permita vincular sensores y mostrar alertas, porque lo ve como algo realmente práctico para cuidar mejor las rutas. En general, transmite una impresión positiva: considera que la herramienta funciona bien, es intuitiva y podría ser utilizada sin problemas por cualquier transportista. 
+
+
+
+**Segmento Objetivo 2: Representantes de Consorcios**
+
+- **Nombres y apellidos:** **FRANCO ALCOCER** 
+- **Género:** Masculino
+- **Edad:** 25 años
+
+<img src="assets/img/EntrevistaFRANCO.png">
+
+- **Inicio:** 0:00
+- **Duración:** 10:44 min
+- **URL:** [https://youtu.be/hXUC10LIUPg](https://youtu.be/hXUC10LIUPg) 
+- **Resumen:** Franco transmite que la aplicación le resulta clara, ordenada y muy fácil de usar desde el inicio. Percibe que todo el flujo, desde la landing page hasta alertas es intuitivo, sin pasos confusos. La información está bien presentada, es relevante y le permite entender rápidamente cómo funciona cada sección. También valora que los formularios sean breves y que la navegación sea directa. En general, su impresión es positiva, siente que la app está bien estructurada, que cada parte cumple su propósito y que todas las funciones aportan valor a la experiencia del usuario. 
+
+
+- **Nombres y apellidos:** **CARO CASTILO** 
+- **Género:** Femenino
+- **Edad:** 25 años
+
+<img src="assets/img/EntrevistaCARO.png">
+
+- **Inicio:** 0:00
+- **Duración:** 6:25 min
+- **URL:** [https://youtu.be/eNBxgPOn_I4](https://youtu.be/eNBxgPOn_I4) 
+- **Resumen:** Caro percibe que toda la aplicación es clara, directa y fácil de usar. Desde la landing page siente que la información está bien explicada y no encuentra ningún obstáculo para entender las funciones gratuitas ni para navegar. El formulario de registro le parece rápido y lógico, con los datos justos y necesarios. Al llegar al dashboard, entiende de inmediato cómo moverse entre secciones y considera que agregar una ruta es un proceso muy intuitivo, ya que todo está ordenado y bien identificado. También interpreta el módulo de administrador como una herramienta útil para organizar sus seguiminentos y anotar fechas, complicaciones y prioridades. En resumen, su impresión global es positiva: siente que la plataforma es sencilla, funcional y pensada para que cualquier usuario la pueda utilizar sin complicaciones.   
+
+### 6.3.3. Evaluaciones según heurísticas.
+## 6.4. Auditoría de Experiencias de Usuario.
+### 6.4.1. Auditoría realizada.
+#### 6.4.1.1. Información del grupo auditado.
+Grupo a evaluar: El grupo de Milenko
+Contexto
+#### 6.4.1.2. Cronograma de auditoría realizada.
+Cuadro de interacciones con el otro equipo
+#### 6.4.1.3. Contenido de auditoría realizada.
+Un cuadro
+
+### 6.4.2. Auditoría recibida.
+#### 6.4.2.1. Información del grupo auditor.
+Grupo auditor: el grupo del compañero
+Contexto
+#### 6.4.2.2. Cronograma de auditoría recibida.
+cauador
+#### 6.4.2.3. Contenido de auditoría recibida.
+##### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+correciones que desarrollamos o desarrollaremos
