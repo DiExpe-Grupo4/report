@@ -467,69 +467,99 @@ _Tabla 18. Plan de tracking web y móvil - Elaboración propia._
 
 ## 8.3. Experimentation
 
+En esta sección se presenta la fase de Experimentación de Avisum, que lleva los experimentos planificados (sección 8.1) y diseñados (sección 8.2) a trabajo ejecutable por el equipo. El punto de partida es un sistema que ya cuenta con su primera versión: las 37 historias del Capítulo III se completaron en el Sprint 1 (sección 5.2.1). Lo que falta no es más funcionalidad de negocio, sino la capacidad de **medir** si esa funcionalidad cumple lo que el equipo cree. Por eso, las historias de esta sección no reemplazan a las del Capítulo III: se suman a ellas y registran los datos que necesitan los experimentos EX-01 a EX-04 (8.1.5) y el plan de tracking de la sección 8.2.8.
+
+Se trabaja con dos familias de hipótesis que no deben confundirse. Las **hipótesis Lean UX H1 a H4** (sección 1.2.2.3) son las del producto y se resumen en la Tabla 19. Las **hipótesis de experimento H-01 a H-07** (sección 8.2.1) son las que se contrastan en cada experimento; cada historia indica a cuáles aporta datos. Las historias cuyo experimento aparece como “—” sostienen una hipótesis Lean UX, pero la sección 8.2 todavía no define un experimento para ellas.
+
+| Hipótesis | Lo que el equipo cree | Evidencia que el sistema debe poder entregar |
+| :--: | :--: | :--: |
+| H1 | La gestión de alertas permite al conductor comunicar un riesgo a la central de forma más rápida y oportuna. | Tiempo entre la activación de una alerta y la confirmación de su recepción por la central. |
+| H2 | Conocer el estado y la ubicación de las unidades mejora la supervisión de la empresa durante el servicio. | Uso del panel de supervisión y tiempo que toma ubicar una unidad. |
+| H3 | Validar y autorizar al conductor antes del servicio mejora la trazabilidad de las operaciones. | Resultado de cada validación y tiempo hasta registrar el inicio del servicio. |
+| H4 | Centralizar alertas, ubicaciones y servicios permite un mejor seguimiento de los incidentes. | Alertas almacenadas con su información y uso real del historial de emergencias. |
+
+_Tabla 19. Hipótesis Lean UX que respalda la Experimentación - Elaboración propia._
+
+Para construir estas historias se siguieron tres criterios del enfoque XDPD:
+
+- **La cosa más simple y útil:** cada historia registra solo la información necesaria para responder una pregunta concreta, sin instrumentar todo el sistema.
+- **Condiciones de control y experimental:** cada medición se etiqueta con su condición (por ejemplo, alerta de Avisum frente a llamada telefónica, o la condición de red) y los eventos de un experimento se separan de los de producción con el indicador experiment_session definido en la sección 8.2.8.
+- **No causar daño:** ningún experimento puede degradar el botón de pánico. En ambas condiciones el conductor conserva el acceso completo a la alerta; la condición experimental solo agrega o mejora comportamiento, y las pruebas de activación (EX-03) se hacen con el vehículo detenido, como define la sección 8.2.4.
+
 ### 8.3.1. To-Be User Stories.
 
-Las To-Be User Stories son historias de usuario nuevas que se anticipa surgirán de los hallazgos de los experimentos diseñados. No reemplazan el backlog actual; se incorporan a él una vez que el experimento correspondiente confirma la necesidad. Se presentan como propuestas condicionadas a los resultados esperados.
+Las historias To-Be se agrupan en una nueva épica, EP006, que reúne el trabajo de instrumentación y operación de experimentos. EP006 se relaciona con EP002 (gestión de alertas) y con EP003 (seguimiento de unidades). Tres historias, US45, US46 y US48, profundizan funcionalidad de alertas ya existente, por lo que pertenecen directamente a EP002.
 
-| Story ID | Título | Usuario | Descripción | Criterio de aceptación | Epic ID | Origen del experimento |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| US38 | Activación de alerta con gesto mínimo | Conductor | Como conductor, quiero activar la alerta con un único toque largo en un área grande de la pantalla, para no delatar la acción al cobrador. | **Éxito:** El conductor activa la alerta en ≤ 2 s con 1 toque y sin mirar la pantalla más de 0,5 s. **Fracaso:** El gesto se confunde con otra interacción o no activa la alerta en el primer intento. | EP002 | EX-03 (si BQ-01 no se cumple con el diseño actual) |
-| US39 | Notificación push al celular del responsable nocturno | Sistema | Como sistema, quiero enviar una notificación push al celular del responsable de guardia cuando no hay operador activo en el panel, para garantizar que toda alerta sea atendida. | **Éxito:** La notificación llega en ≤ 15 s al celular registrado como guardia si el panel lleva más de 5 minutos sin actividad. **Fracaso:** No hay número de guardia registrado o la notificación no llega por restricciones del SO. | EP002 | EX-01 (si K-02 revela ausencia de operador nocturno) |
-| US40 | Reintento automático de alerta sin cobertura | Sistema | Como sistema, quiero almacenar la alerta localmente y reenviarla en cuanto se recupere la señal, para que ninguna emergencia se pierda por falta de cobertura momentánea. | **Éxito:** La alerta almacenada se envía en ≤ 5 s tras recuperar la conexión y llega al panel con marca de tiempo del momento original. **Fracaso:** La alerta no se envía o llega sin el timestamp original. | EP002 | EX-02 (condición sin datos) y EQ-02 |
-| US41 | Protocolo guiado de respuesta en el panel | Empresa | Como operador de la central, quiero que el panel me sugiera los pasos a seguir ante cada tipo de alerta, para actuar correctamente aunque no recuerde el protocolo. | **Éxito:** El operador completa el protocolo en ≤ 2 min con el asistente visible, sin cometer pasos omitidos. **Fracaso:** El asistente no aparece para alertas de baja gravedad o bloquea la vista del mapa. | EP002 | EX-01 y EX-02 (si BQ-03 no se cumple) |
-| US42 | Modo silencioso de pantalla durante el servicio | Conductor | Como conductor, quiero que la pantalla de la app se apague automáticamente tras confirmar el inicio de servicio y solo vibre sin encenderse al recibir confirmaciones, para no llamar la atención durante el trayecto. | **Éxito:** La pantalla permanece apagada durante el servicio activo; la vibración es perceptible a 1 m de distancia. **Fracaso:** La pantalla se enciende al llegar el ACK o la vibración no es detectable con ruido de cabina. | EP001 | EX-04 (si conductores mencionan la pantalla encendida como factor de riesgo) |
+| Epic ID | Title | Description | Acceptance Criteria | Related to (Epic ID) |
+| :--: | :--: | :--: | :--: | :--: |
+| EP006 | Medición y operación de experimentos | Como equipo de producto, quiero registrar el comportamiento del sistema y comparar condiciones de experimento, para contrastar las hipótesis con evidencia y decidir qué mantener, cambiar o descartar. | No aplicable | EP002, EP003 |
 
-_Tabla 19. To-Be User Stories propuestas - Elaboración propia._
+_Tabla 20. Epic To-Be del proyecto - Elaboración propia._
 
----
+La numeración continúa la del Capítulo III (US01 a US37). Se incorpora el actor **Equipo de producto**, que es quien consulta los resultados de los experimentos.
+
+| Story ID | Title | User | Description | Acceptance Criteria | Epic ID | Priority | Hipótesis Lean UX | H. XDPD (8.2.1) | Experimento (8.1.5) |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| US38 | Registrar marcas de tiempo del ciclo de la alerta | Sistema | Como sistema, quiero registrar la hora de activación, recepción y confirmación de cada alerta, para calcular el tiempo de respuesta de la central. | **Escenario (Éxito):**</br> **Given** que un conductor activa una alerta durante un servicio activo,</br> **When** la central recibe y confirma la alerta,</br> **Then** el sistema guarda las tres marcas de tiempo asociadas a esa alerta.</br> **Escenario (Fracaso):**</br> **Given** que la alerta no recibe confirmación,</br> **When** vence el tiempo de espera,</br> **Then** el sistema conserva la activación y la recepción, deja la confirmación vacía y marca la alerta como no confirmada. | EP006 | Alta | H1 | H-01 | EX-02 |
+| US39 | Registrar eventos de atención en el panel de supervisión | Sistema | Como sistema, quiero registrar cuándo un operador abre sesión en el panel, cuándo ve una alerta y cuándo consulta el estado o la ubicación de una unidad, para medir cuánto tarda la central en reaccionar. | **Escenario (Éxito):**</br> **Given** que un operador usa el panel de supervisión,</br> **When** abre sesión, ve una alerta o consulta una unidad,</br> **Then** el sistema registra el evento con el operador, la hora y la alerta o unidad involucrada.</br> **Escenario (Fracaso):**</br> **Given** que el registro del evento falla,</br> **When** el operador consulta la alerta o la unidad,</br> **Then** el panel muestra la información igualmente y el fallo queda anotado en el registro interno. | EP006 | Media | H2 | H-03 | — |
+| US40 | Registrar resultado y duración del inicio de servicio | Sistema | Como sistema, quiero registrar el resultado de cada validación de conductor y el tiempo hasta el inicio del servicio, para evaluar la trazabilidad de las operaciones. | **Escenario (Éxito):**</br> **Given** que un conductor intenta iniciar su jornada,</br> **When** el sistema valida su identidad y su autorización,</br> **Then** registra el resultado (aceptada o rechazada), el motivo y el tiempo hasta el inicio del servicio.</br> **Escenario (Fracaso):**</br> **Given** que la validación fue rechazada,</br> **When** el conductor vuelve a intentarlo,</br> **Then** cada intento se registra por separado, sin sobrescribir los anteriores. | EP006 | Media | H3 | H-05 | — |
+| US41 | Registrar consultas al historial de alertas | Sistema | Como sistema, quiero registrar cuándo una empresa consulta el historial de alertas, para saber si lo usa en el seguimiento de incidentes. | **Escenario (Éxito):**</br> **Given** que una empresa se encuentra en el historial de alertas,</br> **When** aplica un filtro o abre una alerta,</br> **Then** el sistema registra la consulta con la hora y el filtro usado.</br> **Escenario (Fracaso):**</br> **Given** que no existen alertas registradas,</br> **When** la empresa consulta el historial,</br> **Then** el sistema registra la consulta como una búsqueda sin resultados. | EP006 | Baja | H4 | — | — |
+| US42 | Marcar sesiones y eventos de experimento | Sistema | Como sistema, quiero marcar los eventos registrados durante un experimento con su identificador y su condición (control o experimental), para separar los datos de prueba de los de producción y comparar las condiciones. | **Escenario (Éxito):**</br> **Given** que el equipo inicia una sesión de experimento e indica su condición,</br> **When** el conductor o la central generan eventos durante la sesión,</br> **Then** todos los eventos quedan con experiment_session en verdadero, el identificador del experimento y la condición, y la alerta de pánico funciona igual en ambas condiciones.</br> **Escenario (Fracaso):**</br> **Given** que no hay una sesión de experimento activa,</br> **When** se registran eventos,</br> **Then** quedan con experiment_session en falso y no entran en las métricas de ningún experimento. | EP006 | Alta | H1, H2, H3, H4 | H-01, H-02 | EX-02, EX-03 |
+| US43 | Consultar métricas del experimento | Equipo de producto | Como equipo de producto, quiero consultar las métricas de cada condición, para contrastar los resultados con las hipótesis. | **Escenario (Éxito):**</br> **Given** que un experimento tiene datos registrados,</br> **When** el equipo consulta sus métricas,</br> **Then** el sistema muestra cada métrica por condición (control y experimental) junto con el número de observaciones.</br> **Escenario (Fracaso):**</br> **Given** que aún no hay datos suficientes,</br> **When** el equipo consulta las métricas,</br> **Then** el sistema indica que la muestra es insuficiente y no presenta conclusiones. | EP006 | Alta | H1, H2, H3, H4 | H-01 | EX-02 |
+| US44 | Endpoint de métricas del experimento | Developer | Como developer, quiero consultar las métricas de un experimento mediante API, para usarlas en reportes y en el análisis de resultados. | **Escenario (Éxito):**</br> **Given** un identificador de experimento válido,</br> **When** se envía la consulta,</br> **Then** el API retorna las métricas por condición.</br> **Escenario (Fracaso):**</br> **Given** un identificador de experimento inválido,</br> **When** el API procesa la consulta,</br> **Then** retorna un error. | EP006 | Media | H1, H2, H3, H4 | H-01 | EX-02 |
+| US45 | Marcar una alerta como atendida | Empresa | Como empresa, quiero marcar una alerta como atendida, para dejar registro de cuándo se resolvió el incidente. | **Escenario (Éxito):**</br> **Given** una alerta confirmada por la central,</br> **When** la empresa la marca como atendida,</br> **Then** el sistema guarda el nuevo estado y la hora.</br> **Escenario (Fracaso):**</br> **Given** una alerta no confirmada o que ya fue atendida,</br> **When** la empresa intenta marcarla como atendida,</br> **Then** el sistema rechaza la operación. | EP002 | Alta | H1, H4 | H-03 | — |
+| US46 | Resumir incidentes por zona y franja horaria | Empresa | Como empresa, quiero ver un resumen de las alertas por zona y franja horaria, para identificar patrones de riesgo en mis rutas. | **Escenario (Éxito):**</br> **Given** que existen alertas con ubicación registrada,</br> **When** la empresa consulta el resumen,</br> **Then** el sistema agrupa las alertas por zona y franja horaria.</br> **Escenario (Fracaso):**</br> **Given** que las alertas no tienen ubicación registrada,</br> **When** la empresa consulta el resumen,</br> **Then** el sistema indica que no hay datos suficientes para agrupar. | EP002 | Media | H4 | — | — |
+| US47 | Endpoint de eventos de analytics | Developer | Como developer, quiero un endpoint POST /api/v1/events que reciba los eventos de la app del conductor y del panel, para centralizar los datos de los experimentos sin depender de servicios de terceros. | **Escenario (Éxito):**</br> **Given** un evento válido con tipo, propiedades y marca de tiempo en UTC,</br> **When** se envía al endpoint,</br> **Then** el sistema lo guarda con su tipo y sus propiedades.</br> **Escenario (Fracaso):**</br> **Given** un evento con tipo desconocido o sin marca de tiempo,</br> **When** se envía al endpoint,</br> **Then** el API retorna un error y no lo guarda. | EP006 | Alta | H1, H2, H3, H4 | H-01, H-03, H-05 | EX-02 |
+| US48 | Guardar eventos sin conexión y sincronizarlos | Sistema | Como sistema, quiero guardar en el celular los eventos y las alertas cuando no hay señal y enviarlos al recuperarla, para no perder datos en zonas de cobertura débil. | **Escenario (Éxito):**</br> **Given** que el celular del conductor no tiene conexión,</br> **When** el conductor activa una alerta o se genera un evento,</br> **Then** queda guardado en el celular y se envía en cuanto se recupera la señal, conservando su marca de tiempo original.</br> **Escenario (Fracaso):**</br> **Given** que el almacenamiento local falla,</br> **When** se genera un evento,</br> **Then** el fallo queda anotado en el registro interno y la alerta se sigue intentando enviar cuando haya señal. | EP002 | Alta | H1 | H-01 | EX-02 |
+
+_Tabla 21. User Stories To-Be del proyecto - Elaboración propia._
 
 ### 8.3.2. To-Be Product Backlog.
 
-El To-Be Product Backlog integra las historias actuales del Sprint 1 con las To-Be User Stories propuestas, reordenadas según la prioridad que se anticipa tendrán una vez procesados los hallazgos de los experimentos. Las estimaciones en Story Points siguen la escala Fibonacci (1, 2, 3, 5, 8).
+El To-Be Product Backlog reúne las historias de la sección 8.3.1. El orden lo determina el valor para el negocio, según los Business Outcomes de la sección 1.2.2.2: primero se atiende el tiempo de respuesta ante alertas (US45, US38), luego se habilita el registro y la comparación de datos (US47, US48, US42, US43), después el resumen de incidentes para la empresa (US46) y, al final, el registro de uso del panel, de la validación y del historial, junto con el endpoint de métricas. Dentro de ese orden se respetan las dependencias técnicas: ninguna historia aparece antes de otra de la que depende. Las estimaciones usan la misma escala de Fibonacci (1, 2, 3, 5, 8) del Product Backlog de la sección 3.3. Las 37 historias del Capítulo III ya implementadas siguen siendo la base del producto.
 
-| Orden | Story ID | Título | Story Points | Estado | Condición de inclusión |
-|---|---|---|---|---|---|
-| 1 | US40 | Reintento automático de alerta sin cobertura | 5 | Propuesta | EX-02 confirma fallos por cobertura débil |
-| 2 | US39 | Notificación push al responsable nocturno | 3 | Propuesta | EX-01 revela ausencia de operador en algún turno |
-| 3 | US38 | Activación de alerta con gesto mínimo | 5 | Propuesta | EX-03 no supera el umbral de discreción con el diseño actual |
-| 4 | US41 | Protocolo guiado de respuesta en el panel | 5 | Propuesta | EX-02 revela que el operador tarda más de 2 min sin guía |
-| 5 | US42 | Modo silencioso de pantalla durante el servicio | 3 | Propuesta | EX-04 identifica la pantalla encendida como factor de riesgo |
-| 6 | US03 | Activar alerta de emergencia | 5 | Implementada (Sprint 1) | — |
-| 7 | US04 | Recepción de alerta en la central | 3 | Implementada (Sprint 1) | — |
-| 8 | US19 | Confirmación de recepción de alerta (ACK) | 3 | Implementada (Sprint 1) | — |
-| 9 | US05 | Registro de evento de emergencia | 2 | Implementada (Sprint 1) | — |
-| 10 | US26 | Clasificación de alertas por gravedad | 3 | Implementada (Sprint 1) | — |
-| 11 | US27 | Registro de ubicación del evento | 3 | Implementada (Sprint 1) | — |
-| 12 | US01 | Verificar identidad del conductor | 5 | Implementada (Sprint 1) | — |
-| 13 | US02 | Registrar inicio de servicio | 3 | Implementada (Sprint 1) | — |
-| 14 | US14 | Validar autorización del conductor | 3 | Implementada (Sprint 1) | — |
-| 15 | US15 | Asociación de conductor al vehículo | 2 | Implementada (Sprint 1) | — |
-| 16 | US20 | Registro de turno terminado | 2 | Implementada (Sprint 1) | — |
-| 17 | US06 | Conteo de pasajeros | 8 | Implementada (Sprint 1) | — |
-| 18 | US07 | Consultar número de pasajeros | 2 | Implementada (Sprint 1) | — |
-| 19 | US28 | Seguimiento de ubicación del vehículo | 8 | Implementada (Sprint 1) | — |
-| 20 | US21 | Visualizar estado de unidades | 3 | Implementada (Sprint 1) | — |
-| 21 | US16 | Consultar historial de emergencias | 3 | Implementada (Sprint 1) | — |
-| 22 | US36 | Investigar mecanismo de comunicación en tiempo real (Spike) | 3 | Implementada (Sprint 1) | — |
-| 23 | US35 | Investigar sensores de conteo de pasajeros (Spike) | 3 | Implementada (Sprint 1) | — |
-| 24 | US37 | Investigar servicio de geolocalización (Spike) | 3 | Implementada (Sprint 1) | — |
-| 25 | US10 | Endpoint de validación de conductor | 3 | Implementada (Sprint 1) | — |
-| 26 | US11 | Endpoint de inicio de servicio | 3 | Implementada (Sprint 1) | — |
-| 27 | US12 | Endpoint de alerta de emergencia | 3 | Implementada (Sprint 1) | — |
-| 28 | US13 | Endpoint de conteo de pasajeros | 3 | Implementada (Sprint 1) | — |
-| 29 | US18 | Endpoint de autenticación | 3 | Implementada (Sprint 1) | — |
-| 30 | US24 | Endpoint de finalización de servicio | 2 | Implementada (Sprint 1) | — |
-| 31 | US31 | Endpoint de actualización de conductor | 2 | Implementada (Sprint 1) | — |
-| 32 | US32 | Endpoint de consulta de historial de emergencias | 2 | Implementada (Sprint 1) | — |
-| 33 | US33 | Endpoint de consulta de estado del servicio | 2 | Implementada (Sprint 1) | — |
-| 34 | US34 | Endpoint de consulta de ocupación del vehículo | 2 | Implementada (Sprint 1) | — |
-| 35 | US08 | Visualizar información del servicio (Landing) | 2 | Implementada (Sprint 1) | — |
-| 36 | US09 | Visualización de funcionalidades (Landing) | 2 | Implementada (Sprint 1) | — |
-| 37 | US25 | Visualizar propuesta de valor (Landing) | 1 | Implementada (Sprint 1) | — |
-| 38 | US23 | Visualización de datos de la problemática (Landing) | 1 | Implementada (Sprint 1) | — |
-| 39 | US29 | Visualización de beneficios (Landing) | 1 | Implementada (Sprint 1) | — |
-| 40 | US22 | Visualización de características (Landing) | 1 | Implementada (Sprint 1) | — |
-| 41 | US17 | Navegar entre secciones (Landing) | 2 | Implementada (Sprint 1) | — |
-| 42 | US30 | Visualización del equipo de trabajo (Landing) | 1 | Implementada (Sprint 1) | — |
+Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?filter=&groupBy=none
 
-_Tabla 20. To-Be Product Backlog - Elaboración propia. Las historias US38–US42 se activan condicionalmente según los resultados de los experimentos EX-01 a EX-04._
+| Orden | User Story ID | Título | Descripción | Hipótesis Lean UX | Story Points | Experimento (8.1.5) |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 1 | US45 | Marcar una alerta como atendida | Como empresa, quiero marcar una alerta como atendida, para dejar registro de cuándo se resolvió el incidente. | H1, H4 | 3 | — |
+| 2 | US38 | Registrar marcas de tiempo del ciclo de la alerta | Como sistema, quiero registrar la hora de activación, recepción y confirmación de cada alerta, para calcular el tiempo de respuesta de la central. | H1 | 3 | EX-02 |
+| 3 | US47 | Endpoint de eventos de analytics | Como developer, quiero un endpoint POST /api/v1/events que reciba los eventos de la app del conductor y del panel, para centralizar los datos de los experimentos sin depender de servicios de terceros. | H1, H2, H3, H4 | 3 | EX-02 |
+| 4 | US48 | Guardar eventos sin conexión y sincronizarlos | Como sistema, quiero guardar en el celular los eventos y las alertas cuando no hay señal y enviarlos al recuperarla, para no perder datos en zonas de cobertura débil. | H1 | 5 | EX-02 |
+| 5 | US42 | Marcar sesiones y eventos de experimento | Como sistema, quiero marcar los eventos registrados durante un experimento con su identificador y su condición (control o experimental), para separar los datos de prueba de los de producción y comparar las condiciones. | H1, H2, H3, H4 | 3 | EX-02, EX-03 |
+| 6 | US43 | Consultar métricas del experimento | Como equipo de producto, quiero consultar las métricas de cada condición, para contrastar los resultados con las hipótesis. | H1, H2, H3, H4 | 5 | EX-02 |
+| 7 | US46 | Resumir incidentes por zona y franja horaria | Como empresa, quiero ver un resumen de las alertas por zona y franja horaria, para identificar patrones de riesgo en mis rutas. | H4 | 5 | — |
+| 8 | US39 | Registrar eventos de atención en el panel de supervisión | Como sistema, quiero registrar cuándo un operador abre sesión en el panel, cuándo ve una alerta y cuándo consulta el estado o la ubicación de una unidad, para medir cuánto tarda la central en reaccionar. | H2 | 2 | — |
+| 9 | US40 | Registrar resultado y duración del inicio de servicio | Como sistema, quiero registrar el resultado de cada validación de conductor y el tiempo hasta el inicio del servicio, para evaluar la trazabilidad de las operaciones. | H3 | 3 | — |
+| 10 | US44 | Endpoint de métricas del experimento | Como developer, quiero consultar las métricas de un experimento mediante API, para usarlas en reportes y en el análisis de resultados. | H1, H2, H3, H4 | 3 | EX-02 |
+| 11 | US41 | Registrar consultas al historial de alertas | Como sistema, quiero registrar cuándo una empresa consulta el historial de alertas, para saber si lo usa en el seguimiento de incidentes. | H4 | 2 | — |
+
+_Tabla 22. To-Be Product Backlog del proyecto (total: 37 Story Points) - Elaboración propia._
+
+### 8.3.3. Pipeline-supported, Experiment-Driven To-Be Software Platform Lifecycle.
+
+Los sprints de la Experimentación se ejecutan sobre el pipeline de integración y entrega continua descrito en el Capítulo VII, de modo que cada historia pasa por las mismas pruebas y validaciones antes de integrarse.
+
+#### 8.3.3.1. To-Be Sprint Backlogs.
+
+Las historias del To-Be Product Backlog se distribuyen en dos sprints siguiendo el orden de prioridad. Cada sprint tiene un objetivo asociado a las hipótesis que permite medir.
+
+**Sprint 2 (17 Story Points).** Objetivo: poder medir el ciclo completo de una alerta, incluso sin señal, y etiquetar los datos por experimento y condición, que es lo necesario para ejecutar EX-02 y contrastar H-01.
+
+**Sprint 3 (20 Story Points).** Objetivo: consultar las métricas por condición, registrar la atención de la central (H-03) y la validación del conductor (H-05), y entregar a la empresa el resumen de incidentes por zona y franja horaria.
+
+| Sprint | US | Título | Tareas | SP |
+| :--: | :--: | :--: | :--: | :--: |
+| Sprint 2 | US45 | Marcar una alerta como atendida | Agregar el estado "Atendida" a la alerta; crear la acción en el panel de la empresa; guardar estado y hora; rechazar si la alerta no está confirmada | 3 |
+| Sprint 2 | US38 | Registrar marcas de tiempo del ciclo de la alerta | Agregar los campos de hora de activación, recepción y confirmación; guardarlos en el flujo de la alerta; marcar la alerta como no confirmada al vencer el tiempo de espera | 3 |
+| Sprint 2 | US47 | Endpoint de eventos de analytics | Crear el endpoint POST /api/v1/events; validar tipo y marca de tiempo UTC; guardar el evento con sus propiedades; documentar en Swagger | 3 |
+| Sprint 2 | US48 | Guardar eventos sin conexión y sincronizarlos | Guardar localmente los eventos y alertas sin conexión; sincronizarlos al recuperar la señal con su marca de tiempo original; registrar los fallos de almacenamiento | 5 |
+| Sprint 2 | US42 | Marcar sesiones y eventos de experimento | Agregar el indicador experiment_session y la condición a los eventos; guardar el identificador del experimento; excluir de las métricas los eventos sin sesión; verificar que la alerta de pánico siga disponible en ambas condiciones | 3 |
+| Sprint 3 | US43 | Consultar métricas del experimento | Calcular las métricas por condición; crear la vista de métricas con el número de observaciones; mostrar el aviso de muestra insuficiente | 5 |
+| Sprint 3 | US46 | Resumir incidentes por zona y franja horaria | Agrupar las alertas por zona y franja horaria; crear la vista del resumen; manejar las alertas sin ubicación | 5 |
+| Sprint 3 | US39 | Registrar eventos de atención en el panel de supervisión | Registrar apertura de sesión, vista de alerta y consulta de unidad con operador y hora; evitar que un fallo del registro bloquee el panel | 2 |
+| Sprint 3 | US40 | Registrar resultado y duración del inicio de servicio | Registrar resultado, motivo y tiempo de cada validación; guardar cada intento por separado | 3 |
+| Sprint 3 | US44 | Endpoint de métricas del experimento | Crear el endpoint GET de métricas por experimento; devolver error ante un identificador inválido; documentar en Swagger | 3 |
+| Sprint 3 | US41 | Registrar consultas al historial de alertas | Registrar la consulta al historial con hora y filtro; registrar las búsquedas sin resultados | 2 |
+
+_Tabla 23. To-Be Sprint Backlogs del proyecto - Elaboración propia._
