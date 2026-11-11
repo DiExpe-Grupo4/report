@@ -287,10 +287,10 @@ Las métricas de negocio son los indicadores de alto nivel con los que Avisum me
 |---|---|---|---|
 | PM-01 | Latencia de alerta extremo a extremo | Segundos entre la pulsación del botón y la aparición de la alerta en el panel | EX-02 |
 | PM-02 | Tasa de entrega de alertas | Porcentaje de alertas que llegan al panel sin intervención manual | EX-02 |
-| PM-03 | Tiempo de verificación de identidad | Segundos desde que el conductor abre la validación hasta la confirmación | EX-03 (como medida secundaria), H-05 |
+| PM-03 | Tiempo de verificación de identidad | Segundos desde que el conductor abre la validación hasta la confirmación | Sin experimento definido aún (H-05); se alimenta de los eventos identity_verification_* de 8.2.8 |
 | PM-04 | Tiempo de activación discreta | Segundos hasta pulsar el botón de alerta sin ser detectado | EX-03 |
-| PM-05 | Precisión del sensor de pasajeros | Porcentaje de conteos correctos respecto al conteo manual de referencia | EX-02 (como contexto) y experimento específico de hardware |
-| PM-06 | Tiempo de reacción del operador en el panel | Segundos desde que la alerta aparece en el panel hasta que el operador ejecuta la primera acción | EX-01 (línea base), EX-02 (con Avisum) |
+| PM-05 | Precisión del sensor de pasajeros | Porcentaje de conteos correctos respecto al conteo manual de referencia | Sin experimento definido aún (H-06, BQ-06) |
+| PM-06 | Tiempo de reacción del operador en el panel | Segundos desde que la alerta aparece en el panel hasta que el operador ejecuta la primera acción | EX-01 (línea base); la medición con Avisum depende de un experimento aún no definido (H-03, BQ-03) |
 
 _Tabla 12. Domain Business Metrics - Elaboración propia._
 
@@ -370,7 +370,7 @@ El tamaño de cada experimento responde a dos criterios: la naturaleza de la pre
 | Experimento | Muestra | Justificación | Duración estimada |
 |---|---|---|---|
 | EX-01 | 5 empresas, 2 incidentes por empresa (10 incidentes totales) | La saturación temática en entrevistas exploratorias del sector transporte suele alcanzarse entre 5 y 8 participantes. Se añaden 2 empresas nuevas a las 3 ya conocidas para ampliar diversidad. | 1 semana |
-| EX-02 | 90 alertas (30 por condición de red) + 10 llamadas de comparación | Con n = 30 por condición y un efecto esperado grande (diferencia de varios segundos), la potencia estadística es suficiente para detectar diferencias con α = 0,05. Las 10 llamadas permiten estimar el intervalo de confianza del tiempo de llamada. | 1 semana (después de EX-01) |
+| EX-02 | 90 alertas (30 por condición de red) + 10 llamadas de comparación | Con n = 30 por condición y un efecto esperado grande (diferencia de varios segundos), la potencia estadística es suficiente para detectar diferencias con α = 0,05. Las 10 llamadas permiten estimar el intervalo de confianza del tiempo de llamada. Las sesiones se reparten además entre backend activo y en frío y entre día y noche (unas 7 u 8 alertas por combinación), por lo que el análisis estadístico se hace por condición de red y esas dos variables se reportan de forma descriptiva. | 1 semana (después de EX-01) |
 | EX-03 | 5 conductores, 3 intentos cada uno (15 intentos totales) | La prueba de usabilidad evalúa un umbral de proporción (≥ 4/5 exitosos). Con 5 participantes y criterio binario por intento se puede detectar un fallo sistemático. Se prioriza incluir a los 3 conductores ya entrevistados por su familiaridad con el contexto. | 2 a 3 días (en paralelo con EX-01) |
 | EX-04 | 6 conductores | Pregunta exploratoria; el criterio de parada es la saturación de motivos de no uso. Se incluyen los 3 ya entrevistados más 3 nuevos de rutas distintas para maximizar diversidad de respuestas. | 1 semana (en paralelo con EX-01) |
 
