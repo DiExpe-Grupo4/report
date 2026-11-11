@@ -80,9 +80,10 @@ Durante el desarrollo de la entrega AV2, el equipo continuó con la elaboración
 
 Se presenta la evidencia de trabajo según los Insights de GitHub.
 
-![Insights Github - Hito 3]()
+![Insights Github - Hito 3](Avisum/assets/img/report_insight_hito3.png)
 
-![Network3]()
+![Network3](Avisum/assets/img/Network_3Avissum.png)
+
 ---
 
 # Indice
