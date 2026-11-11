@@ -520,6 +520,12 @@ El To-Be Product Backlog reúne las historias de la sección 8.3.1. El orden lo 
 
 Link: https://ivonneibanez.atlassian.net/jira/software/projects/AV/boards/38?filter=&groupBy=none
 
+![To-Be Product Backlog en Jira](assets/img/ST_TO_BE_BACKLOG.png)
+
+_Figura. To-Be Product Backlog en Jira - Elaboración propia._
+
+Los Story Points y la asignación a Sprint 2 y Sprint 3 se detallan en las Tablas 22 y 23.
+
 | Orden | User Story ID | Título | Descripción | Hipótesis Lean UX | Story Points | Experimento (8.1.5) |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | 1 | US45 | Marcar una alerta como atendida | Como empresa, quiero marcar una alerta como atendida, para dejar registro de cuándo se resolvió el incidente. | H1, H4 | 3 | — |
