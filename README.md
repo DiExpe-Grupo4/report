@@ -24,7 +24,7 @@
 
   <br>
   <h2 >Periodo 2026-2</h2>
-  <h3>Agosto del 2026</h3>
+  <h3>Noviembre del 2026</h3>
 </div>
 
 ---
