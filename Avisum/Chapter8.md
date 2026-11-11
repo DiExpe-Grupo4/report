@@ -252,22 +252,284 @@ _Tarjeta EX-04. Cuándo no usaría el botón - Elaboración propia._
 
 ### 8.2.1. Hypotheses.
 
-### 8.2.2. Domain Business Metrics
+Las hipótesis formales corresponden únicamente a las preguntas belief-led (BQ). Las preguntas exploratorias (EQ-01 y EQ-04) no generan hipótesis previas porque su propósito es descubrir, no confirmar una creencia del equipo.
+
+| ID | Pregunta | Enunciado de hipótesis | Criterio de éxito |
+|---|---|---|---|
+| H-01 | BQ-02 | Creemos que la alerta de Avisum llega al panel de la central y el conductor recibe la confirmación (ACK) más rápido que una llamada telefónica al número de la empresa. | Tasa de entrega ≥ 95 %; notificación en el panel en ≤ 5 s (mediana); ACK en ≤ 10 s; cumplidos en al menos 2 de las 3 condiciones de red evaluadas. |
+| H-02 | BQ-01 | Creemos que un conductor puede activar la alerta de forma discreta en ≤ 3 s, con un máximo de 2 toques y sin que el observador lo detecte. | Al menos 4 de cada 5 conductores superan el umbral en los 3 intentos; ninguno es detectado por el observador en el último intento (con poca luz). |
+| H-03 | BQ-03 | Creemos que un operador de la central puede ver, interpretar y tomar una primera decisión ante una alerta en el panel en ≤ 2 minutos desde su llegada. | ≥ 4 de cada 5 operadores reaccionan dentro del umbral sin haber recibido más de 10 minutos de entrenamiento previo. |
+| H-04 | BQ-04 | Creemos que al menos 3 de cada 5 empresas con 3 o más unidades declaran disposición a pagar S/ 99 por unidad al mes tras ver el sistema en funcionamiento. | Mínimo 3 de 5 empresas confirman disposición de pago después de la demostración. |
+| H-05 | BQ-05 | Creemos que la verificación de identidad del conductor no agrega más de 30 segundos al inicio de la jornada. | Tiempo medio de verificación ≤ 30 s en al menos 4 de cada 5 conductores en la prueba. |
+| H-06 | BQ-06 | Creemos que el sensor cuenta pasajeros con una precisión ≥ 90 % en condiciones reales de ruta (hora punta, subidas y bajadas simultáneas). | Precisión ≥ 90 % en al menos 80 % de las mediciones registradas durante el recorrido de prueba. |
+| H-07 | BQ-07 | Creemos que al menos 4 de cada 5 conductores perciben el seguimiento de ubicación como una medida de protección y no como vigilancia. | ≥ 4 de cada 5 conductores puntúan la afirmación "Me siento protegido, no vigilado" con 4 o 5 en escala de 1 a 5 tras ver la funcionalidad. |
+
+_Tabla 11. Hipótesis del proyecto Avisum - Elaboración propia._
+
+---
+
+### 8.2.2. Domain Business Metrics.
+
+Las métricas de negocio son los indicadores de alto nivel con los que Avisum medirá si su propuesta de valor se cumple. Se dividen en métricas de resultado (lo que el negocio persigue) y métricas de producto (señales que explican por qué el resultado mejora o empeora).
+
+**Métricas de resultado**
+
+| ID | Métrica | Definición | Meta inicial |
+|---|---|---|---|
+| BM-01 | Tiempo de respuesta ante incidentes | Minutos entre el hecho y la primera acción documentada de la empresa | Reducción ≥ 30 % respecto a la línea base obtenida en EX-01 |
+| BM-02 | Tasa de adopción por conductores | Porcentaje de conductores registrados que activan al menos una sesión semanal | ≥ 70 % en el primer mes de operación |
+| BM-03 | Retención de empresas cliente | Porcentaje de empresas que renuevan el pago en el segundo mes | ≥ 80 % |
+| BM-04 | Alertas gestionadas a tiempo | Porcentaje de alertas ante las que la central ejecuta una primera acción en ≤ 5 minutos | ≥ 90 % |
+
+**Métricas de producto**
+
+| ID | Métrica | Definición | Experimento que la produce |
+|---|---|---|---|
+| PM-01 | Latencia de alerta extremo a extremo | Segundos entre la pulsación del botón y la aparición de la alerta en el panel | EX-02 |
+| PM-02 | Tasa de entrega de alertas | Porcentaje de alertas que llegan al panel sin intervención manual | EX-02 |
+| PM-03 | Tiempo de verificación de identidad | Segundos desde que el conductor abre la validación hasta la confirmación | EX-03 (como medida secundaria), H-05 |
+| PM-04 | Tiempo de activación discreta | Segundos hasta pulsar el botón de alerta sin ser detectado | EX-03 |
+| PM-05 | Precisión del sensor de pasajeros | Porcentaje de conteos correctos respecto al conteo manual de referencia | EX-02 (como contexto) y experimento específico de hardware |
+| PM-06 | Tiempo de reacción del operador en el panel | Segundos desde que la alerta aparece en el panel hasta que el operador ejecuta la primera acción | EX-01 (línea base), EX-02 (con Avisum) |
+
+_Tabla 12. Domain Business Metrics - Elaboración propia._
+
+---
 
 ### 8.2.3. Measures.
 
+Cada medida se expresa como una variable concreta, observable y registrable, ligada a un experimento.
+
+| Experimento | Variable | Tipo | Instrumento de registro |
+|---|---|---|---|
+| EX-01 | Minutos entre el hecho y el aviso a la empresa | Cuantitativa continua | Reconstrucción cronológica en entrevista |
+| EX-01 | Minutos entre el aviso y la primera acción | Cuantitativa continua | Reconstrucción cronológica en entrevista |
+| EX-01 | Canal de aviso usado (llamada, WhatsApp, radio, otro) | Categórica nominal | Entrevista estructurada |
+| EX-01 | Persona que atendió (rol y horario) | Categórica nominal | Entrevista estructurada |
+| EX-02 | Segundos entre pulsación y aparición en panel | Cuantitativa continua | Cronómetro manual + log del backend |
+| EX-02 | Segundos entre pulsación y ACK en la app del conductor | Cuantitativa continua | Log del backend |
+| EX-02 | Alerta entregada (sí/no) | Dicotómica | Log del backend |
+| EX-02 | Segundos hasta que contestan la llamada (comparación) | Cuantitativa continua | Cronómetro manual |
+| EX-02 | Condición de red activa (4G estable / 4G débil / sin datos) | Categórica ordinal | Medición de señal en tiempo real |
+| EX-03 | Segundos hasta la activación | Cuantitativa continua | Cronómetro manual |
+| EX-03 | Número de toques para activar | Cuantitativa discreta | Observación directa |
+| EX-03 | Segundos con vista en la pantalla | Cuantitativa continua | Observación directa |
+| EX-03 | Observador detectó la acción (sí/no) | Dicotómica | Juicio del observador |
+| EX-03 | Percepción de discreción del conductor (1 a 5) | Cuantitativa ordinal | Escala Likert post-intento |
+| EX-04 | Situaciones en que no usaría el botón | Cualitativa | Transcripción de entrevista |
+| EX-04 | Motivos de no uso (represalias, desconfianza, vergüenza) | Categórica nominal | Codificación temática |
+| EX-04 | Cambio de diseño o protocolo que lo haría usarlo | Cualitativa | Transcripción de entrevista |
+
+_Tabla 13. Medidas por experimento - Elaboración propia._
+
+---
+
 ### 8.2.4. Conditions.
+
+Las condiciones definen el entorno bajo el cual se ejecuta cada experimento para garantizar comparabilidad entre repeticiones y validez externa de los resultados.
+
+**EX-01 — Línea base de respuesta ante incidentes**
+
+- Empresas de Lima y Callao con 3 o más unidades en operación.
+- Incidentes reales ocurridos en los últimos 3 meses.
+- Entrevista individual de 20 a 30 minutos; sin mostrar Avisum para evitar sesgo de comparación.
+- Entrevistador neutro que sigue un guion de reconstrucción cronológica.
+
+**EX-02 — Alerta frente a llamada telefónica**
+
+- Recorrido urbano en vehículo en movimiento (mínimo 20 minutos de duración).
+- Tres condiciones de red evaluadas en sesiones separadas: 4G estable, 4G con señal débil (1–2 barras), y pérdida de datos con recuperación automática.
+- Backend activo en Render y backend tras un periodo de inactividad de 30 minutos (arranque en frío).
+- La comparación de llamada usa el número de empresa de las 3 empresas ya entrevistadas; se cronometra desde que se marca hasta que contesta un operador.
+- Hora del día: una sesión diurna y una nocturna por condición de red.
+
+**EX-03 — Activación discreta de la alerta**
+
+- Vehículo detenido y apagado (no se opera la app mientras se conduce, por seguridad).
+- Celular ubicado en el soporte habitual del conductor (parabrisas o tablero).
+- El observador se sienta en el asiento del copiloto, simulando al cobrador, y registra si nota actividad en el celular.
+- Tres intentos por conductor: primer intento con luz normal, segundo con iluminación reducida, tercero de noche o con la cabina oscura.
+- Entre intentos, el conductor descansa 2 minutos para evitar efecto de aprendizaje acumulado en el tercer intento.
+
+**EX-04 — Cuándo no usaría el botón**
+
+- Entrevista individual de 20 minutos; lugar elegido por el conductor (su vehículo, un café, etc.) para garantizar comodidad.
+- Escenarios hipotéticos presentados en orden fijo: cobro de cupo, asalto, acoso a pasajera, accidente mecánico.
+- No se muestra ni describe el botón de Avisum antes de preguntar; se pregunta qué haría el conductor hoy.
+- Confidencialidad explicada al inicio y grabación solo con consentimiento explícito.
+- Al menos una conductora mujer en la muestra.
+
+_Tabla 14. Condiciones por experimento - Elaboración propia._
+
+---
 
 ### 8.2.5. Scale Calculations and Decisions.
 
+El tamaño de cada experimento responde a dos criterios: la naturaleza de la pregunta (exploratoria o cuantitativa) y la disponibilidad de participantes del segmento objetivo.
+
+| Experimento | Muestra | Justificación | Duración estimada |
+|---|---|---|---|
+| EX-01 | 5 empresas, 2 incidentes por empresa (10 incidentes totales) | La saturación temática en entrevistas exploratorias del sector transporte suele alcanzarse entre 5 y 8 participantes. Se añaden 2 empresas nuevas a las 3 ya conocidas para ampliar diversidad. | 1 semana |
+| EX-02 | 90 alertas (30 por condición de red) + 10 llamadas de comparación | Con n = 30 por condición y un efecto esperado grande (diferencia de varios segundos), la potencia estadística es suficiente para detectar diferencias con α = 0,05. Las 10 llamadas permiten estimar el intervalo de confianza del tiempo de llamada. | 1 semana (después de EX-01) |
+| EX-03 | 5 conductores, 3 intentos cada uno (15 intentos totales) | La prueba de usabilidad evalúa un umbral de proporción (≥ 4/5 exitosos). Con 5 participantes y criterio binario por intento se puede detectar un fallo sistemático. Se prioriza incluir a los 3 conductores ya entrevistados por su familiaridad con el contexto. | 2 a 3 días (en paralelo con EX-01) |
+| EX-04 | 6 conductores | Pregunta exploratoria; el criterio de parada es la saturación de motivos de no uso. Se incluyen los 3 ya entrevistados más 3 nuevos de rutas distintas para maximizar diversidad de respuestas. | 1 semana (en paralelo con EX-01) |
+
+_Tabla 15. Escala y decisiones de tamaño muestral - Elaboración propia._
+
+**Decisiones de secuenciación**
+
+EX-01 y EX-04 se ejecutan primero y en paralelo porque no requieren construir nada nuevo y EX-01 entrega la línea base que valida EX-02. EX-02 comienza solo cuando EX-01 ha concluido. EX-03 puede ejecutarse en paralelo con EX-01 y EX-04 porque sus condiciones son independientes.
+
+---
+
 ### 8.2.6. Methods Selection.
+
+La selección del método para cada experimento obedece a la naturaleza de la pregunta y al estado de desarrollo del producto.
+
+| Experimento | Método principal | Razón de elección |
+|---|---|---|
+| EX-01 | Entrevista semiestructurada de reconstrucción cronológica | Pregunta exploratoria sin hipótesis previa. Se necesita el detalle del proceso real de respuesta, no una medición puntual. No requiere el sistema construido. |
+| EX-02 | Prueba de campo cuantitativa con cronometría y logs del backend | El sistema ya está desplegado en Render; la pregunta exige medidas numéricas de latencia bajo condiciones controladas pero realistas. El log del backend complementa la cronometría manual y reduce sesgo de observador. |
+| EX-03 | Prueba de usabilidad con observador encubierto | La pregunta mezcla rendimiento (tiempo y toques) y comportamiento social (si el agresor lo detecta). Un estudio de laboratorio ligero con observador simula el contexto sin requerir un escenario de riesgo real. |
+| EX-04 | Entrevista semiestructurada con escenarios hipotéticos | Pregunta exploratoria sobre comportamiento en situaciones de riesgo. No es ético ni práctico replicar las situaciones reales; los escenarios permiten aproximarse a las motivaciones sin exponer a los participantes. |
+
+_Tabla 16. Selección de métodos - Elaboración propia._
+
+---
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection.
 
+**Objetivo analítico general**
+
+Determinar si las premisas centrales de Avisum son suficientemente sólidas para invertir en el siguiente ciclo de desarrollo, o si alguna de ellas requiere rediseño antes de continuar.
+
+**KPIs por pregunta**
+
+| Pregunta | KPI principal | Umbral de éxito | Acción si no se cumple |
+|---|---|---|---|
+| BQ-02 | Latencia mediana de alerta extremo a extremo (s) | ≤ 5 s en el panel; ≤ 10 s el ACK | Revisar protocolo de comunicación (WebSocket vs. polling) |
+| BQ-02 | Tasa de entrega de alertas | ≥ 95 % | Implementar reintento automático con almacenamiento local offline |
+| BQ-01 | Proporción de activaciones discretas exitosas | ≥ 4/5 conductores | Rediseñar la ubicación y el gesto del botón de alerta |
+| BQ-03 | Tiempo de reacción del operador ante la alerta | ≤ 2 min | Agregar sonido y notificación push al panel; revisar UX |
+| BQ-04 | Proporción de empresas con disposición a pagar | ≥ 3/5 | Revisar el modelo de precios o el empaquetado de la solución |
+| BQ-05 | Tiempo medio de verificación de identidad | ≤ 30 s | Simplificar el flujo de validación (menos pasos, biometría más rápida) |
+| BQ-06 | Precisión del sensor de conteo | ≥ 90 % | Evaluar tecnología alternativa de sensor o ajustar el modelo de detección |
+| BQ-07 | Proporción de conductores con percepción de protección | ≥ 4/5 | Ajustar comunicación del producto y agregar controles de privacidad visibles |
+
+_Tabla 17. KPIs y umbrales de decisión - Elaboración propia._
+
+**Análisis estadístico aplicado**
+
+- EX-02: Mediana y percentil 95 de latencia por condición de red; intervalo de confianza del 95 % para la tasa de entrega; prueba de Wilcoxon para comparar alerta vs. llamada.
+- EX-03: Proporción de éxito con intervalo de confianza exacto de Clopper-Pearson; tiempo medio de activación con desviación estándar.
+- EX-01 y EX-04: Análisis temático inductivo; frecuencia de menciones por categoría de respuesta.
+
+---
+
 ### 8.2.8. Web and Mobile Tracking Plan.
+
+El plan de tracking define los eventos que la app móvil del conductor y el panel web de la central deben registrar para alimentar los KPIs de los experimentos y el monitoreo continuo del producto.
+
+**Eventos de la app del conductor**
+
+| Evento | Propiedades | Propósito |
+|---|---|---|
+| `session_start` | `conductor_id`, `service_id`, `timestamp`, `device_model`, `os_version` | Medir adopción y detectar dispositivos con problemas |
+| `identity_verification_start` | `conductor_id`, `timestamp`, `method` (QR / facial) | Iniciar medición del tiempo de verificación (H-05) |
+| `identity_verification_complete` | `conductor_id`, `timestamp`, `duration_ms`, `success` | Cerrar medición de verificación; detectar fallos |
+| `service_started` | `conductor_id`, `service_id`, `timestamp` | Confirmar inicio de jornada registrado |
+| `alert_button_pressed` | `conductor_id`, `service_id`, `timestamp`, `battery_level`, `network_type` | Inicio de medición de latencia (PM-01) |
+| `alert_ack_received` | `conductor_id`, `alert_id`, `timestamp`, `latency_ms` | Tiempo hasta ACK (PM-01, H-01) |
+| `service_ended` | `conductor_id`, `service_id`, `timestamp` | Cierre de jornada |
+| `session_end` | `conductor_id`, `timestamp`, `duration_ms` | Duración de sesión para métricas de retención |
+
+**Eventos del panel web de la central**
+
+| Evento | Propiedades | Propósito |
+|---|---|---|
+| `alert_received` | `alert_id`, `service_id`, `timestamp`, `severity_level`, `latency_from_press_ms` | Latencia extremo a extremo (EX-02, PM-01) |
+| `alert_viewed` | `alert_id`, `operator_id`, `timestamp` | Tiempo de reacción del operador (H-03) |
+| `alert_action_taken` | `alert_id`, `operator_id`, `action_type`, `timestamp` | Cierre del ciclo de respuesta; alimenta BM-04 |
+| `panel_session_start` | `operator_id`, `timestamp` | Verificar cobertura horaria del panel (K-02) |
+| `vehicle_location_updated` | `vehicle_id`, `lat`, `lng`, `timestamp` | Seguimiento GPS continuo |
+| `passenger_count_updated` | `vehicle_id`, `count`, `timestamp`, `source` (sensor / manual) | Precisión del conteo (PM-05) |
+
+**Consideraciones de implementación**
+
+- Todos los eventos se envían a un endpoint de analytics propio (`/api/v1/events`) para evitar dependencia de terceros en zonas con tráfico restringido.
+- Los eventos del conductor se almacenan localmente en SQLite si no hay conexión y se sincronizan al recuperar señal, garantizando trazabilidad incluso en zonas de cobertura débil (K-04).
+- El `timestamp` siempre es UTC; la conversión a hora local se realiza en el panel.
+- Durante los experimentos EX-02 y EX-03 se activa un flag `experiment_session: true` en los eventos para segmentar los datos de prueba de los de producción futura.
+
+_Tabla 18. Plan de tracking web y móvil - Elaboración propia._
+
+---
 
 ## 8.3. Experimentation
 
 ### 8.3.1. To-Be User Stories.
 
-### 8.3.2. To-Be Product Backlog
+Las To-Be User Stories son historias de usuario nuevas que se anticipa surgirán de los hallazgos de los experimentos diseñados. No reemplazan el backlog actual; se incorporan a él una vez que el experimento correspondiente confirma la necesidad. Se presentan como propuestas condicionadas a los resultados esperados.
+
+| Story ID | Título | Usuario | Descripción | Criterio de aceptación | Epic ID | Origen del experimento |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| US38 | Activación de alerta con gesto mínimo | Conductor | Como conductor, quiero activar la alerta con un único toque largo en un área grande de la pantalla, para no delatar la acción al cobrador. | **Éxito:** El conductor activa la alerta en ≤ 2 s con 1 toque y sin mirar la pantalla más de 0,5 s. **Fracaso:** El gesto se confunde con otra interacción o no activa la alerta en el primer intento. | EP002 | EX-03 (si BQ-01 no se cumple con el diseño actual) |
+| US39 | Notificación push al celular del responsable nocturno | Sistema | Como sistema, quiero enviar una notificación push al celular del responsable de guardia cuando no hay operador activo en el panel, para garantizar que toda alerta sea atendida. | **Éxito:** La notificación llega en ≤ 15 s al celular registrado como guardia si el panel lleva más de 5 minutos sin actividad. **Fracaso:** No hay número de guardia registrado o la notificación no llega por restricciones del SO. | EP002 | EX-01 (si K-02 revela ausencia de operador nocturno) |
+| US40 | Reintento automático de alerta sin cobertura | Sistema | Como sistema, quiero almacenar la alerta localmente y reenviarla en cuanto se recupere la señal, para que ninguna emergencia se pierda por falta de cobertura momentánea. | **Éxito:** La alerta almacenada se envía en ≤ 5 s tras recuperar la conexión y llega al panel con marca de tiempo del momento original. **Fracaso:** La alerta no se envía o llega sin el timestamp original. | EP002 | EX-02 (condición sin datos) y EQ-02 |
+| US41 | Protocolo guiado de respuesta en el panel | Empresa | Como operador de la central, quiero que el panel me sugiera los pasos a seguir ante cada tipo de alerta, para actuar correctamente aunque no recuerde el protocolo. | **Éxito:** El operador completa el protocolo en ≤ 2 min con el asistente visible, sin cometer pasos omitidos. **Fracaso:** El asistente no aparece para alertas de baja gravedad o bloquea la vista del mapa. | EP002 | EX-01 y EX-02 (si BQ-03 no se cumple) |
+| US42 | Modo silencioso de pantalla durante el servicio | Conductor | Como conductor, quiero que la pantalla de la app se apague automáticamente tras confirmar el inicio de servicio y solo vibre sin encenderse al recibir confirmaciones, para no llamar la atención durante el trayecto. | **Éxito:** La pantalla permanece apagada durante el servicio activo; la vibración es perceptible a 1 m de distancia. **Fracaso:** La pantalla se enciende al llegar el ACK o la vibración no es detectable con ruido de cabina. | EP001 | EX-04 (si conductores mencionan la pantalla encendida como factor de riesgo) |
+
+_Tabla 19. To-Be User Stories propuestas - Elaboración propia._
+
+---
+
+### 8.3.2. To-Be Product Backlog.
+
+El To-Be Product Backlog integra las historias actuales del Sprint 1 con las To-Be User Stories propuestas, reordenadas según la prioridad que se anticipa tendrán una vez procesados los hallazgos de los experimentos. Las estimaciones en Story Points siguen la escala Fibonacci (1, 2, 3, 5, 8).
+
+| Orden | Story ID | Título | Story Points | Estado | Condición de inclusión |
+|---|---|---|---|---|---|
+| 1 | US40 | Reintento automático de alerta sin cobertura | 5 | Propuesta | EX-02 confirma fallos por cobertura débil |
+| 2 | US39 | Notificación push al responsable nocturno | 3 | Propuesta | EX-01 revela ausencia de operador en algún turno |
+| 3 | US38 | Activación de alerta con gesto mínimo | 5 | Propuesta | EX-03 no supera el umbral de discreción con el diseño actual |
+| 4 | US41 | Protocolo guiado de respuesta en el panel | 5 | Propuesta | EX-02 revela que el operador tarda más de 2 min sin guía |
+| 5 | US42 | Modo silencioso de pantalla durante el servicio | 3 | Propuesta | EX-04 identifica la pantalla encendida como factor de riesgo |
+| 6 | US03 | Activar alerta de emergencia | 5 | Implementada (Sprint 1) | — |
+| 7 | US04 | Recepción de alerta en la central | 3 | Implementada (Sprint 1) | — |
+| 8 | US19 | Confirmación de recepción de alerta (ACK) | 3 | Implementada (Sprint 1) | — |
+| 9 | US05 | Registro de evento de emergencia | 2 | Implementada (Sprint 1) | — |
+| 10 | US26 | Clasificación de alertas por gravedad | 3 | Implementada (Sprint 1) | — |
+| 11 | US27 | Registro de ubicación del evento | 3 | Implementada (Sprint 1) | — |
+| 12 | US01 | Verificar identidad del conductor | 5 | Implementada (Sprint 1) | — |
+| 13 | US02 | Registrar inicio de servicio | 3 | Implementada (Sprint 1) | — |
+| 14 | US14 | Validar autorización del conductor | 3 | Implementada (Sprint 1) | — |
+| 15 | US15 | Asociación de conductor al vehículo | 2 | Implementada (Sprint 1) | — |
+| 16 | US20 | Registro de turno terminado | 2 | Implementada (Sprint 1) | — |
+| 17 | US06 | Conteo de pasajeros | 8 | Implementada (Sprint 1) | — |
+| 18 | US07 | Consultar número de pasajeros | 2 | Implementada (Sprint 1) | — |
+| 19 | US28 | Seguimiento de ubicación del vehículo | 8 | Implementada (Sprint 1) | — |
+| 20 | US21 | Visualizar estado de unidades | 3 | Implementada (Sprint 1) | — |
+| 21 | US16 | Consultar historial de emergencias | 3 | Implementada (Sprint 1) | — |
+| 22 | US36 | Investigar mecanismo de comunicación en tiempo real (Spike) | 3 | Implementada (Sprint 1) | — |
+| 23 | US35 | Investigar sensores de conteo de pasajeros (Spike) | 3 | Implementada (Sprint 1) | — |
+| 24 | US37 | Investigar servicio de geolocalización (Spike) | 3 | Implementada (Sprint 1) | — |
+| 25 | US10 | Endpoint de validación de conductor | 3 | Implementada (Sprint 1) | — |
+| 26 | US11 | Endpoint de inicio de servicio | 3 | Implementada (Sprint 1) | — |
+| 27 | US12 | Endpoint de alerta de emergencia | 3 | Implementada (Sprint 1) | — |
+| 28 | US13 | Endpoint de conteo de pasajeros | 3 | Implementada (Sprint 1) | — |
+| 29 | US18 | Endpoint de autenticación | 3 | Implementada (Sprint 1) | — |
+| 30 | US24 | Endpoint de finalización de servicio | 2 | Implementada (Sprint 1) | — |
+| 31 | US31 | Endpoint de actualización de conductor | 2 | Implementada (Sprint 1) | — |
+| 32 | US32 | Endpoint de consulta de historial de emergencias | 2 | Implementada (Sprint 1) | — |
+| 33 | US33 | Endpoint de consulta de estado del servicio | 2 | Implementada (Sprint 1) | — |
+| 34 | US34 | Endpoint de consulta de ocupación del vehículo | 2 | Implementada (Sprint 1) | — |
+| 35 | US08 | Visualizar información del servicio (Landing) | 2 | Implementada (Sprint 1) | — |
+| 36 | US09 | Visualización de funcionalidades (Landing) | 2 | Implementada (Sprint 1) | — |
+| 37 | US25 | Visualizar propuesta de valor (Landing) | 1 | Implementada (Sprint 1) | — |
+| 38 | US23 | Visualización de datos de la problemática (Landing) | 1 | Implementada (Sprint 1) | — |
+| 39 | US29 | Visualización de beneficios (Landing) | 1 | Implementada (Sprint 1) | — |
+| 40 | US22 | Visualización de características (Landing) | 1 | Implementada (Sprint 1) | — |
+| 41 | US17 | Navegar entre secciones (Landing) | 2 | Implementada (Sprint 1) | — |
+| 42 | US30 | Visualización del equipo de trabajo (Landing) | 1 | Implementada (Sprint 1) | — |
+
+_Tabla 20. To-Be Product Backlog - Elaboración propia. Las historias US38–US42 se activan condicionalmente según los resultados de los experimentos EX-01 a EX-04._
